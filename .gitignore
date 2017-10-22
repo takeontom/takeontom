@@ -89,3 +89,4 @@ ENV/
 # Rope project settings
 .ropeproject
 takeontom/node_modules
+node_modules
