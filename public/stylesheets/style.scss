@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    color: #fff;
+
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.layout-front {
+    display: grid;
+    grid-template-columns: auto 400px 400px auto;
+    grid-template-rows: 200px auto;
+    grid-template-areas:
+        ". header header ."
+        ". overview content .";
+    grid-column-gap: 100px;
+
+    .section-header {
+        grid-area: header;
+        align-self: center;
+    }
+
+    .section-overview {
+        grid-area: overview;
+    }
+
+    .section-content {
+        grid-area: content;
+    }
+}
+
+.section-header {
+    h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 4rem;
+        font-weight: normal;
+    }
+}
+
+.section-overview {
+    font-size: 1rem;
+
+    .intro {
+        .lead {
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 1rem 0;
+        }
+    }
+
+    .skills {
+        margin: 0 0 0 1rem;
+        padding: 0;
+
+        list-style: none;
+
+        font-size: 0.8rem;
+
+        li {
+            list-style: none;
+            margin-top: 0.5rem;
+            margin-right: 0;
+            margin-bottom: 1rem;
+            margin-left: 0;
+
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: 0.5rem;
+
+            border-left: solid 3px #ffb27e;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

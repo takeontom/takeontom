@@ -4,4 +4,13 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    section.layout-front
+      header.section-header
+        h1 Tom Smith
+
+      aside.section-overview
+        block overview
+
+      section.section-content
+        block content
+
