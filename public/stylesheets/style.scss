@@ -10,6 +10,11 @@ body {
     background: linear-gradient(to left, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
 .layout-front {
     display: grid;
     grid-template-columns: auto 400px 400px auto;
@@ -39,9 +44,7 @@ body {
         padding: 0;
         line-height: 1;
 
-        font-family: 'Open Sans', sans-serif;
         font-size: 4rem;
-        font-weight: normal;
     }
 }
 
@@ -86,5 +89,54 @@ body {
     p {
         margin-top: 0;
         padding-top: 0;
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .portfolio-item {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+
+        margin-bottom: 4rem;
+
+        .logo {
+            flex: 1;
+            margin: 0 0.5rem 0 0;
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .info {
+            flex: 2;
+            margin: 0 0 0 0.5rem;
+
+            font-size: 0.9rem;
+
+            h2 {
+                margin: 0 0 0.5rem;
+                padding: 0;
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin: 0 0 0.5rem 0;
+                padding: 0;
+            }
+        }
     }
 }
