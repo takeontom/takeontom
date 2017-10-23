@@ -5,12 +5,25 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     section.layout-front
-      header.section-header
-        h1 Tom Smith
+      aside.section-utility
+        block contact
+          address.contact-details
+            ul.skills
+              li: a(href='mailto:hey@takeontom.com') hey@takeontom.com
+              li: a(href='https://uk.linkedin.com/in/takeontom') LinkedIn
+              li: a(href='https://github.com/takeontom/') GitHub
 
-      aside.section-overview
-        block overview
+      header.section-heading
+        block heading
+          h1 Tom Smith
+          section.intro
+            h2.lead Senior web developer
+
+      aside.section-highlight-1.highlight
+        block highlight-1
+
+      aside.section-highlight-2.highlight
+        block highlight-2
 
       section.section-content
         block content
-

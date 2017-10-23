@@ -124,6 +124,18 @@ router.get('/', function(req, res, next) {
     {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
+    },
+    {
+      name: 'Rubix Consulting',
+      logo: 'rubix-consulting.png',
+    },
+    {
+      name: 'Citizens Advice Bureau',
+      logo: 'cab.png',
+    },
+    {
+      name: 'CMA Video',
+      logo: 'cma-video.png',
     }
 
   ]
