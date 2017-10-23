@@ -5,13 +5,6 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     section.layout-front
-      aside.section-utility
-        block contact
-          address.contact-details
-            ul.skills
-              li: a(href='mailto:hey@takeontom.com') hey@takeontom.com
-              li: a(href='https://uk.linkedin.com/in/takeontom') LinkedIn
-              li: a(href='https://github.com/takeontom/') GitHub
 
       header.section-heading
         block heading
@@ -27,3 +20,11 @@ html
 
       section.section-content
         block content
+
+      aside.section-utility
+        block contact
+          address.contact-details
+            ul
+              li: a(href='mailto:hey@takeontom.com') Email me
+              li: a(href='https://uk.linkedin.com/in/takeontom') My LinkedIn
+              li: a(href='https://github.com/takeontom/') My GitHub
