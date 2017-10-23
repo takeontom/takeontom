@@ -68,30 +68,19 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
   .portfolio h2 {
     margin-top: 0;
     padding-top: 0; }
   .portfolio .portfolio-item {
-    flex: 45%;
+    flex: 49% 0;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
     margin-bottom: 1rem;
-    margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff; }
-    .portfolio .portfolio-item.portfolio-item-wide {
-      flex-direction: column; }
-      .portfolio .portfolio-item.portfolio-item-wide .logo {
-        flex: 100px;
-        flex-grow: 0;
-        align-self: top;
-        padding: 1rem; }
-        .portfolio .portfolio-item.portfolio-item-wide .logo img {
-          max-height: 100px; }
-      .portfolio .portfolio-item.portfolio-item-wide .info {
-        flex: auto; }
     .portfolio .portfolio-item .logo {
       flex: 1;
       display: flex;

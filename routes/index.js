@@ -47,19 +47,17 @@ router.get('/', function(req, res, next) {
     {
       name: 'Macmillan Cancer Support',
       logo: 'macmillan.png',
-      wide: true,
     },
     {
       name: 'Land Rights Now',
       logo: 'land-rights-now.png',
-      wide: true,
       desc: `
         Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
 
         Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
 
         Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
-      `
+      `,
     },
     {
       name: 'Childrens Society',
@@ -84,7 +82,6 @@ router.get('/', function(req, res, next) {
     {
       name: 'TechPro',
       logo: 'techpro.png',
-      wide: true,
     },
     {
       name: 'FizzyNova',
@@ -127,7 +124,6 @@ router.get('/', function(req, res, next) {
     {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
-      wide: true,
     }
 
   ]

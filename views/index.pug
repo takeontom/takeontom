@@ -27,7 +27,7 @@ block content
         .info
           h2 #{item.name}
           if item.desc
-            p #{item.desc}
+            p !{item.desc.replace(/\n\n/g, '</p><p>')}
           else
             p.
               Aenean sit amet erat quam. Donec rutrum consequat felis, id
