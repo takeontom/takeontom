@@ -4,7 +4,7 @@ block overview
 
   section.intro
 
-    p.lead Senior web developer
+    h2.lead Senior web developer
 
     p Full stack, quality focussed &amp; widely experienced.
 
@@ -16,56 +16,20 @@ block overview
 
 block content
 
+  h2 Some of my work
+
   section.portfolio
 
-    h2 Some of my work
-
-    article.portfolio-item
-      .logo
-        img(src="images/itv.png")
-      .info
-        h2 ITV
-        p Web integrations for Melinda Messenger's Bingo Night Live programme.
-    article.portfolio-item
-      .logo
-        img(src="images/oxfam.png")
-      .info
-        h2 Oxfam
-        p.
-          Developed Oxfam's "Act" platform, their international hub for
-          raising awareness and promoting actions
-    article.portfolio-item
-      .logo
-        img(src="images/compassion-experience.png")
-      .info
-        h2 Compassion Experience
-        p.
-          Lead developer to create the online presence for this novel,
-          educational experience.
-
-  ul
-    li Amnesty International
-    li Macmillan Cancer Support
-    li Oxfam
-    li Land Rights Now
-    li Compassion Experience
-    li Church of England
-    li Pepsi
-    li Dateline
-    li mirada
-    li Brother
-    li Corporate Rewards
-    li Lumos
-    li Civicus
-    li Childrens Society
-    li Skills Funding Agency
-    li FizzyNova
-    li TechPro
-    li Phil Day Sports
-    li Nuneaton &amp; Bedworth Leisure Society
-    li Business Biscotti
-    li BBC
-    li Phase4
-    li Protec Innovations
-    li D&amp;J Henry
-
+    each item in portfolio
+      article.portfolio-item(class=item.wide ? 'portfolio-item-wide' : '')
+        .logo
+          img(src=`images/${item.logo}`)
+        .info
+          h2 #{item.name}
+          if item.desc
+            p #{item.desc}
+          else
+            p.
+              Aenean sit amet erat quam. Donec rutrum consequat felis, id
+              euismod libero malesuada eget. Vestibulum ac urna vulputate,
+              condimentum ligula eget, ullamcorper turpis.

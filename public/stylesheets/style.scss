@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: 200px auto;
     grid-template-areas:
         ". header header ."
-        ". overview content .";
+        ". overview . ."
+        ". content content .";
     grid-column-gap: 100px;
 
     .section-header {
@@ -53,6 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .intro {
         .lead {
+            margin-top: 0;
+            padding-top: 0;
             font-size: 1.4rem;
         }
 
@@ -92,9 +95,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.section-content {
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
 .portfolio {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     h2 {
         margin-top: 0;
@@ -102,17 +112,49 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .portfolio-item {
-        width: 100%;
+
+        flex: 45%;
 
         display: flex;
         flex-direction: row;
         align-content: flex-start;
 
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+
+        &.portfolio-item-wide {
+            // flex: 100%;
+            flex-direction: column;
+
+            .logo {
+                flex: 100px;
+                flex-grow: 0;
+                align-self: top;
+
+                padding: 1rem;
+
+                img {
+                    max-height: 100px;
+                }
+            }
+
+            .info {
+                flex: auto;
+            }
+        }
 
         .logo {
             flex: 1;
-            margin: 0 0.5rem 0 0;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.5);
 
             img {
                 display: block;
@@ -123,14 +165,15 @@ h1, h2, h3, h4, h5, h6 {
 
         .info {
             flex: 2;
-            margin: 0 0 0 0.5rem;
+            margin: 2rem;
+            margin-left: 1rem;
 
             font-size: 0.9rem;
 
             h2 {
                 margin: 0 0 0.5rem;
                 padding: 0;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             p {

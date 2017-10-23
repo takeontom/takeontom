@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: auto 400px 400px auto;
   grid-template-rows: 200px auto;
-  grid-template-areas: ". header header ." ". overview content .";
+  grid-template-areas: ". header header ." ". overview . ." ". content content .";
   grid-column-gap: 100px; }
   .layout-front .section-header {
     grid-area: header;
@@ -36,6 +36,8 @@ h1, h2, h3, h4, h5, h6 {
 .section-overview {
   font-size: 1rem; }
   .section-overview .intro .lead {
+    margin-top: 0;
+    padding-top: 0;
     font-size: 1.4rem; }
   .section-overview .intro p {
     margin: 0;
@@ -60,33 +62,56 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     padding-top: 0; }
 
+.section-content h2 {
+  font-size: 1.4rem; }
+
 .portfolio {
   display: flex;
-  flex-direction: column; }
+  flex-direction: row;
+  flex-wrap: wrap; }
   .portfolio h2 {
     margin-top: 0;
     padding-top: 0; }
   .portfolio .portfolio-item {
-    width: 100%;
+    flex: 45%;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-    margin-bottom: 4rem; }
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff; }
+    .portfolio .portfolio-item.portfolio-item-wide {
+      flex-direction: column; }
+      .portfolio .portfolio-item.portfolio-item-wide .logo {
+        flex: 100px;
+        flex-grow: 0;
+        align-self: top;
+        padding: 1rem; }
+        .portfolio .portfolio-item.portfolio-item-wide .logo img {
+          max-height: 100px; }
+      .portfolio .portfolio-item.portfolio-item-wide .info {
+        flex: auto; }
     .portfolio .portfolio-item .logo {
       flex: 1;
-      margin: 0 0.5rem 0 0; }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.5); }
       .portfolio .portfolio-item .logo img {
         display: block;
         max-width: 100%;
         height: auto; }
     .portfolio .portfolio-item .info {
       flex: 2;
-      margin: 0 0 0 0.5rem;
+      margin: 2rem;
+      margin-left: 1rem;
       font-size: 0.9rem; }
       .portfolio .portfolio-item .info h2 {
         margin: 0 0 0.5rem;
         padding: 0;
-        font-size: 1.5rem; }
+        font-size: 1.3rem; }
       .portfolio .portfolio-item .info p {
         margin: 0 0 0.5rem 0;
         padding: 0; }
