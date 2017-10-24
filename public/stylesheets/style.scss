@@ -2,6 +2,10 @@
 @import 'fontello/fontello';
 // @import 'fontello/fontello-codes.css';
 
+@-ms-viewport{
+    width: device-width;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -115,6 +119,8 @@ $c2: #3a6186;
 // $c1: #33001b;
 // $c2: #ff0084;
 
+$c1: #ee0979;
+$c2: #ff6a00;
 
 .background {
     position: fixed;
@@ -122,8 +128,8 @@ $c2: #3a6186;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    // height: 100vh;
+    // width: 100vw;
 
     z-index: -800;
 
@@ -189,19 +195,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .layout-front {
     position: static;
-
     display: grid;
-    grid-template-columns: auto 30rem 30rem auto;
     grid-template-rows: auto;
-    grid-template-areas:
-        ". . . ."
-        ". heading utility ."
-        ". highlight-1 highlight-2 ."
-        ". content content ."
-        ". footer footer ."
-        ". . . .";
-    grid-column-gap: 1rem;
-    grid-row-gap: 3rem;
 
     .section-utility {
         grid-area: utility;
@@ -232,6 +227,51 @@ p, h1, h2, h3, h4, h5, h6 {
 
     .section-footer {
         grid-area: footer;
+    }
+}
+
+@media screen and (min-width: 0) {
+    .layout-front {
+        grid-template-columns: 2rem auto 2rem;
+        grid-template-areas:
+            ". . ."
+            ". heading ."
+            ". highlight-1 ."
+            ". highlight-2 ."
+            ". content ."
+            ". footer .";
+        grid-column-gap: 0;
+        grid-row-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .layout-front {
+        grid-template-columns: auto 300px 300px auto;
+        grid-template-areas:
+            ". . . ."
+            ". heading heading ."
+            ". highlight-1 highlight-2 ."
+            ". content content ."
+            ". footer footer ."
+            ". . . .";
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .layout-front {
+        grid-template-columns: auto 450px 450px auto;
+        grid-template-areas:
+            ". . . ."
+            ". heading utility ."
+            ". highlight-1 highlight-2 ."
+            ". content content ."
+            ". footer footer ."
+            ". . . .";
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
     }
 }
 
@@ -325,9 +365,23 @@ p, h1, h2, h3, h4, h5, h6 {
 .portfolio {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 1rem;
+    @media screen and (min-width: 0) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+    }
+
+    @media screen and (min-width: 500px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
 
 
     h2 {
