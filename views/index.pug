@@ -24,20 +24,36 @@ block highlight-2
 
 block content
 
-  h2 Some of my work
+  section.content-block
 
-  section.portfolio
+    h2 Some of my work
 
-    each item in portfolio
-      article.portfolio-item(class=item.wide ? 'portfolio-item-wide' : '')
-        .logo
-          img(src=`images/${item.logo}`)
-        .info
-          h2 #{item.name}
-          if item.desc
-            p !{item.desc.replace(/\n\n/g, '</p><p>')}
-          else
-            p.
-              Aenean sit amet erat quam. Donec rutrum consequat felis, id
-              euismod libero malesuada eget. Vestibulum ac urna vulputate,
-              condimentum ligula eget, ullamcorper turpis.
+    section.portfolio
+
+      each item in portfolio
+        article.portfolio-item(class=item.wide ? 'portfolio-item-wide' : '')
+          .logo
+            img(src=`images/${item.logo}`)
+          .info
+            h2 #{item.name}
+            if item.desc
+              p !{item.desc.replace(/\n\n/g, '</p><p>')}
+            else
+              p.
+                Aenean sit amet erat quam. Donec rutrum consequat felis, id
+                euismod libero malesuada eget. Vestibulum ac urna vulputate,
+                condimentum ligula eget, ullamcorper turpis.
+
+  section.content-block.content-block-highlight
+
+    address.contact-details.contact-details-highlight
+      ul
+        li: a(href='mailto:hey@takeontom.com')
+          span.icon.icon-mail
+          | Email
+        li: a(href='https://uk.linkedin.com/in/takeontom')
+          span.icon.icon-linkedin
+          | LinkedIn
+        li: a(href='https://github.com/takeontom/')
+          span.icon.icon-github
+          | GitHub
