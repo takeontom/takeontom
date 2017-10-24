@@ -14,10 +14,147 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 
     color: #fff;
+}
 
-    background: #ee0979;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$c1: #89253e;
+$c2: #3a6186;
+
+// $c1: #2C3E50;
+// $c2: #FD746C;
+
+// $c1: #e96443;
+// $c2: #904e95;
+
+// $c1: #0B486B;
+// $c2: #F56217;
+
+// $c1: #2196f3;
+// $c2: #f44336;
+
+// $c1: #f44336;
+// $c2: #2196f3;
+
+// $c1: #CB3066;
+// $c2: #16BFFD;
+
+// $c1: #A43931;
+// $c2: #1D4350;
+
+// $c1: #db36a4;
+// $c2: #f7ff00;
+
+// $c1: #C02425;
+// $c2: #F0CB35;
+
+// $c1: #403A3E;
+// $c2: #BE5869;
+
+// $c1: #fc00ff;
+// $c2: #00dbde;
+
+// $c1: #141517;
+// $c2: #6A9113;
+
+// $c1: #7b4397;
+// $c2: #dc2430;
+
+// $c1: #f83600;
+// $c2: #fe8c00;
+
+// $c1: #556270;
+// $c2: #FF6B6B;
+
+// $c1: #780206;
+// $c2: #061161;
+
+// $c1: #7B920A;
+// $c2: #ADD100;
+
+// $c1: #000000;
+// $c2: #53346D;
+
+// $c1: #c21500;
+// $c2: #ffc500;
+
+// $c1: #FC354C;
+// $c2: #0ABFBC;
+
+// $c1: #480048;
+// $c2: #C04848;
+
+// $c1: #5f2c82;
+// $c2: #49a09d;
+
+// $c1: #4A569D;
+// $c2: #DC2424;
+
+// $c1: #232526;
+// $c2: #414345;
+
+// $c1: #FF512F;
+// $c2: #F09819;
+
+// $c1: #61045F;
+// $c2: #AA076B;
+
+// $c1: #e65c00;
+// $c2: #F9D423;
+
+// $c1: #ec008c;
+// $c2: #fc6767;
+
+// $c1: #1D2671;
+// $c2: #C33764;
+
+// $c1: #FC5C7D;
+// $c2: #6A82FB;
+
+// $c1: #FC466B;
+// $c2: #3F5EFB;
+
+// $c1: #33001b;
+// $c2: #ff0084;
+
+
+.background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    z-index: -800;
+
+    // background: #ee0979;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to left, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to left, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #ff00cc;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #de6161;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #ef32d9;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #3a6186;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: $c2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, $c1, $c2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, $c1, $c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #000000;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #FF070B, #E5008D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(315deg, #FF070B, #E5008D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 a, a:visited {
@@ -107,8 +244,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.section-utility {
-    // background-color: rgba(255, 255, 255, 0.1);
+.section-highlight-2 {
+    font-size: 0.8rem;
 }
 
 .section-footer {
