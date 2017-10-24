@@ -12,6 +12,19 @@ html
           section.intro
             h2.lead Senior web developer
 
+            block contact
+              address.contact-details
+                ul
+                  li: a(href='mailto:hey@takeontom.com')
+                    span.icon.icon-mail
+                    | Email
+                  li: a(href='https://uk.linkedin.com/in/takeontom')
+                    span.icon.icon-linkedin
+                    | LinkedIn
+                  li: a(href='https://github.com/takeontom/')
+                    span.icon.icon-github
+                    | GitHub
+
       aside.section-highlight-1.highlight
         block highlight-1
 
@@ -20,11 +33,3 @@ html
 
       section.section-content
         block content
-
-      aside.section-utility
-        block contact
-          address.contact-details
-            ul
-              li: a(href='mailto:hey@takeontom.com') Email me
-              li: a(href='https://uk.linkedin.com/in/takeontom') My LinkedIn
-              li: a(href='https://github.com/takeontom/') My GitHub
