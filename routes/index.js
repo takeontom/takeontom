@@ -19,46 +19,56 @@ router.get('/', function(req, res, next) {
     {
       name: 'Compassion Experience',
       logo: 'compassion-experience.png',
-      desc: `Lead developer to create the online presence and online booking
+      desc: `Lead developer creating the online presence and online booking
         portal for this powerful educational experience.`,
     },
     {
       name: 'Church of England',
       logo: 'cofe.png',
-      desc: ``,
+      desc: `Created mobile first website e-learning site to help encourage
+        better safe guarding practices within the Church of England.`,
     },
 
     {
       name: 'Pepsi',
       logo: 'pepsi.png',
+      desc: `Created advanced and highly regarded reporting tool for Pepsi's
+        ground breaking "Max-It for a Million" marketing campaign.
+
+        It provided the crucial data on product purchases, engagement levels
+        and buying behaviour.`
     },
     {
       name: 'Brother',
       logo: 'brother.png',
+      desc: `As Product Manager, designed, coordinated and oversaw development
+        of Brother UK's staff training and development portal.`
     },
     {
       name: 'Lumos',
       logo: 'lumos.png',
+      desc: `Website for international donations for JK Rowling's children
+        charity, Lumos.`
     },
     {
       name: 'Civicus',
       logo: 'civicus.png',
     },
-    {
-      name: 'Macmillan Cancer Support',
-      logo: 'macmillan.png',
-    },
-    {
-      name: 'Land Rights Now',
-      logo: 'land-rights-now.png',
-      desc: `
-        Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
+    // {
+    //   name: 'Macmillan Cancer Support',
+    //   logo: 'macmillan.png',
+    // },
+    // {
+    //   name: 'Land Rights Now',
+    //   logo: 'land-rights-now.png',
+    //   desc: `
+    //     Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
 
-        Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
+    //     Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
 
-        Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
-      `,
-    },
+    //     Aenean sit amet erat quam. Donec rutrum consequat felis, id euismod libero malesuada eget. Vestibulum ac urna vulputate, condimentum ligula eget, ullamcorper turpis.
+    //   `,
+    // },
     {
       name: 'Childrens Society',
       logo: 'childrens-society.png',
@@ -79,41 +89,41 @@ router.get('/', function(req, res, next) {
       name: 'Corporate Rewards',
       logo: 'corporate-rewards.png',
     },
-    {
-      name: 'TechPro',
-      logo: 'techpro.png',
-    },
-    {
-      name: 'FizzyNova',
-      logo: 'fizzynova.png',
-    },
-    {
-      name: 'Phil Day Sports',
-      logo: 'phil-day-sports.png',
-    },
+    // {
+    //   name: 'TechPro',
+    //   logo: 'techpro.png',
+    // },
+    // {
+    //   name: 'FizzyNova',
+    //   logo: 'fizzynova.png',
+    // },
+    // {
+    //   name: 'Phil Day Sports',
+    //   logo: 'phil-day-sports.png',
+    // },
     {
       name: 'Nuneaton & Bedworth Leisure Society',
       logo: 'nblt.png',
     },
-    {
-      name: 'Business Biscotti',
-      logo: 'business-biscotti.png',
-    },
-    {
-      name: 'BBC',
-      logo: 'bbc.png',
-    },
-    {
-      name: 'Phase4',
-    },
+    // {
+    //   name: 'Business Biscotti',
+    //   logo: 'business-biscotti.png',
+    // },
+    // {
+    //   name: 'BBC',
+    //   logo: 'bbc.png',
+    // },
+    // {
+    //   name: 'Phase4',
+    // },
     {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
     },
-    {
-      name: 'D&J Henry',
-      logo: 'dj-henry.png',
-    },
+    // {
+    //   name: 'D&J Henry',
+    //   logo: 'dj-henry.png',
+    // },
     {
       name: 'The Developer Society',
     },
@@ -125,18 +135,18 @@ router.get('/', function(req, res, next) {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
     },
-    {
-      name: 'Rubix Consulting',
-      logo: 'rubix-consulting.png',
-    },
+    // {
+    //   name: 'Rubix Consulting',
+    //   logo: 'rubix-consulting.png',
+    // },
     {
       name: 'Citizens Advice Bureau',
       logo: 'cab.png',
     },
-    {
-      name: 'CMA Video',
-      logo: 'cma-video.png',
-    }
+    // {
+    //   name: 'CMA Video',
+    //   logo: 'cma-video.png',
+    // }
 
   ]
 
