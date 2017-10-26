@@ -198,6 +198,16 @@ p, h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-rows: auto;
 
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+
+    @media screen and (min-width: 650px) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     .section-utility {
         grid-area: utility;
         align-self: end;
@@ -232,29 +242,27 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 0) {
     .layout-front {
-        grid-template-columns: 2rem auto 2rem;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
         grid-template-areas:
-            ". . ."
-            ". heading ."
-            ". highlight-1 ."
-            ". highlight-2 ."
-            ". content ."
-            ". footer .";
-        grid-column-gap: 0;
-        grid-row-gap: 3rem;
+            "heading"
+            "highlight-1"
+            "highlight-2"
+            "content"
+            "footer";
+        grid-column-gap: 15px;
+        grid-row-gap: 60px;
     }
 }
 
 @media screen and (min-width: 650px) {
     .layout-front {
-        grid-template-columns: auto 300px 300px auto;
+        grid-template-columns: auto 290px 290px auto;
         grid-template-areas:
-            ". . . ."
             ". heading heading ."
             ". highlight-1 highlight-2 ."
             ". content content ."
-            ". footer footer ."
-            ". . . .";
+            ". footer footer .";
         grid-column-gap: 20px;
         grid-row-gap: 60px;
     }
@@ -264,23 +272,31 @@ p, h1, h2, h3, h4, h5, h6 {
     .layout-front {
         grid-template-columns: auto 450px 450px auto;
         grid-template-areas:
-            ". . . ."
             ". heading utility ."
             ". highlight-1 highlight-2 ."
             ". content content ."
-            ". footer footer ."
-            ". . . .";
+            ". footer footer .";
         grid-column-gap: 20px;
         grid-row-gap: 60px;
     }
 }
 
 .section-heading {
+    text-align: center;
+
+    @media screen and (min-width: 350px) {
+        text-align: left;
+    }
+
     h1 {
         margin: 0 0 1rem 0;
         padding: 0;
+        font-size: 3rem;
         line-height: 1;
-        font-size: 4rem;
+
+        @media screen and (min-width: 400px) {
+            font-size: 4rem;
+        }
     }
 }
 
@@ -289,6 +305,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-footer {
+    margin-bottom: 30px;
+    @media screen and (min-width: 500px) {
+        margin-bottom: 0;
+    }
     font-size: 0.7rem;
     text-align: right;
 }
@@ -368,7 +388,7 @@ p, h1, h2, h3, h4, h5, h6 {
     @media screen and (min-width: 0) {
         grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-gap: 0.5rem;
+        grid-row-gap: 1.5rem;
     }
 
     @media screen and (min-width: 500px) {
@@ -390,9 +410,12 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .portfolio-item {
+        flex-direction: column;
         display: flex;
-        flex-direction: row;
         align-content: flex-start;
+        @media screen and (min-width: 500px) {
+            flex-direction: row;
+        }
 
         background-color: rgba(255, 255, 255, 0.1);
         color: #fff;
@@ -404,13 +427,25 @@ p, h1, h2, h3, h4, h5, h6 {
             flex-direction: row;
             align-items: center;
 
-            padding: 2rem;
+            padding: 1rem 0;
+
             background-color: rgba(255, 255, 255, 0.5);
+
+            @media screen and (min-width: 500px) {
+                padding: 2rem;
+            }
 
             img {
                 display: block;
-                max-width: 100%;
-                height: auto;
+                max-height: 100px;
+                max-width: 100px;
+                margin: 0 auto;
+
+                @media screen and (min-width: 500px) {
+                    max-width: 100%;
+                    max-height: none;
+                    height: auto;
+                }
             }
         }
 
@@ -442,17 +477,31 @@ p, h1, h2, h3, h4, h5, h6 {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: space-around;
 
         margin: 0;
         padding: 0;
 
         list-style: none;
 
+        @media screen and (min-width: 350px) {
+            justify-content: flex-start;
+        }
+
         li {
-            margin: 0 2rem 0 0;
+            margin: 0;
             padding: 0;
             list-style: none;
+            text-align: center;
+
+            @media screen and (min-width: 350px) {
+                margin: 0 2rem 0 0;
+            }
+
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             a {
                 text-decoration: none;
