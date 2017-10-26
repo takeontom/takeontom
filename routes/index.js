@@ -47,12 +47,15 @@ router.get('/', function(req, res, next) {
     {
       name: 'Lumos',
       logo: 'lumos.png',
-      desc: `Website for international donations for JK Rowling's children
-        charity, Lumos.`
+      desc: `Payment and SalesForce integrations for JK Rowling's children
+      charity, Lumos.`
     },
     {
-      name: 'Civicus',
+      name: 'Civicus Monitor',
       logo: 'civicus.png',
+      desc: `Website to track and increase awareness of civic freedom and
+        repression around the world. Makes you wish you live in Sweden.`,
+      urls: ['https://monitor.civicus.org/'],
     },
     // {
     //   name: 'Macmillan Cancer Support',
@@ -72,22 +75,39 @@ router.get('/', function(req, res, next) {
     {
       name: 'Childrens Society',
       logo: 'childrens-society.png',
+      desc: `Invited to provide training and advise to regional reps on network
+        marketing and share my knowledge on communicating to small businesses.`
     },
     {
       name: 'Skills Funding Agency',
       logo: 'sfa.jpg',
+      urls: ['https://findapprenticeshiptraining.sfa.bis.gov.uk/'],
+      desc: `Delivered an in-depth content audit and review on the SFA's
+      Apprenticeship service in preparation for it's public beta phase.`,
     },
     {
       name: 'Dateline',
       logo: 'dateline.png',
+      urls: ['http://dateline.co.uk/'],
+      desc: `Lead developer on the successful complete redevelopment of
+        Dateline, the UK's leading online dating service.`,
     },
     {
       name: 'mirada',
       logo: 'mirada.png',
+      urls: ['https://www.mirada.tv/'],
+      desc: `Senior web developer for this multinational PLC. Oversaw the
+        rebrand of Youmedia into mirada following its merge with Fresh IT.`
     },
     {
       name: 'Corporate Rewards',
       logo: 'corporate-rewards.png',
+      urls: ['https://www.corporaterewards.co.uk/'],
+      desc: `Oversaw the development of performance reward websites for big
+        names such as Microsoft, HP & Samsung.
+
+        Sourced a new development team and drastically modernised the
+        technology behind the company's service.`
     },
     // {
     //   name: 'TechPro',
@@ -101,10 +121,10 @@ router.get('/', function(req, res, next) {
     //   name: 'Phil Day Sports',
     //   logo: 'phil-day-sports.png',
     // },
-    {
-      name: 'Nuneaton & Bedworth Leisure Society',
-      logo: 'nblt.png',
-    },
+    // {
+    //   name: 'Nuneaton & Bedworth Leisure Society',
+    //   logo: 'nblt.png',
+    // },
     // {
     //   name: 'Business Biscotti',
     //   logo: 'business-biscotti.png',
@@ -119,6 +139,9 @@ router.get('/', function(req, res, next) {
     {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
+      desc: `As Product Manage I grew and managed 6 person development team to
+        build the ambitious Phase4 project which radically improves the
+        aftersales customer service industry.`
     },
     // {
     //   name: 'D&J Henry',
@@ -126,10 +149,14 @@ router.get('/', function(req, res, next) {
     // },
     {
       name: 'The Developer Society',
+      desc: `Worked with the lovely people at Dev to introduced Test Driven
+        Development, team focussed development processes, trained the project
+        management team on development flows and ate too many doughnuts. 🍩`
     },
     {
       name: 'HM Courts & Tribunals Service',
       logo: 'magistrates-court.jpg',
+      desc: ``
     },
     {
       name: 'Connect Cashless Parking',
@@ -147,6 +174,10 @@ router.get('/', function(req, res, next) {
     //   name: 'CMA Video',
     //   logo: 'cma-video.png',
     // }
+    {
+      name: 'FORCE',
+      logo: 'force.png',
+    }
 
   ]
 

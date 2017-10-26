@@ -284,7 +284,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:las
   align-items: center; }
   #loading-screen.off {
     opacity: 0;
-    transition: opacity 0.7s; }
+    transition: opacity 0.1s; }
     #loading-screen.off .dot {
       opacity: 0; }
   #loading-screen .dot {
