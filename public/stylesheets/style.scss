@@ -1,4 +1,5 @@
-@import 'fontello/fontello';
+// @import 'fontello/fontello';
+@import 'fontello/animation.css';
 // @import 'fontello/fontello-codes.css';
 
 @-ms-viewport{
@@ -523,5 +524,73 @@ p, h1, h2, h3, h4, h5, h6 {
                 margin-left: 1rem;
             }
         }
+    }
+}
+
+#loading-screen {
+    font-size: 5rem;
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+
+    pointer-events: none;
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: $c2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, $c1, $c2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, $c1, $c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    justify-content: center;
+    align-items: center;
+
+    &.off {
+        opacity: 0;
+        transition: opacity 0.7s;
+
+        .dot {
+            opacity: 0;
+        }
+    }
+
+    .dot {
+        font-family: serif;
+        opacity: 1;
+    }
+
+    &.on {
+        opacity: 1;
+
+        .dot {
+            font-family: serif;
+            animation: fade 1s infinite linear;
+            opacity: 0;
+        }
+        .dot-1 {
+            animation-delay: 0.3s;
+        }
+        .dot-2 {
+            animation-delay: 0.4s;
+        }
+        .dot-3 {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
     }
 }
