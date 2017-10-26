@@ -33,7 +33,8 @@ block content
       each item in portfolio
         article.portfolio-item(class=item.wide ? 'portfolio-item-wide' : '')
           .logo
-            img(src=`images/${item.logo}`)
+            if item.logo
+              img(src=`images/${item.logo}`)
           .info
             h2 #{item.name}
             if item.desc

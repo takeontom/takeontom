@@ -9,14 +9,19 @@ WebFont.load({
       'fontello': '\uE800\uE801\uE802\uF300',
     },
   },
-  loading: function() {
-    loadingScreen.classList = ['on'];
-  },
-  active: function() {
+  loading: () => loadingScreen.classList = ['on'],
+  active: () => {
     loadingScreen.classList = ['off'];
     setTimeout(removeLoadingScreen, 1000);
   },
-  timeout: 20000,
+  fontinactive: (fontFamily) =>
+    console.log(`${fontFamily} failed to load in time`),
+  inactive: () => {
+    console.log('Some fonts failed to load in time.');
+    loadingScreen.classList = ['off'];
+    setTimeout(removeLoadingScreen, 1000);
+  },
+  timeout: 3000,
 });
 
 function removeLoadingScreen() {
