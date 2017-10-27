@@ -74,7 +74,7 @@ const loadingScreen = document.getElementById('loading-screen');
 
 function startLoadingScreen() {
   loadingScreen.classList = ['on'];
-  setTimeout(removeLoadingScreen, 5000);
+  setTimeout(removeLoadingScreen, 3500);
 }
 
 function completeLoadingScreen() {
