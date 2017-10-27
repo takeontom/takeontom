@@ -594,3 +594,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
     }
 }
+
+.wf-fontello-n4-inactive, .wf-fontello-n4-loading {
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+        display: none;
+    }
+}

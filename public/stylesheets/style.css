@@ -311,4 +311,7 @@ p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:las
   100% {
     opacity: 0; } }
 
+.wf-fontello-n4-inactive [class^="icon-"]:before, .wf-fontello-n4-inactive [class*=" icon-"]:before, .wf-fontello-n4-loading [class^="icon-"]:before, .wf-fontello-n4-loading [class*=" icon-"]:before {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */

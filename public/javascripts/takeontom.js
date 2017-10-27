@@ -71,6 +71,21 @@ var WebFont = __webpack_require__(1);
 
 const loadingScreen = document.getElementById('loading-screen');
 
+
+function startLoadingScreen() {
+  loadingScreen.classList = ['on'];
+  setTimeout(removeLoadingScreen, 5000);
+}
+
+function completeLoadingScreen() {
+  loadingScreen.classList = ['off'];
+  setTimeout(removeLoadingScreen, 1000);
+}
+
+function removeLoadingScreen() {
+  loadingScreen.remove();
+}
+
 WebFont.load({
   custom: {
     families: ['fontello', 'Source Sans Pro', 'Open Sans'],
@@ -78,11 +93,8 @@ WebFont.load({
       'fontello': '\uE800\uE801\uE802\uF300',
     },
   },
-  loading: () => loadingScreen.classList = ['on'],
-  active: () => {
-    loadingScreen.classList = ['off'];
-    setTimeout(removeLoadingScreen, 1000);
-  },
+  loading: startLoadingScreen,
+  active: completeLoadingScreen,
   fontinactive: (fontFamily) =>
     console.log(`${fontFamily} failed to load in time`),
   inactive: () => {
@@ -90,12 +102,8 @@ WebFont.load({
     loadingScreen.classList = ['off'];
     setTimeout(removeLoadingScreen, 1000);
   },
-  timeout: 3000,
+  timeout: 30000,
 });
-
-function removeLoadingScreen() {
-  loadingScreen.remove();
-}
 
 
 /***/ }),
