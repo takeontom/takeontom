@@ -1,71 +1,101 @@
-var gulp = require('gulp');
-var changed = require("gulp-changed");
-var imageResize = require('gulp-image-resize');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var webpack = require('webpack-stream');
-var del = require('del');
-var gulpSequence = require('gulp-sequence')
+const gulp = require('gulp');
+const util = require('gulp-util');
+const changed = require('gulp-changed');
+const imageResize = require('gulp-image-resize');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const webpack = require('webpack-stream');
+const del = require('del');
+const gulpSequence = require('gulp-sequence');
+const eslint = require('gulp-eslint');
 
-gulp.task('watch', ['resize_portfolio_images:watch', 'sass:watch', 'js:watch', 'fonts:watch'], () => {
-  console.log('Watchers started');
-})
+gulp.task(
+  'watch', [
+    'resize_portfolio_images:watch', 'sass:watch', 'js:watch', 'fonts:watch',
+  ],
+  () => util.log('Watchers started'),
+);
 
-gulp.task('build', ['resize_portfolio_images', 'sass', 'js', 'fonts'], () => {
-  console.log('Build complete');
-})
+gulp.task(
+  'build',
+  ['resize_portfolio_images', 'sass', 'js', 'fonts'],
+  () => util.log('Build complete'),
+);
 
 gulp.task('build:full', gulpSequence('clean:public', 'build'));
 
-gulp.task('clean:public', () => {
-  return del(['./public_dist/**/*']);
-});
+gulp.task('clean:public', () => del(['./public_dist/**/*']));
 
-gulp.task('sass', () => {
-  return gulp.src('./public_src/stylesheets/takeontom.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(sourcemaps.write('./maps'))
-  .pipe(gulp.dest('./public_dist/css/'));
-});
+gulp.task(
+  'lint:js',
+  () => gulp.src(['**/*.js', '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError()),
+);
 
-gulp.task('sass:watch', ['sass'], () => {
-  gulp.watch('./public_src/stylesheets/**/*.*', ['sass']);
-});
+gulp.task(
+  'sass',
+  () => gulp.src('./public_src/stylesheets/takeontom.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./public_dist/css/')),
+);
 
-gulp.task('js', () => {
-  return gulp.src('./public_src/js/takeontom.js')
-  .pipe(webpack({output: {
-    filename: 'takeontom.js'
-  }}))
-  .pipe(gulp.dest('./public_dist/js/'));
-})
+gulp.task(
+  'sass:watch',
+  ['sass'],
+  () => gulp.watch('./public_src/stylesheets/**/*.*', ['sass']),
+);
 
-gulp.task('js:watch', ['js'], () => {
-  gulp.watch('./public_src/js/**/*.*', ['js']);
-});
+gulp.task(
+  'js',
+  () => gulp.src('./public_src/js/takeontom.js')
+    .pipe(webpack({
+      output: {
+        filename: 'takeontom.js',
+      },
+    }))
+    .pipe(gulp.dest('./public_dist/js/')),
+);
 
-gulp.task('fonts', () => {
-  return gulp.src('./public_src/font/*.*')
-  .pipe(gulp.dest('./public_dist/font/'));
-})
+gulp.task(
+  'js:watch',
+  ['js'],
+  () => gulp.watch('./public_src/js/**/*.*', ['js']),
+);
 
-gulp.task('fonts:watch', ['fonts'], () => {
-  gulp.watch('./public_src/font/**/*.*', ['fonts']);
-})
+gulp.task(
+  'fonts',
+  () => gulp.src('./public_src/font/*.*')
+    .pipe(gulp.dest('./public_dist/font/')),
+);
 
-gulp.task('resize_portfolio_images', () => {
-  return gulp.src('./public_src/images/portfolio/*.{jpg,png}')
+gulp.task(
+  'fonts:watch',
+  ['fonts'],
+  () => gulp.watch('./public_src/font/**/*.*', ['fonts']),
+);
+
+gulp.task(
+  'resize_portfolio_images',
+  () => gulp.src('./public_src/images/portfolio/*.{jpg,png}')
     .pipe(changed('./public_dist/images/portfolio/'))
     .pipe(imageResize({
-      width : 200,
-      height : 200,
-      crop : false,
-      upscale : false
+      width: 200,
+      height: 200,
+      crop: false,
+      upscale: false,
     }))
-    .pipe(gulp.dest('./public_dist/images/portfolio/'));
-});
+    .pipe(gulp.dest('./public_dist/images/portfolio/')),
+);
 
-gulp.task('resize_portfolio_images:watch', ['resize_portfolio_images'], () => {
-  gulp.watch('./public_src/images/portfolio/*.{jpg,png}', ['resize_portfolio_images']);
-});
+gulp.task(
+  'resize_portfolio_images:watch',
+  ['resize_portfolio_images'],
+  () => gulp.watch(
+    './public_src/images/portfolio/*.{jpg,png}',
+    ['resize_portfolio_images'],
+  ),
+);
