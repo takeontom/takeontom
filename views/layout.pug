@@ -5,6 +5,7 @@ html
     title= title
     link(href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro' rel='stylesheet')
     link(rel='stylesheet', href='/css/takeontom.css')
+    script(src='/js/takeontom.js')
 
   body
     #loading-screen
@@ -13,7 +14,6 @@ html
           span.dot.dot-1 .
           span.dot.dot-2 .
           span.dot.dot-3 .
-    script(src='/js/takeontom.js')
 
     .background
 
@@ -51,3 +51,6 @@ html
       footer.section-footer
         block footer
           p &copy; 2017 Tom Smith
+
+    script.
+      TakeOnTom.loadingScreen();

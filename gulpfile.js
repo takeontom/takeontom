@@ -57,6 +57,8 @@ gulp.task(
     .pipe(webpack({
       devtool: 'source-map',
       output: {
+        library: 'TakeOnTom',
+        libraryTarget: 'var',
         filename: 'takeontom.js',
       },
     }))
