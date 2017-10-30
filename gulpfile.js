@@ -18,7 +18,7 @@ gulp.task('build', ['resize_portfolio_images', 'sass', 'js', 'fonts'], () => {
 gulp.task('build:full', gulpSequence('clean:public', 'build'));
 
 gulp.task('clean:public', () => {
-  return del(['./public/**/*']);
+  return del(['./public_dist/**/*']);
 });
 
 gulp.task('sass', () => {
@@ -26,7 +26,7 @@ gulp.task('sass', () => {
   .pipe(sourcemaps.init())
   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(sourcemaps.write('./maps'))
-  .pipe(gulp.dest('./public/css/'));
+  .pipe(gulp.dest('./public_dist/css/'));
 });
 
 gulp.task('sass:watch', ['sass'], () => {
@@ -38,7 +38,7 @@ gulp.task('js', () => {
   .pipe(webpack({output: {
     filename: 'takeontom.js'
   }}))
-  .pipe(gulp.dest('./public/js/'));
+  .pipe(gulp.dest('./public_dist/js/'));
 })
 
 gulp.task('js:watch', ['js'], () => {
@@ -47,7 +47,7 @@ gulp.task('js:watch', ['js'], () => {
 
 gulp.task('fonts', () => {
   return gulp.src('./public_src/font/*.*')
-  .pipe(gulp.dest('./public/font/'));
+  .pipe(gulp.dest('./public_dist/font/'));
 })
 
 gulp.task('fonts:watch', ['fonts'], () => {
@@ -56,14 +56,14 @@ gulp.task('fonts:watch', ['fonts'], () => {
 
 gulp.task('resize_portfolio_images', () => {
   return gulp.src('./public_src/images/portfolio/*.{jpg,png}')
-    .pipe(changed('./public/images/portfolio/'))
+    .pipe(changed('./public_dist/images/portfolio/'))
     .pipe(imageResize({
       width : 200,
       height : 200,
       crop : false,
       upscale : false
     }))
-    .pipe(gulp.dest('./public/images/portfolio/'));
+    .pipe(gulp.dest('./public_dist/images/portfolio/'));
 });
 
 gulp.task('resize_portfolio_images:watch', ['resize_portfolio_images'], () => {

@@ -27,7 +27,7 @@ app.use(cookieParser());
 //   indentedSyntax: false, // true = .sass and false = .scss
 //   sourceMap: true
 // }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public_dist')));
 
 app.use('/', index);
 app.use('/users', users);
