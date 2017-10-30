@@ -37,6 +37,7 @@ gulp.task(
 gulp.task(
   'sass',
   () => gulp.src('./public_src/stylesheets/takeontom.scss')
+    .pipe(changed('./public_dist/css/'))
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
@@ -52,6 +53,7 @@ gulp.task(
 gulp.task(
   'js',
   () => gulp.src('./public_src/js/takeontom.js')
+    .pipe(changed('./public_dist/js/'))
     .pipe(webpack({
       output: {
         filename: 'takeontom.js',
@@ -69,6 +71,7 @@ gulp.task(
 gulp.task(
   'fonts',
   () => gulp.src('./public_src/font/*.*')
+    .pipe(changed('./public_dist/font/'))
     .pipe(gulp.dest('./public_dist/font/')),
 );
 
