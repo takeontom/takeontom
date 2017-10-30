@@ -8,7 +8,6 @@ const webpackStream = require('webpack-stream');
 const del = require('del');
 const gulpSequence = require('gulp-sequence');
 const eslint = require('gulp-eslint');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 gulp.task(
   'watch', [
@@ -33,6 +32,11 @@ gulp.task(
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError()),
+);
+
+gulp.task(
+  'lint:js:watch',
+  () => gulp.watch('./**/*.js', ['lint:js']),
 );
 
 gulp.task(

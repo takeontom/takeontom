@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+
+const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  full_portfolio = [
+router.get('/', (req, res) => {
+  const fullPortfolio = [
     {
       name: 'ITV',
       logo: 'itv.png',
@@ -41,21 +42,21 @@ router.get('/', function(req, res, next) {
         ground breaking "Max-It for a Million" marketing campaign.
 
         It provided the crucial data on product purchases, engagement levels
-        and buying behaviour.`
+        and buying behaviour.`,
     },
     {
       name: 'Brother',
       logo: 'brother.png',
       display: true,
       desc: `As Product Manager, designed, coordinated and oversaw development
-        of Brother UK's staff training and development portal.`
+        of Brother UK's staff training and development portal.`,
     },
     {
       name: 'Lumos',
       logo: 'lumos.png',
       display: true,
       desc: `Payment and SalesForce integrations for JK Rowling's children
-      charity, Lumos.`
+      charity, Lumos.`,
     },
     {
       name: 'Civicus Monitor',
@@ -78,7 +79,7 @@ router.get('/', function(req, res, next) {
       logo: 'childrens-society.png',
       display: true,
       desc: `Invited to provide training and advise to regional reps on network
-        marketing and share my knowledge on communicating to small businesses.`
+        marketing and share my knowledge on communicating to small businesses.`,
     },
     {
       name: 'Skills Funding Agency',
@@ -105,7 +106,7 @@ router.get('/', function(req, res, next) {
       display: true,
       urls: ['https://www.mirada.tv/'],
       desc: `Senior web developer for this multinational PLC. Oversaw the
-        rebrand of Youmedia into mirada following its merge with Fresh IT.`
+        rebrand of Youmedia into mirada following its merge with Fresh IT.`,
     },
     {
       name: 'Corporate Rewards',
@@ -116,7 +117,7 @@ router.get('/', function(req, res, next) {
         names such as Microsoft, HP & Samsung.
 
         Sourced a new development team and drastically modernised the
-        technology behind the company's service.`
+        technology behind the company's service.`,
     },
     {
       name: 'TechPro',
@@ -187,7 +188,6 @@ router.get('/', function(req, res, next) {
       name: 'Citizens Advice Bureau',
       logo: 'cab.png',
       display: true,
-      desc: ``,
     },
     {
       name: 'CMA Video',
@@ -200,9 +200,9 @@ router.get('/', function(req, res, next) {
       desc: `Digital media advisor to this well known construction trade forum,
         advising on social media and digital strategy.`,
     },
-  ]
+  ];
 
-  const portfolio = full_portfolio.filter(item =>
+  const portfolio = fullPortfolio.filter(item =>
     item.desc && item.logo && item.display);
 
 
