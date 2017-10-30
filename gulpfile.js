@@ -8,10 +8,12 @@ const webpackStream = require('webpack-stream');
 const del = require('del');
 const gulpSequence = require('gulp-sequence');
 const eslint = require('gulp-eslint');
+const shell = require('gulp-shell');
 
 gulp.task(
   'watch', [
     'resize_portfolio_images:watch', 'sass:watch', 'js:watch', 'fonts:watch',
+    'lint:js:watch',
   ],
   () => util.log('Watchers started'),
 );
@@ -27,6 +29,11 @@ gulp.task('build:full', gulpSequence('clean:public', 'build'));
 gulp.task('clean:public', () => del(['./public_dist/**/*']));
 
 gulp.task(
+  'lint',
+  ['lint:js', 'lint:pug'],
+);
+
+gulp.task(
   'lint:js',
   () => gulp.src(['**/*.js', '!node_modules/**'])
     .pipe(eslint())
@@ -37,6 +44,19 @@ gulp.task(
 gulp.task(
   'lint:js:watch',
   () => gulp.watch('./**/*.js', ['lint:js']),
+);
+
+gulp.task(
+  'lint:pug',
+  () => gulp.src('views/*.pug')
+    .pipe(shell([
+      'npx pug-lint <%= file.path %>',
+    ])),
+);
+
+gulp.task(
+  'lint:pug:watch',
+  () => gulp.watch('views/**/*.pug', ['lint:pug']),
 );
 
 gulp.task(

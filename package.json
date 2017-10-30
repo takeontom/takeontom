@@ -26,9 +26,11 @@
     "gulp-image-resize": "^0.13.0",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
+    "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-util": "^3.0.8",
     "nodemon": "^1.12.1",
+    "pug-lint": "^2.5.0",
     "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0"
   }
