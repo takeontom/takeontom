@@ -19,10 +19,12 @@
     "winston": "^2.4.0"
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-changed": "^3.1.1",
     "gulp-image-resize": "^0.13.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^2.6.1",
     "nodemon": "^1.12.1",
     "webpack-stream": "^4.0.0"
