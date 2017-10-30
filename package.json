@@ -11,11 +11,9 @@
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "morgan": "~1.9.0",
-    "node-sass-middleware": "0.9.8",
     "pug": "2.0.0-beta11",
     "serve-favicon": "~2.4.5",
     "webfontloader": "^1.6.28",
-    "webpack": "^3.8.1",
     "winston": "^2.4.0"
   },
   "devDependencies": {
@@ -32,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-util": "^3.0.8",
     "nodemon": "^1.12.1",
+    "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0"
   }
 }

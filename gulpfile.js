@@ -4,10 +4,11 @@ const changed = require('gulp-changed');
 const imageResize = require('gulp-image-resize');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const webpack = require('webpack-stream');
+const webpackStream = require('webpack-stream');
 const del = require('del');
 const gulpSequence = require('gulp-sequence');
 const eslint = require('gulp-eslint');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 gulp.task(
   'watch', [
@@ -53,8 +54,8 @@ gulp.task(
 gulp.task(
   'js',
   () => gulp.src('./public_src/js/takeontom.js')
-    .pipe(changed('./public_dist/js/'))
-    .pipe(webpack({
+    // .pipe(changed('./public_dist/js/'))
+    .pipe(webpackStream({
       devtool: 'source-map',
       output: {
         library: 'TakeOnTom',
