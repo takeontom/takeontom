@@ -55,6 +55,7 @@ gulp.task(
   () => gulp.src('./public_src/js/takeontom.js')
     .pipe(changed('./public_dist/js/'))
     .pipe(webpack({
+      devtool: 'source-map',
       output: {
         filename: 'takeontom.js',
       },
