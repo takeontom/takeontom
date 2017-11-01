@@ -122,7 +122,7 @@ $c2: #ff0084;
 $c1: #ee0979;
 $c2: #ff6a00;
 
-.background {
+#background {
     position: fixed;
     top: 0;
     right: 0;
@@ -160,7 +160,6 @@ $c2: #ff6a00;
     // background: #000000;  /* fallback for old browsers */
     // background: -webkit-linear-gradient(to right, #FF070B, #E5008D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     // background: linear-gradient(315deg, #FF070B, #E5008D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 a, a:visited {
