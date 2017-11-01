@@ -193,7 +193,27 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.4rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
 .layout-front {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading"
+        "highlights"
+        "content"
+        "footer";
+    grid-column-gap: 15px;
+    grid-row-gap: 60px;
+
     position: static;
     display: grid;
     grid-template-rows: auto;
@@ -223,12 +243,8 @@ p, h1, h2, h3, h4, h5, h6 {
         align-self: auto;
     }
 
-    .section-highlight-1 {
-        grid-area: highlight-1;
-    }
-
-    .section-highlight-2 {
-        grid-area: highlight-2;
+    .section-highlights {
+        grid-area: highlights;
     }
 
     .section-content {
@@ -240,27 +256,12 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media screen and (min-width: 0) {
-    .layout-front {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "heading"
-            "highlight-1"
-            "highlight-2"
-            "content"
-            "footer";
-        grid-column-gap: 15px;
-        grid-row-gap: 60px;
-    }
-}
-
 @media screen and (min-width: 650px) {
     .layout-front {
         grid-template-columns: auto 290px 290px auto;
         grid-template-areas:
             ". heading heading ."
-            ". highlight-1 highlight-2 ."
+            ". highlights highlights ."
             ". content content ."
             ". footer footer .";
         grid-column-gap: 20px;
@@ -273,7 +274,7 @@ p, h1, h2, h3, h4, h5, h6 {
         grid-template-columns: auto 450px 450px auto;
         grid-template-areas:
             ". heading utility ."
-            ". highlight-1 highlight-2 ."
+            ". highlights highlights ."
             ". content content ."
             ". footer footer .";
         grid-column-gap: 20px;
@@ -300,6 +301,24 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.section-highlights {
+    h3 {
+        flex: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight-bit {
+        flex: 1;
+    }
+
+
+    @media screen and (min-width: 650px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 .section-highlight-2 {
     font-size: 0.8rem;
 }
@@ -322,7 +341,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .highlight {
     font-size: 1rem;
 
-
     .intro {
 
         p {
@@ -331,35 +349,32 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    .skills {
-        margin: 0 0 0 1rem;
-        padding: 0;
-
-        list-style: none;
-
-        font-size: 0.8rem;
-
-        li {
-            list-style: none;
-            margin-top: 0.5rem;
-            margin-right: 0;
-            margin-bottom: 1rem;
-            margin-left: 0;
-
-            padding-top: 0;
-            padding-right: 0;
-            padding-bottom: 0;
-            padding-left: 0.5rem;
-
-            border-left: solid 0.25rem #ffb27e;
-        }
-    }
-
     p {
         margin-top: 0;
         padding-top: 0;
     }
+}
 
+.skills {
+    margin: 0 0 0 1rem;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+        list-style: none;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0.5rem;
+
+        border-left: solid 0.25rem #ffb27e;
+    }
 }
 
 .section-content {
@@ -463,8 +478,8 @@ p, h1, h2, h3, h4, h5, h6 {
             }
 
             p {
-                margin: 0 0 0.5rem 0;
-                padding: 0;
+                // margin: 0 0 0.5rem 0;
+                // padding: 0;
             }
         }
     }

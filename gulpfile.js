@@ -35,7 +35,7 @@ gulp.task(
 
 gulp.task(
   'lint:js',
-  () => gulp.src(['**/*.js', '!node_modules/**'])
+  () => gulp.src(['**/*.js', '!node_modules/**', '!public_dist/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError()),
