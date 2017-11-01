@@ -9,29 +9,28 @@ router.get('/', (req, res) => {
       name: 'ITV',
       logo: 'itv.png',
       display: true,
-      desc: `Web integrations for Melinda Messenger's Bingo Night Live
-        programme.`,
+      desc: 'Web integrations for flagship live TV show.',
     },
     {
       name: 'Oxfam',
       logo: 'oxfam.png',
       display: true,
-      desc: `Developed Oxfam's "Act" platform, their international hub for
-        raising awareness and promoting action.`,
+      desc: `Developed Oxfam's international hub for
+        raising awareness and promoting action, the "Act" platform.`,
     },
     {
-      name: 'Compassion Experience',
+      name: 'The Compassion Experience UK',
       logo: 'compassion-experience.png',
       display: true,
-      desc: `Lead developer creating the online presence and online booking
-        portal for this powerful educational experience.`,
+      desc: `As Lead Developer, created the online presence and booking portal
+        for this powerful educational experience.`,
     },
     {
-      name: 'Church of England',
+      name: 'The Church of England',
       logo: 'cofe.png',
       display: true,
-      desc: `Created mobile first website e-learning site to help encourage
-        better safe guarding practices within the Church of England.`,
+      desc: `Created the official mobile first e-learning site to help
+        encourage better safeguarding practices within the Church of England.`,
     },
 
     {
@@ -55,15 +54,15 @@ router.get('/', (req, res) => {
       name: 'Lumos',
       logo: 'lumos.png',
       display: true,
-      desc: `Payment and SalesForce integrations for JK Rowling's children
-      charity, Lumos.`,
+      desc: `Implemented payment and SalesForce integrations for JK Rowling's
+        children charity, Lumos.`,
     },
     {
       name: 'Civicus Monitor',
       logo: 'civicus.png',
       display: true,
-      desc: `Website to track and increase awareness of civic freedom and
-        repression around the world. Makes you wish you live in Sweden.`,
+      desc: `Developed high profile website to track and increase awareness of
+        civic freedom and repression around the world.`,
       urls: ['https://monitor.civicus.org/'],
     },
     {
@@ -75,29 +74,27 @@ router.get('/', (req, res) => {
       logo: 'land-rights-now.png',
     },
     {
-      name: 'Childrens Society',
+      name: "The Children's Society",
       logo: 'childrens-society.png',
       display: true,
-      desc: `Invited to provide training and advise to regional reps on network
-        marketing and share my knowledge on communicating to small businesses.`,
+      desc: `Invited to provide training to regional reps on network marketing
+        and ways of communicating effectively with small businesses.`,
     },
     {
       name: 'Skills Funding Agency',
       logo: 'sfa.jpg',
       display: true,
       urls: ['https://findapprenticeshiptraining.sfa.bis.gov.uk/'],
-      desc: `Delivered an in-depth content audit and review on the SFA's
-        Apprenticeship service in preparation for it's public beta phase.
-
-        The service is a GDS Exemplar Service core to the government's
-        commitment to get an extra 3 million apprentices employed by 2020.`,
+      desc: `Delivered an in-depth content audit and review of the
+        Apprenticeship Service, a GDS Exemplar, in preparation for public
+        beta.`,
     },
     {
       name: 'Dateline',
       logo: 'dateline.png',
       display: true,
       urls: ['http://dateline.co.uk/'],
-      desc: `Lead developer on the successful complete redevelopment of
+      desc: `The Lead Developer for the successful complete redevelopment of
         Dateline, the UK's leading online dating service.`,
     },
     {
