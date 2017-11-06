@@ -110,6 +110,13 @@ gulp.task(
 );
 
 gulp.task(
+  'favicons',
+  () => gulp.src('./public_src/images/favicon/*.*')
+    .pipe(changed('./public_dist/images/favicon/'))
+    .pipe(gulp.dest('./public_dist/images/favicon/')),
+);
+
+gulp.task(
   'resize_portfolio_images',
   () => gulp.src('./public_src/images/portfolio/*.{jpg,png}')
     .pipe(changed('./public_dist/images/portfolio/'))

@@ -62,19 +62,19 @@ router.get('/', (req, res) => {
         technology behind the company's services.`,
     },
     {
-      name: 'Lumos',
-      logo: 'lumos.png',
-      display: true,
-      desc: `Implemented payment and SalesForce integrations for JK Rowling's
-        children charity, Lumos.`,
-    },
-    {
       name: 'Civicus Monitor',
       logo: 'civicus.png',
       display: true,
       desc: `Developed high profile website to track and increase awareness of
         civic freedom and repression around the world.`,
       urls: ['https://monitor.civicus.org/'],
+    },
+    {
+      name: 'Lumos',
+      logo: 'lumos.png',
+      display: true,
+      desc: `Implemented payment and SalesForce integrations for JK Rowling's
+        children charity, Lumos.`,
     },
     {
       name: 'ITV',
