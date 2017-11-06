@@ -158,7 +158,7 @@ router.get('/', (req, res) => {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
       display: true,
-      desc: `As Product Manage, I recruited and managed a 6 person development
+      desc: `As Product Manager, I recruited and managed a 6 person development
         team building the ambitious Phase4 project which radically improves the
         aftersales customer service industry.`,
     },
