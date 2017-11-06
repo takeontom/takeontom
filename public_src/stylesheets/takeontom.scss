@@ -36,7 +36,7 @@ $c2: #ff6a00;
     background: -webkit-linear-gradient(180deg, $c1, $c2);
     background: linear-gradient(180deg, $c1, $c2);
 
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 500px) {
         background: -webkit-linear-gradient(135deg, $c1, $c2);
         background: linear-gradient(135deg, $c1, $c2);
     }
