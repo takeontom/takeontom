@@ -9,14 +9,15 @@ router.get('/', (req, res) => {
       name: 'ITV',
       logo: 'itv.png',
       display: true,
-      desc: 'Web integrations for flagship live TV show.',
+      desc: `Created internal admin system and public facing Web integrations
+        for flagship live TV show.`,
     },
     {
       name: 'Oxfam',
       logo: 'oxfam.png',
       display: true,
-      desc: `Developed Oxfam's international hub for
-        raising awareness and promoting action, the "Act" platform.`,
+      desc: `Developed "Act" - Oxfam's international hub for raising awareness
+        and promoting action for problems around the world.`,
     },
     {
       name: 'The Compassion Experience UK',
@@ -32,16 +33,13 @@ router.get('/', (req, res) => {
       desc: `Created the official mobile first e-learning site to help
         encourage better safeguarding practices within the Church of England.`,
     },
-
     {
       name: 'Pepsi',
       logo: 'pepsi.png',
       display: true,
-      desc: `Created advanced and highly regarded reporting tool for Pepsi's
-        ground breaking "Max-It for a Million" marketing campaign.
-
-        It provided the crucial data on product purchases, engagement levels
-        and buying behaviour.`,
+      desc: `Lead Developer on an advanced and highly regarded reporting tool
+        for Pepsi's ground breaking "Max-It for a Million" marketing
+        campaign.`,
     },
     {
       name: 'Brother',
@@ -86,32 +84,34 @@ router.get('/', (req, res) => {
       display: true,
       urls: ['https://findapprenticeshiptraining.sfa.bis.gov.uk/'],
       desc: `Delivered an in-depth content audit and review of the
-        Apprenticeship Service, a GDS Exemplar, in preparation for public
-        beta.`,
+        Apprenticeship Service (a GDS Exemplar service), in preparation for
+        public beta.`,
     },
     {
       name: 'Dateline',
       logo: 'dateline.png',
       display: true,
       urls: ['http://dateline.co.uk/'],
-      desc: `The Lead Developer for the successful complete redevelopment of
+      desc: `Lead Developer for the successful and complete redevelopment of
         Dateline, the UK's leading online dating service.`,
     },
     {
-      name: 'mirada',
+      name: 'mirada PLC',
       logo: 'mirada.png',
       display: true,
       urls: ['https://www.mirada.tv/'],
-      desc: `Senior web developer for this multinational PLC. Oversaw the
-        rebrand of Youmedia into mirada following its merge with Fresh IT.`,
+      desc: `Senior web developer for this multinational PLC, overseeing the
+        rebrand of Yoomedia PLC into mirada PLC following its merge with Fresh
+        IT.`,
     },
     {
       name: 'Corporate Rewards',
       logo: 'corporate-rewards.png',
       display: true,
       urls: ['https://www.corporaterewards.co.uk/'],
-      desc: `Oversaw the development of performance reward websites for big
-        names such as Microsoft, HP & Samsung.
+      desc: `As Product Manager, oversaw and coordinated the development of
+        performance reward websites for major names such as Microsoft, HP &
+        Samsung.
 
         Sourced a new development team and drastically modernised the
         technology behind the company's service.`,
@@ -123,6 +123,9 @@ router.get('/', (req, res) => {
     {
       name: 'FizzyNova',
       logo: 'fizzynova.png',
+      display: true,
+      desc: `Technical Director and Co-Founder of this well known West Midlands
+        based digital agency.`,
     },
     {
       name: 'Phil Day Sports',
@@ -147,8 +150,8 @@ router.get('/', (req, res) => {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
       display: true,
-      desc: `As Product Manage I grew and managed 6 person development team to
-        build the ambitious Phase4 project which radically improves the
+      desc: `As Product Manage, I grew and managed a 6 person development team
+        building the ambitious Phase4 project which radically improves the
         aftersales customer service industry.`,
     },
     {
@@ -159,23 +162,24 @@ router.get('/', (req, res) => {
       name: 'The Developer Society',
       logo: 'dev2.png',
       display: true,
-      desc: `Worked with the lovely people at Dev to introduced Test Driven
-        Development, team focussed development processes, trained the project
-        management team on development flows and ate too many doughnuts. 🍩`,
+      desc: `Consultant to the lovely people at Dev to introduce Test Driven
+        Development and team focussed development processes. Trained the
+        project management team on development flows and ate too many
+        doughnuts. 🍩`,
     },
     {
       name: 'HM Courts & Tribunals Service',
       logo: 'magistrates-court.jpg',
       display: true,
-      desc: `Designed, developed & managed core database for the court's
-        liquor licensing modernisation process.`,
+      desc: `As Lead Developer, designed, developed & managed core database
+        for the court's liquor licensing modernisation process.`,
     },
     {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
       display: true,
-      desc: `Customer facing website and comprehensive management reporting
-        framework`,
+      desc: `Developed the customer facing website and comprehensive reporting
+        system for this SMS based car parking solution.`,
     },
     {
       name: 'Rubix Consulting',
@@ -185,6 +189,8 @@ router.get('/', (req, res) => {
       name: 'Citizens Advice Bureau',
       logo: 'cab.png',
       display: true,
+      desc: `Consultant on the complete redevelopment of the Stratford Upon
+        Avon Citizen Advice Bureau's website.`,
     },
     {
       name: 'CMA Video',
@@ -194,8 +200,8 @@ router.get('/', (req, res) => {
       name: 'FORCE',
       logo: 'force.png',
       display: true,
-      desc: `Digital media advisor to this well known construction trade forum,
-        advising on social media and digital strategy.`,
+      desc: `Digital media advisor to this influential West Midlands based
+        trade group, providing workshops and mentoring on digital strategy.`,
     },
   ];
 
