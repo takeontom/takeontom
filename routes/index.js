@@ -6,13 +6,6 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const fullPortfolio = [
     {
-      name: 'ITV',
-      logo: 'itv.png',
-      display: true,
-      desc: `Created internal admin system and public facing Web integrations
-        for flagship live TV show.`,
-    },
-    {
       name: 'Oxfam',
       logo: 'oxfam.png',
       display: true,
@@ -20,18 +13,12 @@ router.get('/', (req, res) => {
         and promoting action for problems around the world.`,
     },
     {
-      name: 'The Compassion Experience UK',
-      logo: 'compassion-experience.png',
+      name: 'The Developer Society',
+      logo: 'dev2.png',
       display: true,
-      desc: `As Lead Developer, created the online presence and booking portal
-        for this powerful educational experience.`,
-    },
-    {
-      name: 'The Church of England',
-      logo: 'cofe.png',
-      display: true,
-      desc: `Created the official mobile first e-learning site to help
-        encourage better safeguarding practices within the Church of England.`,
+      desc: `Consultant to the lovely people at Dev to introduce Test Driven
+        Development and team focussed development processes... and ate too many
+        doughnuts. 🍩`,
     },
     {
       name: 'Pepsi',
@@ -49,6 +36,32 @@ router.get('/', (req, res) => {
         of Brother UK's staff training and development portal.`,
     },
     {
+      name: 'The Compassion Experience UK',
+      logo: 'compassion-experience.png',
+      display: true,
+      desc: `As Lead Developer, created the online presence and booking portal
+        for this powerful educational experience.`,
+    },
+    {
+      name: 'The Church of England',
+      logo: 'cofe.png',
+      display: true,
+      desc: `Created the official mobile first e-learning site to help
+        encourage better safeguarding practices within the Church of England.`,
+    },
+    {
+      name: 'Corporate Rewards',
+      logo: 'corporate-rewards.png',
+      display: true,
+      urls: ['https://www.corporaterewards.co.uk/'],
+      desc: `As Product Manager, oversaw and coordinated the development of
+        performance reward websites for major names such as Microsoft, HP &
+        Samsung.
+
+        Sourced a new development team and drastically modernised the
+        technology behind the company's services.`,
+    },
+    {
       name: 'Lumos',
       logo: 'lumos.png',
       display: true,
@@ -62,6 +75,13 @@ router.get('/', (req, res) => {
       desc: `Developed high profile website to track and increase awareness of
         civic freedom and repression around the world.`,
       urls: ['https://monitor.civicus.org/'],
+    },
+    {
+      name: 'ITV',
+      logo: 'itv.png',
+      display: true,
+      desc: `Created internal admin system and public facing Web integrations
+        for flagship live TV show.`,
     },
     {
       name: 'Macmillan Cancer Support',
@@ -81,7 +101,7 @@ router.get('/', (req, res) => {
     {
       name: 'Skills Funding Agency',
       logo: 'sfa.jpg',
-      display: true,
+      display: false,
       urls: ['https://findapprenticeshiptraining.sfa.bis.gov.uk/'],
       desc: `Delivered an in-depth content audit and review of the
         Apprenticeship Service (a GDS Exemplar service), in preparation for
@@ -98,23 +118,11 @@ router.get('/', (req, res) => {
     {
       name: 'mirada PLC',
       logo: 'mirada.png',
-      display: true,
+      display: false,
       urls: ['https://www.mirada.tv/'],
       desc: `Senior web developer for this multinational PLC, overseeing the
         rebrand of Yoomedia PLC into mirada PLC following its merge with Fresh
         IT.`,
-    },
-    {
-      name: 'Corporate Rewards',
-      logo: 'corporate-rewards.png',
-      display: true,
-      urls: ['https://www.corporaterewards.co.uk/'],
-      desc: `As Product Manager, oversaw and coordinated the development of
-        performance reward websites for major names such as Microsoft, HP &
-        Samsung.
-
-        Sourced a new development team and drastically modernised the
-        technology behind the company's service.`,
     },
     {
       name: 'TechPro',
@@ -123,7 +131,7 @@ router.get('/', (req, res) => {
     {
       name: 'FizzyNova',
       logo: 'fizzynova.png',
-      display: true,
+      display: false,
       desc: `Technical Director and Co-Founder of this well known West Midlands
         based digital agency.`,
     },
@@ -150,22 +158,13 @@ router.get('/', (req, res) => {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
       display: true,
-      desc: `As Product Manage, I grew and managed a 6 person development team
-        building the ambitious Phase4 project which radically improves the
+      desc: `As Product Manage, I recruited and managed a 6 person development
+        team building the ambitious Phase4 project which radically improves the
         aftersales customer service industry.`,
     },
     {
       name: 'D&J Henry',
       logo: 'dj-henry.png',
-    },
-    {
-      name: 'The Developer Society',
-      logo: 'dev2.png',
-      display: true,
-      desc: `Consultant to the lovely people at Dev to introduce Test Driven
-        Development and team focussed development processes. Trained the
-        project management team on development flows and ate too many
-        doughnuts. 🍩`,
     },
     {
       name: 'HM Courts & Tribunals Service',
@@ -179,7 +178,7 @@ router.get('/', (req, res) => {
       logo: 'connect-cashless-parking.png',
       display: true,
       desc: `Developed the customer facing website and comprehensive reporting
-        system for this SMS based car parking solution.`,
+        system for this natinoal SMS based car parking solution.`,
     },
     {
       name: 'Rubix Consulting',
@@ -188,7 +187,7 @@ router.get('/', (req, res) => {
     {
       name: 'Citizens Advice Bureau',
       logo: 'cab.png',
-      display: true,
+      display: false,
       desc: `Consultant on the complete redevelopment of the Stratford Upon
         Avon Citizen Advice Bureau's website.`,
     },
@@ -199,7 +198,7 @@ router.get('/', (req, res) => {
     {
       name: 'FORCE',
       logo: 'force.png',
-      display: true,
+      display: false,
       desc: `Digital media advisor to this influential West Midlands based
         trade group, providing workshops and mentoring on digital strategy.`,
     },
