@@ -32,9 +32,14 @@ $c2: #ff6a00;
 
     z-index: -800;
 
-    background: $c2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(135deg, $c1, $c2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(135deg, $c1, $c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: $c2;
+    background: -webkit-linear-gradient(180deg, $c1, $c2);
+    background: linear-gradient(180deg, $c1, $c2);
+
+    @media screen and (min-width: 650px) {
+        background: -webkit-linear-gradient(135deg, $c1, $c2);
+        background: linear-gradient(135deg, $c1, $c2);
+    }
 }
 
 a, a:visited {
