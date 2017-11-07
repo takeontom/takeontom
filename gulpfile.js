@@ -5,10 +5,12 @@ const imageResize = require('gulp-image-resize');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const webpackStream = require('webpack-stream');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const del = require('del');
 const gulpSequence = require('gulp-sequence');
 const eslint = require('gulp-eslint');
 const shell = require('gulp-shell');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task(
   'watch', [
@@ -20,7 +22,7 @@ gulp.task(
 
 gulp.task(
   'build',
-  ['resize_portfolio_images', 'sass', 'js', 'fonts'],
+  ['resize_portfolio_images', 'sass', 'js', 'fonts', 'images'],
   () => util.log('Build complete'),
 );
 
@@ -65,6 +67,10 @@ gulp.task(
     .pipe(changed('./public_dist/css/'))
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false,
+    }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./public_dist/css/')),
 );
@@ -86,6 +92,9 @@ gulp.task(
         libraryTarget: 'var',
         filename: 'takeontom.js',
       },
+      plugins: [
+        new UglifyJSPlugin({ sourceMap: true }),
+      ],
     }))
     .pipe(gulp.dest('./public_dist/js/')),
 );
@@ -110,10 +119,10 @@ gulp.task(
 );
 
 gulp.task(
-  'favicons',
-  () => gulp.src('./public_src/images/favicon/*.*')
-    .pipe(changed('./public_dist/images/favicon/'))
-    .pipe(gulp.dest('./public_dist/images/favicon/')),
+  'images',
+  () => gulp.src(['./public_src/images/**/*.*', '!./public_src/images/portfolio/**'])
+    .pipe(changed('./public_dist/images/'))
+    .pipe(gulp.dest('./public_dist/images/')),
 );
 
 gulp.task(

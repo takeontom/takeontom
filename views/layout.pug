@@ -1,8 +1,19 @@
 doctype html
-html
+html(lang="en", dir="ltr")
   head
-    meta(name="viewport", content="width=device-width")
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
     title Tom Smith - Web Developer
+    meta(name="description",
+      content="Experienced full stack web developer, based in the UK.")
+
+    link(
+      href="https://fonts.googleapis.com/css?family=Open+Sans%7CSource+Sans+Pro",
+      rel="stylesheet")
+    link(rel="stylesheet", href="/css/takeontom.css")
+
     link(rel="apple-touch-icon", sizes="180x180",
       href="/images/favicon/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32",
@@ -18,10 +29,7 @@ html
     meta(name="msapplication-config",
       content="/images/favicon/browserconfig.xml")
     meta(name="theme-color", content="#ee0979")
-    link(
-      href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro",
-      rel="stylesheet")
-    link(rel="stylesheet", href="/css/takeontom.css")
+
     script(src="/js/takeontom.js")
 
   body
@@ -36,7 +44,7 @@ html
 
     section.layout-front
 
-      header.section-heading
+      header.section-heading(role="banner")
         block heading
           h1 Tom Smith
           section.intro
@@ -55,18 +63,17 @@ html
                     span.icon.icon-github
                     | GitHub
 
-      section.section-highlights
+      section.section-highlights(role="main")
         block highlights
 
-      section.section-content
+      section.section-content(role="main")
         block content
         block content-bottom
 
-      footer.section-footer
+      aside.section-footer
         block footer
           p &copy; 2017 Tom Smith
 
     script.
       TakeOnTom.loadingScreen();
-
       const colourFinder = TakeOnTom.colourFinder();

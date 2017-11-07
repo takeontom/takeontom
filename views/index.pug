@@ -39,7 +39,8 @@ block content
         article.portfolio-item(class=item.wide ? 'portfolio-item-wide' : '')
           .logo
             if item.logo
-              img(src=`/images/portfolio/${item.logo}`)
+              img(src=`/images/portfolio/${item.logo}`,
+                alt=`Logo for '${item.name}'`)
           .info
             h2 #{item.name}
             if item.desc
