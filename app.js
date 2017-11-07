@@ -3,6 +3,7 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const expressSitemap = require('express-sitemap');
 
 const index = require('./routes/index');
 
@@ -18,7 +19,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public_dist')));
 
+
 app.use('/', index);
+
+const sitemap = expressSitemap({
+  http: 'https',
+  url: 'takeontom.com',
+  cache: 3600000, // 1 hour
+});
+sitemap.generate4(app, ['/']);
+
+app
+  .get('/sitemap.xml', (req, res) => sitemap.XMLtoWeb(res))
+  .get('/robots.txt', (req, res) => sitemap.TXTtoWeb(res));
 
 // catch 404 and forward to error handler
 app.use((req, res) => {

@@ -1,6 +1,4 @@
 const express = require('express');
-const sitemap = require('express-sitemap')();
-
 
 const router = express.Router();
 
@@ -212,15 +210,5 @@ router.get('/', (req, res) => {
 
   res.render('index', { title: 'Hello.', portfolio });
 });
-
-router.get('/wibble/', (req, res) => {
-  res.send('wibble');
-});
-
-sitemap.generate4(router);
-
-router
-  .get('/sitemap.xml', (req, res) => sitemap.XMLtoWeb(res))
-  .get('/robots.txt', (req, res) => sitemap.TXTtoWeb(res));
 
 module.exports = router;
