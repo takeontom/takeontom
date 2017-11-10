@@ -84,28 +84,11 @@ router.get('/', (req, res) => {
         for flagship live TV show.`,
     },
     {
-      name: 'Macmillan Cancer Support',
-      logo: 'macmillan.png',
-    },
-    {
-      name: 'Land Rights Now',
-      logo: 'land-rights-now.png',
-    },
-    {
       name: "The Children's Society",
       logo: 'childrens-society.png',
       display: true,
       desc: `Invited to provide training to regional reps on network marketing
         and ways of communicating effectively with small businesses.`,
-    },
-    {
-      name: 'Skills Funding Agency',
-      logo: 'sfa.jpg',
-      display: false,
-      urls: ['https://findapprenticeshiptraining.sfa.bis.gov.uk/'],
-      desc: `Delivered an in-depth content audit and review of the
-        Apprenticeship Service (a GDS Exemplar service), in preparation for
-        public beta.`,
     },
     {
       name: 'Dateline',
@@ -116,55 +99,12 @@ router.get('/', (req, res) => {
         Dateline, the UK's leading online dating service.`,
     },
     {
-      name: 'mirada PLC',
-      logo: 'mirada.png',
-      display: false,
-      urls: ['https://www.mirada.tv/'],
-      desc: `Senior web developer for this multinational PLC, overseeing the
-        rebrand of Yoomedia PLC into mirada PLC following its merge with Fresh
-        IT.`,
-    },
-    {
-      name: 'TechPro',
-      logo: 'techpro.png',
-    },
-    {
-      name: 'FizzyNova',
-      logo: 'fizzynova.png',
-      display: false,
-      desc: `Technical Director and Co-Founder of this well known West Midlands
-        based digital agency.`,
-    },
-    {
-      name: 'Phil Day Sports',
-      logo: 'phil-day-sports.png',
-    },
-    {
-      name: 'Nuneaton & Bedworth Leisure Society',
-      logo: 'nblt.png',
-    },
-    {
-      name: 'Business Biscotti',
-      logo: 'business-biscotti.png',
-    },
-    {
-      name: 'BBC',
-      logo: 'bbc.png',
-    },
-    {
-      name: 'Phase4',
-    },
-    {
       name: 'Protec Innovations',
       logo: 'protec-innovations.png',
       display: true,
       desc: `As Product Manager, I recruited and managed a 6 person development
         team building the ambitious Phase4 project which radically improves the
         aftersales customer service industry.`,
-    },
-    {
-      name: 'D&J Henry',
-      logo: 'dj-henry.png',
     },
     {
       name: 'HM Courts & Tribunals Service',
@@ -179,28 +119,6 @@ router.get('/', (req, res) => {
       display: true,
       desc: `Developed the customer facing website and comprehensive reporting
         system for this natinoal SMS based car parking solution.`,
-    },
-    {
-      name: 'Rubix Consulting',
-      logo: 'rubix-consulting.png',
-    },
-    {
-      name: 'Citizens Advice Bureau',
-      logo: 'cab.png',
-      display: false,
-      desc: `Consultant on the complete redevelopment of the Stratford Upon
-        Avon Citizen Advice Bureau's website.`,
-    },
-    {
-      name: 'CMA Video',
-      logo: 'cma-video.png',
-    },
-    {
-      name: 'FORCE',
-      logo: 'force.png',
-      display: false,
-      desc: `Digital media advisor to this influential West Midlands based
-        trade group, providing workshops and mentoring on digital strategy.`,
     },
   ];
 

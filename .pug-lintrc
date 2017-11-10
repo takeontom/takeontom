@@ -1,5 +1,4 @@
 {
-    "disallowAttributeConcatenation": true,
     "disallowClassAttributeWithStaticValue": true,
     "disallowDuplicateAttributes": true,
     "disallowHtmlText": true,
