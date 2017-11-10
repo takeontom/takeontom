@@ -15,7 +15,7 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task(
   'watch', [
     'resize_portfolio_images:watch', 'sass:watch', 'js:watch', 'fonts:watch',
-    'lint:js:watch',
+    'lint:js:watch', 'images:watch',
   ],
   () => util.log('Watchers started'),
 );
@@ -123,6 +123,18 @@ gulp.task(
   () => gulp.src(['./public_src/images/**/*.*', '!./public_src/images/portfolio/**'])
     .pipe(changed('./public_dist/images/'))
     .pipe(gulp.dest('./public_dist/images/')),
+);
+
+gulp.task(
+  'images:watch',
+  ['images'],
+  () => gulp.watch(
+    [
+      './public_src/images/**/*.*',
+      '!./public_src/images/portfolio/**',
+    ],
+    ['images'],
+  ),
 );
 
 gulp.task(
