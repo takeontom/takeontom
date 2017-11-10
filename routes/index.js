@@ -2,7 +2,6 @@ const express = require('express');
 
 const router = express.Router();
 
-/* GET home page. */
 router.get('/', (req, res) => {
   const fullPortfolio = [
     {
@@ -127,6 +126,10 @@ router.get('/', (req, res) => {
 
 
   res.render('index', { title: 'Hello.', portfolio });
+});
+
+router.get('/privacy', (req, res) => {
+  res.render('privacy');
 });
 
 module.exports = router;

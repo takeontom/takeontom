@@ -50,11 +50,11 @@ html(lang="en", dir="ltr")
 
     #background
 
-    section.layout-front
+    .layout-front
 
       header.section-heading(role="banner")
         block heading
-          h1 Tom Smith
+          h1 #[a(href="/") Tom Smith]
           section.intro
             h2.lead Web Developer
 
@@ -73,6 +73,8 @@ html(lang="en", dir="ltr")
 
       section.section-highlights(role="main")
         block highlights
+          h1.page-title
+            block page-title
 
       section.section-content(role="main")
         block content
@@ -80,7 +82,8 @@ html(lang="en", dir="ltr")
 
       aside.section-footer
         block footer
-          p &copy; 2017 Tom Smith
+          p &copy; 2017 Take on Tom Ltd
+          p #[a(href="/privacy") Privacy policy]
 
     script.
       TakeOnTom.loadingScreen();
