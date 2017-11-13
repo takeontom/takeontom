@@ -24,6 +24,11 @@ $c2: #ff6a00;
     background: $c2;
     // background: -webkit-linear-gradient(180deg, $c1, $c2);
     background: linear-gradient(180deg, $c1, $c2);
+
+    @media screen and (min-width: 500px) {
+        // background: -webkit-linear-gradient(135deg, $c1, $c2);
+        background: linear-gradient(135deg, $c1, $c2);
+    }
 }
 
 #background {
@@ -34,12 +39,6 @@ $c2: #ff6a00;
     height: 100vh;
 
     z-index: -800;
-
-
-    @media screen and (min-width: 500px) {
-        // background: -webkit-linear-gradient(135deg, $c1, $c2);
-        background: linear-gradient(135deg, $c1, $c2);
-    }
     background-attachment: fixed;
 }
 
@@ -515,6 +514,10 @@ h3 {
     height: 297mm;
     overflow: hidden;
 
+    p {
+        font-size: 0.8rem;
+    }
+
     border: dotted 1px #333;
 
     a {
@@ -528,27 +531,35 @@ h3 {
     .resume-sidebar {
         grid-area: sidebar;
 
-        padding: 0.5cm 1cm;
+        padding: 1cm 1cm;
 
         h3 {
             line-height: 1;
-            margin: 0 0 1.5rem 0;
+            margin: 3rem 0 1.5rem 0;
             padding: 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
 
-    .resume-contact {
+    .resume-sidebar-list {
         list-style: none;
-        margin: 0 0 4rem 0;
+        margin: 0;
         padding: 0;
         font-size: 0.8rem;
 
         li {
+            position: relative;
             list-style: none;
-            margin: 0 0 1rem 0;
+            margin: 0 0 1rem 1.3rem;
             padding: 0;
 
             &:before {
+                position: absolute;
+                top: 0.1rem;
+                left: -1.3rem;
                 font-family: "fontello";
                 font-style: normal;
                 font-weight: normal;
@@ -557,7 +568,7 @@ h3 {
                 display: inline-block;
                 text-decoration: inherit;
                 width: 1em;
-                margin-right: .5em;
+                // margin-right: .5em;
                 text-align: center;
                 /* opacity: .8; */
 
@@ -570,7 +581,7 @@ h3 {
 
                 /* Animation center compensation - margins should be symmetric */
                 /* remove if not needed */
-                margin-left: .2em;
+                // margin-left: .2em;
 
                 /* you can be more comfortable with increased icons size */
                 /* font-size: 120%; */
@@ -582,7 +593,9 @@ h3 {
                 /* Uncomment for 3D effect */
                 /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
             }
+        }
 
+        li {
             &.phone:before {
                 content: '\e802';
             }
@@ -598,6 +611,12 @@ h3 {
             &.website:before {
                 content: '\e803';
             }
+        }
+    }
+
+    .resume-skills {
+        li:before {
+            content: '\e804';
         }
     }
 
