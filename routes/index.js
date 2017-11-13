@@ -132,4 +132,67 @@ router.get('/privacy', (req, res) => {
   res.render('privacy');
 });
 
+router.get('/resume', (req, res) => {
+  const experience = [
+    {
+      company: 'The Developer Society',
+      position: 'Senior Web Developer (contract)',
+      timeperiod: 'Sep 2016 - Jun 2017',
+      description: [
+        `Developed "Act" - Oxfam's international hub for raising awareness and
+          promoting action around the world.`,
+
+        `As Lead Developer, created the online presence and booking portal for the
+          Compassion Experience.`,
+
+        `Also worked on projects for The Church of England, Civicus & Lumos (JK
+          Rowling's Childrens Charity).`,
+      ],
+    },
+    {
+      company: 'FizzyNova',
+      position: 'Lead Developer / Technical Director',
+      timeperiod: 'Nov 2013 - Sep 2016',
+      description: [
+        `Co-created FizzyNova, a digital agency to help SMEs be more successful
+          online.`,
+      ],
+    },
+    {
+      company: 'Corporate Rewards',
+      position: 'Product Manager',
+      timeperiod: 'Apr 2013 - Nov 2013',
+      description: [
+        `Managed and coordinated the development of performance reward websites for
+          major names such as Microsoft, HP & Samsung.`,
+
+        `Sourced a new development team and drastically modernised the technology
+          behind the company's services.`,
+      ],
+    },
+    {
+      company: 'Protec Innovations',
+      position: 'Lead Developer / Product Manager',
+      timeperiod: 'Jul 2010 - Feb 2013',
+      description: [
+        `Recruited and managed a 6 person development team building the
+          ambitious Phase4 project which radically improves the aftersales customer
+          service industry.`,
+      ],
+    },
+    {
+      company: 'mirada PLC',
+      position: 'Senior Web Developer (contract)',
+      timeperiod: 'Feb 2007 - Jun 2010',
+      description: [
+        `Created reporting system for Pepsi.`,
+
+        `Lead Developer for the redevelopment of Dateline.co.uk.`,
+      ],
+    },
+  ];
+
+  res.render('resume', { experience });
+});
+
 module.exports = router;

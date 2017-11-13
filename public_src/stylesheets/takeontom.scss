@@ -20,6 +20,12 @@ body {
 $c1: #ee0979;
 $c2: #ff6a00;
 
+#loading-screen, #background, .resume {
+    background: $c2;
+    // background: -webkit-linear-gradient(180deg, $c1, $c2);
+    background: linear-gradient(180deg, $c1, $c2);
+}
+
 #background {
     position: fixed;
     bottom: 0;
@@ -29,9 +35,6 @@ $c2: #ff6a00;
 
     z-index: -800;
 
-    background: $c2;
-    // background: -webkit-linear-gradient(180deg, $c1, $c2);
-    background: linear-gradient(180deg, $c1, $c2);
 
     @media screen and (min-width: 500px) {
         // background: -webkit-linear-gradient(135deg, $c1, $c2);
@@ -442,10 +445,6 @@ h3 {
     top: 0;
     left: 0;
     opacity: 0;
-    background: $c2;
-    // background: -webkit-linear-gradient(135deg, $c1, $c2);
-    background: linear-gradient(135deg, $c1, $c2);
-
 
     justify-content: center;
     align-items: center;
@@ -502,5 +501,193 @@ h3 {
 .wf-fontello-n4-inactive, .wf-fontello-n4-loading {
     [class^="icon-"]:before, [class*=" icon-"]:before {
         display: none;
+    }
+}
+
+
+.resume {
+    display: grid;
+    grid-template-columns: 0.5cm 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "gutter main sidebar";
+
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+
+    border: dotted 1px #333;
+
+    a {
+        text-decoration: none;
+    }
+
+    .resume-gutter {
+        grid-area: gutter;
+    }
+
+    .resume-sidebar {
+        grid-area: sidebar;
+
+        padding: 0.5cm 1cm;
+
+        h3 {
+            line-height: 1;
+            margin: 0 0 1.5rem 0;
+            padding: 0;
+        }
+    }
+
+    .resume-contact {
+        list-style: none;
+        margin: 0 0 4rem 0;
+        padding: 0;
+        font-size: 0.8rem;
+
+        li {
+            list-style: none;
+            margin: 0 0 1rem 0;
+            padding: 0;
+
+            &:before {
+                font-family: "fontello";
+                font-style: normal;
+                font-weight: normal;
+                speak: none;
+
+                display: inline-block;
+                text-decoration: inherit;
+                width: 1em;
+                margin-right: .5em;
+                text-align: center;
+                /* opacity: .8; */
+
+                /* For safety - reset parent styles, that can break glyph codes*/
+                font-variant: normal;
+                text-transform: none;
+
+                /* fix buttons height, for twitter bootstrap */
+                line-height: 1em;
+
+                /* Animation center compensation - margins should be symmetric */
+                /* remove if not needed */
+                margin-left: .2em;
+
+                /* you can be more comfortable with increased icons size */
+                /* font-size: 120%; */
+
+                /* Font smoothing. That was taken from TWBS */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+
+                /* Uncomment for 3D effect */
+                /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+            }
+
+            &.phone:before {
+                content: '\e802';
+            }
+            &.email:before {
+                content: '\e800';
+            }
+            &.linkedin:before {
+                content: '\e801';
+            }
+            &.github:before {
+                content: '\f300';
+            }
+            &.website:before {
+                content: '\e803';
+            }
+        }
+    }
+
+    .resume-main {
+        grid-area: main;
+        padding: 0.5cm 1cm;
+        color: #445533;
+        background-color: #fff;
+    }
+
+    .resume-header {
+        margin-bottom: 1.5rem;
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+            padding: 0;
+            font-size: 2.5rem;
+            line-height: 1;
+            letter-spacing: 0.1rem;
+        }
+
+        .subtitle {
+            margin: 0 0 1rem 0;
+            padding: 0 0 1rem 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            border-bottom: solid 1px #ffb27e;
+        }
+
+        p {
+            margin: 0 0 0.5rem 0;
+            padding: 0;
+            font-size: 0.8rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .experience-item {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        // border-bottom: solid 1px #eee;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: stretch;
+
+            .position {
+                flex: 2;
+                margin: 0;
+                padding: 0;
+                font-size: 1rem;
+                font-weight: normal;
+            }
+            .company-name {
+                flex: 1;
+                margin: 0;
+                padding: 0;
+                font-size: 0.8rem;
+                text-align: right;
+            }
+            .time-period {
+                margin: 0;
+                padding: 0;
+                font-size: 0.8rem;
+            }
+        }
+
+        .experience-description {
+            margin: 1rem 0 0 1rem;
+            padding: 0;
+            li {
+                margin: 0 0 0.5rem 0;
+                padding: 0;
+                font-size: 0.8rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }

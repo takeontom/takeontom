@@ -15,7 +15,7 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task(
   'watch', [
     'resize_portfolio_images:watch', 'sass:watch', 'js:watch', 'fonts:watch',
-    'lint:js:watch', 'images:watch',
+    'lint:js:watch', 'lint:pug:watch', 'images:watch',
   ],
   () => util.log('Watchers started'),
 );
