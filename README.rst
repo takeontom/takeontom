@@ -45,6 +45,13 @@ automatically:
     $ npx gulp watch
 
 
+To create a PDF of the resume in the `public_dist/resume/` directory:
+
+.. code:: bash
+
+    $ npx gulp resume_pdf
+
+
 License
 -------
 
