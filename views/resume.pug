@@ -94,7 +94,7 @@ html(lang="en", dir="ltr")
                 h3.position #{item.position}
                 p.company-name.
                   #{item.company} #[br]
-                  (#[span.time-period #{item.timeperiod}])
+                  #[span.time-period (#{item.timeperiod})]
 
               ul.experience-description
                 each desc in item.description

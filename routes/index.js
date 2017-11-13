@@ -178,7 +178,7 @@ router.get('/resume', (req, res) => {
       timeperiod: 'Jul 2010 - Feb 2013',
       description: [
         `Recruited and managed a 6 person development team building the
-          ambitious Phase4 project which radically improves the aftersales
+          ambitious Phase4 project which radically improved the aftersales
           customer service industry.`,
       ],
     },
@@ -190,7 +190,7 @@ router.get('/resume', (req, res) => {
         `Created highly regarded reporting system for Pepsi's "Max It For A
           Million" marketing campaign.`,
 
-        `Lead Developer for the total &amp; successful redevelopment of
+        `Lead Developer for the total & successful redevelopment of
           Dateline.co.uk.`,
       ],
     },
