@@ -516,11 +516,16 @@ body.layout-resume {
     grid-template-rows: auto;
 
     @media screen and (min-width: 500px) {
-        grid-template-columns: auto 2fr 1fr auto;
+        grid-template-columns: 1fr 12fr 6fr 1fr;
         grid-template-areas: ". main sidebar .";
     }
 
-    @media screen and (min-width: 200mm), print {
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: auto 600px 300px auto;
+        grid-template-areas: ". main sidebar .";
+    }
+
+    @media print {
         grid-template-columns: auto 60mm;
         grid-template-areas: "main sidebar";
         width: 210mm;
@@ -635,7 +640,7 @@ body.layout-resume {
 
     .resume-main {
         grid-area: main;
-        padding: 0.5cm 1cm;
+        padding: 1cm 1cm;
         color: #445533;
         background-color: #fff;
 
