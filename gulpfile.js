@@ -120,7 +120,9 @@ gulp.task(
 
 gulp.task(
   'images',
-  () => gulp.src(['./public_src/images/**/*.*', '!./public_src/images/portfolio/**'])
+  () => gulp.src([
+    './public_src/images/**/*.*', '!./public_src/images/portfolio/**',
+  ])
     .pipe(changed('./public_dist/images/'))
     .pipe(gulp.dest('./public_dist/images/')),
 );
