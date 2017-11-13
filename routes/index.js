@@ -117,7 +117,7 @@ router.get('/', (req, res) => {
       logo: 'connect-cashless-parking.png',
       display: true,
       desc: `Developed the customer facing website and comprehensive reporting
-        system for this natinoal SMS based car parking solution.`,
+        system for this national SMS based car parking solution.`,
     },
   ];
 
@@ -139,14 +139,14 @@ router.get('/resume', (req, res) => {
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
       description: [
-        `Developed "Act" - Oxfam's international hub for raising awareness and
-          promoting action around the world.`,
+        `Developed "Act", Oxfam's international hub for raising
+          awareness and promoting action around the world.`,
 
-        `As Lead Developer, created the online presence and booking portal for
-          the Compassion Experience.`,
+        `As Lead Developer, created the online presence and booking
+          portal for the Compassion Experience.`,
 
-        `Also worked on projects for The Church of England, Civicus & Lumos (JK
-          Rowling's Childrens Charity).`,
+        `Also worked on projects for The Church of England, Civicus and Lumos
+          (JK Rowling's Childrens Charity).`,
       ],
     },
     {
@@ -156,6 +156,8 @@ router.get('/resume', (req, res) => {
       description: [
         `Co-created FizzyNova, a digital agency to help SMEs be more successful
           online.`,
+
+        'Designed and built many websites using Django-CMS & Drupal.',
       ],
     },
     {
@@ -185,9 +187,11 @@ router.get('/resume', (req, res) => {
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Feb 2007 - Jun 2010',
       description: [
-        'Created reporting system for Pepsi.',
+        `Created highly regarded reporting system for Pepsi's "Max It For A
+          Million" marketing campaign.`,
 
-        'Lead Developer for the redevelopment of Dateline.co.uk.',
+        `Lead Developer for the total &amp; successful redevelopment of
+          Dateline.co.uk.`,
       ],
     },
   ];
