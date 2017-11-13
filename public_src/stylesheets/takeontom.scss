@@ -507,9 +507,20 @@ h3 {
 .resume {
     display: grid;
     // 210 × 297 millimeters
-    grid-template-columns: auto 130mm 60mm auto;
+
+    grid-template-columns: auto;
+    grid-template-areas: "main" "sidebar";
     grid-template-rows: auto;
-    grid-template-areas: ". main sidebar .";
+
+    @media screen and (min-width: 500px) {
+        grid-template-columns: auto 2fr 1fr auto;
+        grid-template-areas: ". main sidebar .";
+    }
+
+    @media screen and (min-width: 200mm) {
+        grid-template-columns: auto 130mm 60mm auto;
+        grid-template-areas: ". main sidebar .";
+    }
 
     // width: 210mm;
     // height: 297mm;
