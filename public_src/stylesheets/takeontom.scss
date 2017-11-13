@@ -503,6 +503,9 @@ h3 {
     }
 }
 
+body.layout-resume {
+    -webkit-print-color-adjust: exact;
+}
 
 .resume {
     display: grid;
@@ -517,13 +520,13 @@ h3 {
         grid-template-areas: ". main sidebar .";
     }
 
-    @media screen and (min-width: 200mm) {
-        grid-template-columns: auto 130mm 60mm auto;
-        grid-template-areas: ". main sidebar .";
+    @media screen and (min-width: 200mm), print {
+        grid-template-columns: auto 60mm;
+        grid-template-areas: "main sidebar";
+        width: 210mm;
+        height: 297mm;
     }
 
-    // width: 210mm;
-    // height: 297mm;
     overflow: hidden;
 
     p {
@@ -635,6 +638,10 @@ h3 {
         padding: 0.5cm 1cm;
         color: #445533;
         background-color: #fff;
+
+        @media print {
+            padding: 1cm;
+        }
 
         h2 {
             margin-bottom: 0.5rem;

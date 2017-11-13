@@ -1,3 +1,5 @@
+const path = require('path');
+
 const gulp = require('gulp');
 const util = require('gulp-util');
 const changed = require('gulp-changed');
@@ -11,6 +13,7 @@ const gulpSequence = require('gulp-sequence');
 const eslint = require('gulp-eslint');
 const shell = require('gulp-shell');
 const autoprefixer = require('gulp-autoprefixer');
+const puppeteer = require('puppeteer');
 
 gulp.task(
   'watch', [
@@ -22,11 +25,14 @@ gulp.task(
 
 gulp.task(
   'build',
-  ['resize_portfolio_images', 'sass', 'js', 'fonts', 'images'],
+  ['resize_portfolio_images', 'sass', 'js', 'fonts', 'images', 'resume_pdf'],
   () => util.log('Build complete'),
 );
 
-gulp.task('build:full', gulpSequence('clean:public', 'build'));
+gulp.task(
+  'build:full',
+  gulpSequence('clean:public', 'resume_pdf:clean', 'build'),
+);
 
 gulp.task('clean:public', () => del(['./public_dist/**/*']));
 
@@ -159,4 +165,32 @@ gulp.task(
     './public_src/images/portfolio/*.{jpg,png}',
     ['resize_portfolio_images'],
   ),
+);
+
+gulp.task(
+  'resume_pdf:generate',
+  ['sass'],
+  async () => {
+    // const puppeteer = require('puppeteer');
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+    const page = await browser.newPage();
+    await page.goto(
+      'http://localhost:3000/resume/',
+      { waitUntil: 'networkidle0' },
+    );
+    await page.pdf({
+      path: path.join('/tmp/Tom_Smith-Web_Developer.pdf'), format: 'A4',
+    });
+    await browser.close();
+  },
+);
+
+gulp.task('resume_pdf:clean', () => del(['./public_dist/resume/']));
+
+gulp.task(
+  'resume_pdf',
+  ['resume_pdf:generate'],
+  () => gulp.src('/tmp/Tom_Smith-Web_Developer.pdf')
+    .pipe(changed('./public_dist/resume/'))
+    .pipe(gulp.dest('./public_dist/resume/')),
 );
