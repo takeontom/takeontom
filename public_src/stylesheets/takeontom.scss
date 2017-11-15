@@ -527,7 +527,6 @@ body.layout-resume {
     @media print {
         grid-template-columns: auto 60mm;
         grid-template-areas: "main sidebar";
-        border: solid 1px red;
         width: 210mm;
         height: 297mm;
     }
