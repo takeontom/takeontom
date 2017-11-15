@@ -509,11 +509,10 @@ body.layout-resume {
 
 .resume {
     display: grid;
-    // 210 × 297 millimeters
-
     grid-template-columns: auto;
     grid-template-areas: "main" "sidebar";
     grid-template-rows: auto;
+
 
     @media screen and (min-width: 500px) {
         grid-template-columns: 1fr 12fr 6fr 1fr;
@@ -528,6 +527,7 @@ body.layout-resume {
     @media print {
         grid-template-columns: auto 60mm;
         grid-template-areas: "main sidebar";
+        border: solid 1px red;
         width: 210mm;
         height: 297mm;
     }
@@ -695,7 +695,7 @@ body.layout-resume {
 
         header {
 
-            @media screen and (min-width: 500px) {
+            @media screen and (min-width: 500px), print {
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: row;
@@ -720,7 +720,7 @@ body.layout-resume {
                     display: none;
                 }
 
-                @media screen and (min-width: 500px) {
+                @media screen and (min-width: 500px), print {
                     text-align: right;
 
                     br {
@@ -757,6 +757,14 @@ body.layout-resume {
                     border: 1px solid #eee;
                     // opacity: 0.5;
                 }
+            }
+        }
+    }
+
+    .experience-item-minor {
+        .experience-description {
+            li {
+                margin-bottom: 0.25rem;
             }
         }
     }
