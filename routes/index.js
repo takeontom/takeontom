@@ -157,7 +157,8 @@ router.get('/resume', (req, res) => {
         `Co-created FizzyNova, a digital agency to help SMEs be more successful
           online.`,
 
-        'Designed and built many websites using Django-CMS & Drupal.',
+        `Designed and built many high quality websites using Django-CMS &
+          Drupal.`,
       ],
     },
     {
