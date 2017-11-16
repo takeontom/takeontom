@@ -135,7 +135,7 @@ router.get('/privacy', (req, res) => {
 router.get('/resume', (req, res) => {
   const experience = [
     {
-      company: 'The Developer Society',
+      company: 'The Developer Society (formally Blanc)',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
       description: [
