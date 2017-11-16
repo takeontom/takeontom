@@ -184,7 +184,7 @@ router.get('/resume', (req, res) => {
       ],
     },
     {
-      company: 'mirada PLC',
+      company: 'mirada PLC (formally Yoomedia)',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Feb 2007 - Jun 2010',
       description: [
