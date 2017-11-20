@@ -750,10 +750,6 @@ body.layout-resume {
                     margin-bottom: 0;
                 }
 
-                .desc + .skill {
-                    // margin-left: 1rem;
-                }
-
                 .desc {
                     margin-right: 0.5rem;
                 }
@@ -762,24 +758,18 @@ body.layout-resume {
                     position: relative;
 
                     display: inline-block;
-                    // margin-left: 1rem;
                     margin-right: 0.5rem;
-                    // padding-left: 0.1rem;
                     font-size: 0.6rem;
                     color: #777;
-                    // border-right: solid 1px #aaa;
 
                     &:before {
                         @include mixin-icon;
-                        // padding-left: 0.2rem;
-                        // padding-right: 0.2rem;
                         position: relative;
                         padding-right: 0.1rem;
                         top: 0;
                         left: 0;
                         color: #999;
                         content: '\e804';
-                        // content: '!';
                     }
                 }
             }
