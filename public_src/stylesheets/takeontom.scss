@@ -755,12 +755,7 @@ body.layout-resume {
                 }
 
                 .desc {
-                    margin-right: 1rem;
-                    // margin-left: -0.5rem;
-
-                    &:last-child {
-                        // margin-right: 0;
-                    }
+                    margin-right: 0.5rem;
                 }
 
                 .skill {
@@ -768,7 +763,7 @@ body.layout-resume {
 
                     display: inline-block;
                     // margin-left: 1rem;
-                    margin-right: 1rem;
+                    margin-right: 0.5rem;
                     // padding-left: 0.1rem;
                     font-size: 0.6rem;
                     color: #777;
@@ -779,7 +774,7 @@ body.layout-resume {
                         // padding-left: 0.2rem;
                         // padding-right: 0.2rem;
                         position: relative;
-                        padding-right: 0.2rem;
+                        padding-right: 0.1rem;
                         top: 0;
                         left: 0;
                         color: #999;
