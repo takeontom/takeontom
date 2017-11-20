@@ -1,5 +1,43 @@
 @import 'fontello/fontello';
 
+@mixin mixin-icon() {
+    position: absolute;
+    top: 0.22rem;
+    left: -1.3rem;
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    // margin-right: .5em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    // margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
 @-ms-viewport{
     width: device-width;
 }
@@ -574,41 +612,7 @@ body.layout-resume {
             padding: 0;
 
             &:before {
-                position: absolute;
-                top: 0.22rem;
-                left: -1.3rem;
-                font-family: "fontello";
-                font-style: normal;
-                font-weight: normal;
-                speak: none;
-
-                display: inline-block;
-                text-decoration: inherit;
-                width: 1em;
-                // margin-right: .5em;
-                text-align: center;
-                /* opacity: .8; */
-
-                /* For safety - reset parent styles, that can break glyph codes*/
-                font-variant: normal;
-                text-transform: none;
-
-                /* fix buttons height, for twitter bootstrap */
-                line-height: 1em;
-
-                /* Animation center compensation - margins should be symmetric */
-                /* remove if not needed */
-                // margin-left: .2em;
-
-                /* you can be more comfortable with increased icons size */
-                /* font-size: 120%; */
-
-                /* Font smoothing. That was taken from TWBS */
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-
-                /* Uncomment for 3D effect */
-                /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+                @include mixin-icon;
             }
         }
 
@@ -639,12 +643,12 @@ body.layout-resume {
 
     .resume-main {
         grid-area: main;
-        padding: 1cm 1cm;
+        padding: 0.75cm 1cm;
         color: #445533;
         background-color: #fff;
 
         @media print {
-            padding: 1cm;
+            padding: 0.75cm 1cm;
         }
 
         h2 {
@@ -653,7 +657,7 @@ body.layout-resume {
     }
 
     .resume-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
 
         h1 {
             margin: 0 0 0.5rem 0;
@@ -683,8 +687,8 @@ body.layout-resume {
     }
 
     .experience-item {
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.8rem;
 
         border-bottom: solid 1px #eee;
 
@@ -739,22 +743,47 @@ body.layout-resume {
             padding: 0;
             li {
                 margin: 0 0 0.5rem 0;
-                padding: 0;
+                padding: 0 0 0 0.3rem;
                 font-size: 0.8rem;
 
                 &:last-child {
                     margin-bottom: 0;
                 }
 
+                .desc + .skill {
+                    // margin-left: 1rem;
+                }
+
+                .desc {
+                    margin-right: 1rem;
+                    margin-left: -0.5rem;
+
+                    &:last-child {
+                        // margin-right: 0;
+                    }
+                }
+
                 .skill {
+                    position: relative;
+
                     display: inline-block;
-                    padding: 0.1rem 0.3rem;
+                    // margin-left: 1rem;
+                    margin-right: 1rem;
+                    padding-left: 0.1rem;
                     font-size: 0.6rem;
-                    color: #aaa;
-                    background-color: #fafafa;
-                    border-radius: 3px;
-                    border: 1px solid #eee;
-                    // opacity: 0.5;
+                    color: #777;
+                    // border-right: solid 1px #aaa;
+
+                    &:before {
+                        @include mixin-icon;
+                        // padding-left: 0.2rem;
+                        // padding-right: 0.2rem;
+                        color: #999;
+                        top: 0.1rem;
+                        left: -1em;
+                        content: '\e804';
+                        // content: '!';
+                    }
                 }
             }
         }

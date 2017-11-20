@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const expressSitemap = require('express-sitemap');
 
 const index = require('./routes/index');
+const resume = require('./routes/resume');
 
 const app = express();
 
@@ -19,7 +20,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public_dist')));
 
+// app.use = (req, res, next) => {
+//   // res.locals['appEnv'] = app.get('env');
+//   // next();
+// };
 
+app.use('/resume', resume);
 app.use('/', index);
 
 const sitemap = expressSitemap({
