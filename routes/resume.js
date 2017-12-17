@@ -5,6 +5,18 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
+      company: 'tails.com',
+      position: 'Full Stack Web Developer (contract)',
+      timeperiod: 'Nov 2017 - current',
+      description: [
+        [
+          `Improved signup process for this revolutionary pet nutrition
+          company.`,
+          ['Flask', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery'],
+        ],
+      ],
+    },
+    {
       company: 'The Developer Society (formally Blanc)',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
@@ -71,24 +83,6 @@ router.get('/', (req, res) => {
             ambitious Phase4 project which radically improved the aftersales
             customer service industry.`,
           ['Management', 'Hiring', 'Scrum Master', 'PHP5', 'AWS'],
-        ],
-      ],
-    },
-    {
-      company: 'mirada PLC (formally Yoomedia)',
-      position: 'Senior Web Developer (contract)',
-      timeperiod: 'Feb 2007 - Jun 2010',
-      description: [
-        [
-          `Created highly regarded reporting system for Pepsi's "Max It For A
-            Million" marketing campaign.`,
-          ['PHP', 'HTML', 'CSS', 'JavaScript', 'Metrics & Data'],
-        ],
-
-        [
-          `Lead Developer for the total & successful redevelopment of
-            Dateline.co.uk.`,
-          ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
         ],
       ],
     },
