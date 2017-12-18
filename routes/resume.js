@@ -30,7 +30,10 @@ router.get('/', (req, res) => {
         [
           `As Lead Developer, created the online presence and booking
             portal for the Compassion Experience.`,
-          ['Django', 'TDD', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery'],
+          [
+            'Django', 'TDD', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery',
+            'Twilio',
+          ],
         ],
 
         [
