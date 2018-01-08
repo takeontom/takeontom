@@ -10,9 +10,19 @@ router.get('/', (req, res) => {
       timeperiod: 'Nov 2017 - current',
       description: [
         [
-          `Improved signup process for this revolutionary pet nutrition
-          company.`,
-          ['Flask', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery'],
+          `Integrated Prismic CMS into key areas of website, with automatic
+          setup of A/B testing using Sixpack.`,
+          ['Flask', 'Prismic', 'Sixpack'],
+        ],
+        [
+          `Improved On-Site Conversion Rate and Average Revenue Per Order by
+          adding ecommerce features and optimising signup process.`,
+          ['Flask', 'HTML', 'CSS/LESS', 'JavaScript'],
+        ],
+        [
+          `Worked with management team to showcase and implement development
+            best practices throughout the team.`,
+          ['Agile', 'TDD', 'Coding standards'],
         ],
       ],
     },
@@ -29,7 +39,7 @@ router.get('/', (req, res) => {
 
         [
           `As Lead Developer, created the online presence and booking
-            portal for the Compassion Experience.`,
+            portal for The Compassion Experience.`,
           [
             'Django', 'TDD', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery',
             'Twilio',

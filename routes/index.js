@@ -69,6 +69,15 @@ router.get('/', (req, res) => {
       urls: ['https://monitor.civicus.org/'],
     },
     {
+      name: 'tails.com',
+      logo: 'tails.png',
+      display: true,
+      desc: `As full-stack developer, optimised the signup funnel for this
+        leading pet nutrition company. Worked with the management team to
+        showcase and implement development best practices throughout the
+        team.`,
+    },
+    {
       name: 'Lumos',
       logo: 'lumos.png',
       display: true,
@@ -115,7 +124,7 @@ router.get('/', (req, res) => {
     {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
-      display: true,
+      display: false,
       desc: `Developed the customer facing website and comprehensive reporting
         system for this national SMS based car parking solution.`,
     },

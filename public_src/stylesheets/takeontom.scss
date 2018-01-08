@@ -551,7 +551,6 @@ body.layout-resume {
     grid-template-areas: "main" "sidebar";
     grid-template-rows: auto;
 
-
     @media screen and (min-width: 500px) {
         grid-template-columns: 1fr 12fr 6fr 1fr;
         grid-template-areas: ". main sidebar .";
@@ -687,14 +686,10 @@ body.layout-resume {
     }
 
     .experience-item {
-        padding-bottom: 0.8rem;
-        margin-bottom: 0.8rem;
+        padding-top: 0.8rem;
+        margin-top: 0.8rem;
 
-        border-bottom: solid 1px #eee;
-
-        &:last-child {
-            border-bottom: none;
-        }
+        border-top: solid 1px #eee;
 
         header {
 
