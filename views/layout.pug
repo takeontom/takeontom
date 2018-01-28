@@ -38,7 +38,9 @@ html(lang="en", dir="ltr")
       content="/images/favicon/browserconfig.xml")
     meta(name="theme-color", content="#ee0979")
 
-    script(src="/js/takeontom.js")
+    script(
+      type="text/javascript",
+      src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js")
 
   body
     #loading-screen
@@ -85,6 +87,7 @@ html(lang="en", dir="ltr")
           p &copy; 2017 Take on Tom Ltd
           p #[a(href="/privacy") Privacy policy]
 
+    script(src="/js/takeontom.js")
     script.
       TakeOnTom.loadingScreen();
       const colourFinder = TakeOnTom.colourFinder();

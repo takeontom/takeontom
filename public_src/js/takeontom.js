@@ -3,6 +3,11 @@
 
 const WebFont = require('webfontloader');
 
+const observer = window.lozad('.lozad', {
+  rootMargin: '200px',
+});
+observer.observe();
+
 function loadingScreen() {
   const el = document.getElementById('loading-screen');
 

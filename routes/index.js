@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     },
     {
       name: 'The Developer Society',
-      logo: 'dev2.png',
+      logo: 'the-developer-society.png',
       display: true,
       desc: `Consultant to the lovely people at Dev to introduce Test Driven
         Development and team focussed development processes... and ate too many
@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
     },
     {
       name: 'The Church of England',
-      logo: 'cofe.png',
+      logo: 'church-of-england.png',
       display: true,
       desc: `Created the official mobile first e-learning site to help
         encourage better safeguarding practices within the Church of England.`,
@@ -116,7 +116,7 @@ router.get('/', (req, res) => {
     },
     {
       name: 'HM Courts & Tribunals Service',
-      logo: 'magistrates-court.jpg',
+      logo: 'hm-courts-tribunals-service.jpg',
       display: true,
       desc: `As Lead Developer, designed, developed & managed core database
         for the court's liquor licensing modernisation process.`,
