@@ -1,5 +1,7 @@
 @import 'fontello/fontello';
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans%7CSource+Sans+Pro");
+
 @mixin mixin-icon() {
     position: absolute;
     top: 0.22rem;
@@ -58,7 +60,7 @@ body {
 $c1: #ee0979;
 $c2: #ff6a00;
 
-#loading-screen, #background, .resume-sidebar {
+#background, .resume-sidebar {
     background: $c2;
     // background: -webkit-linear-gradient(180deg, $c1, $c2);
     background: linear-gradient(180deg, $c1, $c2);
@@ -466,72 +468,6 @@ h3 {
                 margin-left: 1rem;
             }
         }
-    }
-}
-
-#loading-screen {
-    font-size: 5rem;
-
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-
-    pointer-events: none;
-
-    top: 0;
-    left: 0;
-    opacity: 0;
-
-    justify-content: center;
-    align-items: center;
-
-    font-family: sans-serif;
-
-    &.off {
-        opacity: 0;
-        transition: opacity 0;
-
-        .dot {
-            opacity: 0;
-        }
-    }
-
-    .dot {
-        font-family: serif;
-        opacity: 1;
-    }
-
-    &.on {
-        opacity: 1;
-
-        .dot {
-            font-family: serif;
-            animation: fade 1s infinite linear;
-            opacity: 0;
-        }
-        .dot-1 {
-            animation-delay: 0.3s;
-        }
-        .dot-2 {
-            animation-delay: 0.4s;
-        }
-        .dot-3 {
-            animation-delay: 0.5s;
-        }
-
-        @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-            75% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
     }
 }
 
