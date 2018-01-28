@@ -18,6 +18,11 @@ html(lang="en", dir="ltr")
       content="Experienced full stack web developer, based in the UK.")
 
     link(rel="stylesheet", href="/css/common.css")
+    noscript#deferred-styles
+      link(href="https://fonts.googleapis.com/css?family=" +
+        "Open+Sans%7CSource+Sans+Pro",
+        rel="stylesheet")
+      link(rel="stylesheet", type="text/css", href="css/home.css")
 
     link(rel="apple-touch-icon", sizes="180x180",
       href="/images/favicon/apple-touch-icon.png")
@@ -72,12 +77,6 @@ html(lang="en", dir="ltr")
         block footer
           p &copy; 2017 Take on Tom Ltd
           p #[a(href="/privacy") Privacy policy]
-
-    noscript#deferred-styles
-      link(href="https://fonts.googleapis.com/css?family=" +
-        "Open+Sans%7CSource+Sans+Pro",
-        rel="stylesheet")
-      link(rel="stylesheet", type="text/css", href="css/home.css")
 
     script.
       var loadDeferredStyles = function() {
