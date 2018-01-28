@@ -17,7 +17,7 @@ html(lang="en", dir="ltr")
     meta(name="description",
       content="Experienced full stack web developer, based in the UK.")
 
-    link(rel="stylesheet", href="/css/takeontom.css")
+    link(rel="stylesheet", href="/css/common.css")
 
     link(rel="apple-touch-icon", sizes="180x180",
       href="/images/favicon/apple-touch-icon.png")
@@ -36,13 +36,6 @@ html(lang="en", dir="ltr")
     meta(name="theme-color", content="#ee0979")
 
   body
-    #loading-screen
-      .loading-msg
-        p
-          span.dot.dot-1 .
-          span.dot.dot-2 .
-          span.dot.dot-3 .
-
     #background
 
     .layout-front
@@ -80,7 +73,27 @@ html(lang="en", dir="ltr")
           p &copy; 2017 Take on Tom Ltd
           p #[a(href="/privacy") Privacy policy]
 
+    noscript#deferred-styles
+      link(href="https://fonts.googleapis.com/css?family=" +
+        "Open+Sans%7CSource+Sans+Pro",
+        rel="stylesheet")
+      link(rel="stylesheet", type="text/css", href="css/home.css")
+
+    script.
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+
     script(
       type="text/javascript",
       src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js")
-    script(src="/js/takeontom.js")
+    script(src="/js/takeontom.js", async)

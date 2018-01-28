@@ -69,7 +69,11 @@ gulp.task(
 
 gulp.task(
   'sass',
-  () => gulp.src('./public_src/stylesheets/takeontom.scss')
+  () => gulp.src([
+    './public_src/stylesheets/common.scss',
+    './public_src/stylesheets/home.scss',
+    './public_src/stylesheets/resume.scss',
+  ])
     .pipe(changed('./public_dist/css/'))
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
