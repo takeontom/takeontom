@@ -15,17 +15,22 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+if (process.env.NODE_ENV === 'production') {
+  const httpsRedirect = (req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(`https://${req.headers.host}${req.url}`);
+    }
+    return next();
+  };
+  app.use(httpsRedirect);
+}
+
 app.use(logger('dev'));
 app.use(compress());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public_dist')));
-
-// app.use = (req, res, next) => {
-//   // res.locals['appEnv'] = app.get('env');
-//   // next();
-// };
 
 app.use('/resume', resume);
 app.use('/', index);
