@@ -1,5 +1,6 @@
 {
-    "name": "Take on Tom",
+    "name": "Tom Smith - Web Developer",
+    "short_name": "Tom Smith",
     "icons": [
         {
             "src": "/images/android-chrome-192x192.png",
