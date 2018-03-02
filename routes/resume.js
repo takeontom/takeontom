@@ -25,6 +25,12 @@ router.get('/', (req, res) => {
       highlight: true,
       description: [
         [
+          `Full technical SEO sweep, applying modern techniques such as lazy
+          loading images & asynchronous CSS loading. 85% speed improvement on
+          key landing pages.`,
+          ['SEO', 'Lighthouse', 'Google Pagespeed', 'YSlow'],
+        ],
+        [
           `Integrated Prismic CMS into key areas of website, with automatic
           setup of A/B testing using Sixpack.`,
           ['Flask', 'Prismic', 'Sixpack'],
@@ -33,11 +39,6 @@ router.get('/', (req, res) => {
           `Improved On-Site Conversion Rate and Average Revenue Per Order by
           adding ecommerce features and optimising signup process.`,
           ['Flask', 'HTML', 'CSS/LESS', 'JavaScript'],
-        ],
-        [
-          `Worked with management team to showcase and implement development
-            best practices throughout the team.`,
-          ['Agile', 'TDD', 'Coding standards'],
         ],
       ],
     },
