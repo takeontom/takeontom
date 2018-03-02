@@ -198,3 +198,10 @@ gulp.task(
     .pipe(changed('./public_dist/resume/'))
     .pipe(gulp.dest('./public_dist/resume/')),
 );
+
+gulp.task(
+  'resume_pdf:watch',
+  ['resume_pdf'],
+  () => gulp.watch(['./**/*.js', './**/*.css'], ['resume_pdf']),
+);
+

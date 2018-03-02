@@ -5,9 +5,24 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
+      company: 'Karmarama',
+      position: 'Python Developer (contract, part time)',
+      timeperiod: 'Nov 2017 - current',
+      highlight: true,
+      description: [
+        [
+          `Maintaining and improving Karmarama's market leading "Connect"
+          platform, which powers the customer comms for names such as Honda,
+          DFS, Plusnet and JustEat.`,
+          ['Django', 'Sendgrid'],
+        ],
+      ],
+    },
+    {
       company: 'tails.com',
       position: 'Full Stack Web Developer (contract)',
-      timeperiod: 'Nov 2017 - current',
+      timeperiod: 'Nov 2017 - Feb 2018',
+      highlight: true,
       description: [
         [
           `Integrated Prismic CMS into key areas of website, with automatic
@@ -30,6 +45,7 @@ router.get('/', (req, res) => {
       company: 'The Developer Society (formally Blanc)',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
+      highlight: true,
       description: [
         [
           `Developed "Act", Oxfam's international hub for raising
@@ -57,6 +73,7 @@ router.get('/', (req, res) => {
       company: 'FizzyNova',
       position: 'Lead Developer / Technical Director',
       timeperiod: 'Nov 2013 - Sep 2016',
+      highlight: true,
       description: [
         `Co-created FizzyNova, a digital agency to help SMEs be more successful
           online.`,
@@ -64,7 +81,10 @@ router.get('/', (req, res) => {
         [
           `Designed and built many high quality websites using Django-CMS &
             Drupal.`,
-          ['Django-CMS', 'Drupal', 'HTML5', 'CSS/LESS', 'JQuery', 'AWS'],
+          [
+            'Django-CMS', 'Drupal ☹', 'Wordpress', 'HTML5', 'CSS/LESS',
+            'JQuery', 'AWS',
+          ],
         ],
       ],
     },
@@ -72,6 +92,7 @@ router.get('/', (req, res) => {
       company: 'Corporate Rewards',
       position: 'Product Manager',
       timeperiod: 'Apr 2013 - Nov 2013',
+      highlight: true,
       description: [
         [
           `Managed and coordinated the development of performance reward
@@ -88,8 +109,9 @@ router.get('/', (req, res) => {
     },
     {
       company: 'Protec Innovations',
-      position: 'Lead Developer / Product Manager',
+      position: 'Lead Developer 🠚 Product Manager',
       timeperiod: 'Jul 2010 - Feb 2013',
+      highlight: false,
       description: [
         [
           `Recruited and managed a 6 person development team building the
@@ -98,6 +120,34 @@ router.get('/', (req, res) => {
           ['Management', 'Hiring', 'Scrum Master', 'PHP5', 'AWS'],
         ],
       ],
+    },
+
+    {
+      company: 'mirada PLC',
+      position: 'Junior 🠚 Senior 🠚 Lead Web Developer',
+      timeperiod: 'Feb 2007 - Jun 2010',
+      highlight: false,
+    },
+
+    {
+      company: 'Hele’s School',
+      position: 'ICT Technician',
+      timeperiod: 'Apr 2005 - Dec 2006',
+      highlight: false,
+    },
+
+    {
+      company: 'Plymouth District Magistrates’ Court',
+      position: 'Database Developer',
+      timeperiod: 'Dec 2003 - March 2005',
+      highlight: false,
+    },
+
+    {
+      company: 'Abtech Services',
+      position: 'Technical Admin',
+      timeperiod: 'Jun 1997 - Dec 2003',
+      highlight: false,
     },
   ];
 

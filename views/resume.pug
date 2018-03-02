@@ -40,8 +40,6 @@ html(lang="en", dir="ltr")
       content="/images/favicon/browserconfig.xml")
     meta(name="theme-color", content="#ee0979")
 
-    script(src="/js/takeontom.js")
-
   body.layout-resume
     .resume
       section.resume-main
@@ -57,41 +55,32 @@ html(lang="en", dir="ltr")
         section.experience
 
           each item in experience
-            article.experience-item
-              header
-                h3.position #{item.position}
-                p.company-name.
-                  #{item.company}#[br]
-                  #[span.time-period (#{item.timeperiod})]
+            if item.highlight
+              article.experience-item
+                header
+                  h3.position #{item.position}
+                  p.company-name.
+                    #{item.company}#[br]
+                    #[span.time-period (#{item.timeperiod})]
 
-              ul.experience-description
-                each desc in item.description
-                  li
-                    if desc.length > 2
-                      span.desc !{desc}
-                    else
-                      span.desc !{desc[0]}
-                      each skill in desc[1]
-                        span.skill #{skill}
+                ul.experience-description
+                  each desc in item.description
+                    li
+                      if desc.length > 2
+                        span.desc !{desc}
+                      else
+                        span.desc !{desc[0]}
+                        each skill in desc[1]
+                          span.skill #{skill}
 
           article.experience-item.experience-item-minor
             header
               h3 Other positions
 
             ul.experience-description
-              li.
-                Senior Web Developer - mirada PLC, formally Yoomedia
-                (Feb 2007 - Jun 2010)
-
-              li.
-                ICT Technician - Hele’s School (Apr 2005 - Dec 2006)
-
-              li.
-                Database Developer - Plymouth District Magistrates’ Court
-                (Dec 2003 - March 2005)
-
-              li.
-                Technical Admin - Abtech Services (Jun 1997 - Dec 2003)
+              each item in experience
+                if ! item.highlight
+                  li #{item.position} - #{item.company} (#{item.timeperiod})
 
       aside.resume-sidebar
         h3 Contact details
