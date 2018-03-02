@@ -93,3 +93,6 @@ node_modules
 
 # Yarn
 yarn-error.log
+
+# Heroku complains if there's both a Yarn and NPM package lock file
+package-lock.json
