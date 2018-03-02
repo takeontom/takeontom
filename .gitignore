@@ -90,3 +90,6 @@ ENV/
 .ropeproject
 takeontom/node_modules
 node_modules
+
+# Yarn
+yarn-error.log
