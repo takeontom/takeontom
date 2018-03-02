@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
           `Full technical SEO sweep, applying modern techniques such as lazy
           loading images & asynchronous CSS loading. 85% speed improvement on
           key landing pages.`,
-          ['SEO', 'Lighthouse', 'Google Pagespeed', 'YSlow'],
+          ['SEO', 'Lighthouse', 'Google PageSpeed', 'YSlow'],
         ],
         [
           `Integrated Prismic CMS into key areas of website, with automatic
@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
       ],
     },
     {
-      company: 'The Developer Society (formally Blanc)',
+      company: 'The Developer Society (formerly Blanc)',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
       highlight: true,
@@ -83,7 +83,7 @@ router.get('/', (req, res) => {
           `Designed and built many high quality websites using Django-CMS &
             Drupal.`,
           [
-            'Django-CMS', 'Drupal ☹', 'Wordpress', 'HTML5', 'CSS/LESS',
+            'Django-CMS', 'Drupal ☹', 'WordPress', 'HTML5', 'CSS/LESS',
             'JQuery', 'AWS',
           ],
         ],
@@ -110,7 +110,7 @@ router.get('/', (req, res) => {
     },
     {
       company: 'Protec Innovations',
-      position: 'Lead Developer 🠚 Product Manager',
+      position: 'Lead Developer ➜ Product Manager',
       timeperiod: 'Jul 2010 - Feb 2013',
       highlight: false,
       description: [
@@ -125,7 +125,7 @@ router.get('/', (req, res) => {
 
     {
       company: 'mirada PLC',
-      position: 'Junior 🠚 Senior 🠚 Lead Web Developer',
+      position: 'Junior ➜ Senior ➜ Lead Web Developer',
       timeperiod: 'Feb 2007 - Jun 2010',
       highlight: false,
     },
