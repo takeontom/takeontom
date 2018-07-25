@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
       highlight: true,
       description: [
         [
-          `Lead an agile team of developers and data scientists in building a
+          `Led an agile team of developers and data scientists in building a
           'big data' ETL platform for one of the world's top 3 pharmaceutical
           companies.`,
           ['Agile', 'Architect', 'Big Data'],
