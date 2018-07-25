@@ -14,9 +14,9 @@ html(lang="en", dir="ltr")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
-    title Tom Smith - Experienced Web Developer Resume
+    title Tom Smith - Senior Full Stack Developer Resume
     meta(name="description",
-      content="Experienced full stack web developer, based in the UK.")
+      content="Experienced Senior Full Stack Developer, based in the UK.")
 
     link(href="https://fonts.googleapis.com/css?family=" +
       "Open+Sans%7CSource+Sans+Pro",
@@ -45,11 +45,11 @@ html(lang="en", dir="ltr")
       section.resume-main
         header.resume-header
           h1 Tom Smith
-          p.subtitle Experienced Full Stack Web Developer
+          p.subtitle Senior Full Stack Developer
 
           p.
-            Reliable, flexible and skilled UK based web developer, who's been
-            making high quality websites for over 15 years. I can jump
+            Reliable, flexible and skilled UK based developer, who's been
+            making high quality products for over 15 years. I can jump
             into projects at any stage and slot seamlessly into a team.
 
         section.experience
@@ -70,8 +70,9 @@ html(lang="en", dir="ltr")
                         span.desc !{desc}
                       else
                         span.desc !{desc[0]}
-                        each skill in desc[1]
-                          span.skill #{skill}
+                        span.skills
+                          each skill in desc[1]
+                            span.skill #{skill}
 
           article.experience-item.experience-item-minor
             header
@@ -95,7 +96,7 @@ html(lang="en", dir="ltr")
         ul.resume-skills.resume-sidebar-list
           li.python Python3, Django, Flask, #[nobr Django-CMS]
           li.node Node.js, Express
-          li.javascript JavaScript ES6, JQuery
+          li.javascript JavaScript ES6, React, JQuery
           li.html5 HTML5, CSS, SASS, LESS
           li.clearence Basic security clearance
 

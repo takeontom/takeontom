@@ -5,16 +5,32 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
-      company: 'Karmarama',
-      position: 'Python Developer (contract, part time)',
-      timeperiod: 'Nov 2017 - current',
+      company: 'Metacell',
+      position: 'Technical Lead (contract)',
+      timeperiod: 'Feb 2018 - Aug 2018',
       highlight: true,
       description: [
         [
-          `Maintaining and improving Karmarama's market leading "Connect"
-          platform, which powers the customer comms for names such as Honda,
-          DFS, Plusnet and JustEat.`,
-          ['Django', 'Sendgrid'],
+          `Lead an agile team of developers and data scientists in building a
+          'big data' ETL platform for one of the world's top 3 pharmaceutical
+          companies.`,
+          ['Agile', 'Architect', 'Big Data'],
+        ],
+        [
+          `Mission critical, high value data processing with no room for error:
+          So trained, guided and enforced Test Driven Development practices
+          throughout the team.`,
+          ['TDD', 'Training'],
+        ],
+        [
+          `Developed high quality & flexible Django based framework to provide
+          Metacell with a long term, maintainable & commerically viable
+          product.`,
+          ['Django', 'Python', 'Oracle', 'Postgres', 'LDAP', 'Box.com'],
+        ],
+        [
+          'Designed and implementated cutting-edge React based frontend.',
+          ['UX', 'Design', 'React', 'CSS/LESS', 'HTML5'],
         ],
       ],
     },
@@ -93,7 +109,7 @@ router.get('/', (req, res) => {
       company: 'Corporate Rewards',
       position: 'Product Manager',
       timeperiod: 'Apr 2013 - Nov 2013',
-      highlight: true,
+      highlight: false,
       description: [
         [
           `Managed and coordinated the development of performance reward
