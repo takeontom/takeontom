@@ -25,6 +25,27 @@ if (process.env.NODE_ENV === 'production') {
   app.use(httpsRedirect);
 }
 
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', true);
+
+  const httpsRedirect = (req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(301, `https://${req.headers.host}${req.originalUrl}`);
+    }
+    return next();
+  };
+  app.use(httpsRedirect);
+
+  const wwwRedirect = (req, res, next) => {
+    if (req.headers.host.slice(0, 4) === 'www.') {
+      const newHost = req.headers.host.slice(4);
+      return res.redirect(301, `https://${newHost}${req.originalUrl}`);
+    }
+    return next();
+  };
+  app.use(wwwRedirect);
+}
+
 app.use(logger('dev'));
 app.use(compress());
 app.use(bodyParser.json());
