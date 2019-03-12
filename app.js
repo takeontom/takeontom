@@ -16,16 +16,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 if (process.env.NODE_ENV === 'production') {
-  const httpsRedirect = (req, res, next) => {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-      return res.redirect(`https://${req.headers.host}${req.url}`);
-    }
-    return next();
-  };
-  app.use(httpsRedirect);
-}
-
-if (process.env.NODE_ENV === 'production') {
   app.set('trust proxy', true);
 
   const httpsRedirect = (req, res, next) => {
