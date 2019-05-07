@@ -132,7 +132,7 @@ router.get('/', (req, res) => {
     {
       name: 'Connect Cashless Parking',
       logo: 'connect-cashless-parking.png',
-      display: false,
+      display: true,
       desc: `Developed the customer facing website and comprehensive reporting
         system for this national SMS based car parking solution.`,
     },
