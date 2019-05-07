@@ -5,6 +5,14 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const fullPortfolio = [
     {
+      name: 'Pfizer',
+      logo: 'pfizer.png',
+      display: true,
+      desc: `Led an agile team of developers and data scientists in building a
+        cutting edge big-data ETL platform for one of the world's top 3
+        pharmaceutical companies.`,
+    },
+    {
       name: 'Oxfam',
       logo: 'oxfam.png',
       display: true,
