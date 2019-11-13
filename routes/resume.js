@@ -5,6 +5,25 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
+      company: 'Take on Tom',
+      position: 'Freelance developer & consultant',
+      timeperiod: 'Oct 2018 - Nov 2019',
+      highlight: true,
+      description: [
+        [
+          `Using data science techniques, analysed sales and marketing
+          performance of local businesses, found issues and ran projects to
+          improve them.`,
+          ['Data Sciencee', 'Python', 'Pandas', `Wagtail`, `Django`]
+        ],
+        [
+          `Lead developer for ideaflip.com, a Django based brainstorming app
+          for web and tablets.`,
+          [`Django`, `MongoDB`, `Node.js`]
+        ]
+      ]
+    },
+    {
       company: 'Metacell',
       position: 'Technical Lead (contract)',
       timeperiod: 'Feb 2018 - Aug 2018',
@@ -12,8 +31,8 @@ router.get('/', (req, res) => {
       description: [
         [
           `Led an agile team of developers and data scientists in building a
-          'big data' ETL platform for one of the world's top 3 pharmaceutical
-          companies.`,
+          'big data' ETL platform for Pfizer, one of the world's top 3
+          pharmaceutical companies.`,
           ['Agile', 'Architect', 'Big Data'],
         ],
         [
@@ -90,7 +109,7 @@ router.get('/', (req, res) => {
       company: 'FizzyNova',
       position: 'Lead Developer / Technical Director',
       timeperiod: 'Nov 2013 - Sep 2016',
-      highlight: true,
+      highlight: false,
       description: [
         `Co-created FizzyNova, a digital agency to help SMEs be more successful
           online.`,
