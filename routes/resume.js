@@ -6,14 +6,14 @@ router.get('/', (req, res) => {
   const experience = [
     {
       company: 'Take on Tom',
-      position: 'Freelance developer & consultant',
+      position: 'Developer & consultant',
       timeperiod: 'Oct 2018 - Nov 2019',
       highlight: true,
       description: [
         [
-          `Using data science techniques, analysed sales and marketing
-          performance of local businesses, found issues and ran projects to
-          improve them.`,
+          `Using data science techniques to analyse sales and marketing
+          performance of local businesses, finding issues and running projects
+          to improve them.`,
           ['Data Sciencee', 'Python', 'Pandas', `Wagtail`, `Django`]
         ],
         [
