@@ -4,6 +4,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   logo: {
+    overflow: "hidden",
     position: "absolute",
     top: (props) => props.top,
     left: (props) => props.left,
@@ -16,20 +17,31 @@ const useStyles = createUseStyles({
     backgroundColor: "rgba(20, 20, 20, 0.1)",
     color: "#000",
     textTransform: "uppercase",
+    animation: "$breath 1s infinite ease-in-out",
   },
   main: {
     fontSize: "200px",
+    lineHeight: "0.7",
+    opacity: 0.4,
   },
   word: {
     display: "block",
-    opacity: 0.2,
   },
   word2: {
-    marginTop: "-0.75em",
+    marginTop: "0",
   },
   subTitle: {
     fontSize: "60px",
-    opacity: 0.2,
+    lineHeight: "0.7",
+    opacity: 0.4,
+  },
+  "@keyframes breath": {
+    "0%, 100%": {
+      transform: "scaleX(1) scaleY(0.97)",
+    },
+    "50%": {
+      transform: "scaleX(0.99) scaleY(1)",
+    },
   },
 });
 
