@@ -17,7 +17,8 @@ const useStyles = createUseStyles({
     backgroundColor: "rgba(20, 20, 20, 0.1)",
     color: "#000",
     textTransform: "uppercase",
-    animation: "$breath 1s infinite ease-in-out",
+    textAlign: "center",
+    animation: "$breath 1s infinite",
   },
   main: {
     fontSize: "200px",
