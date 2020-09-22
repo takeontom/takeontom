@@ -7,7 +7,7 @@ import Header from "./components/Header";
 
 const useStyles = createUseStyles({
   app: {
-    cursor: `url(${Cursor}) 10 10, auto`,
+    // cursor: `url(${Cursor}) 10 10, auto`,
   },
 });
 

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import { createUseStyles } from "react-jss";
 import Nav from "./Nav";
+
+interface StyleProps {
+  navHeight: number;
+}
 
 const useStyles = createUseStyles({
   header: {
@@ -9,25 +13,36 @@ const useStyles = createUseStyles({
     height: "100vh",
     position: "relative",
     overflow: "hidden",
-    backgroundColor: "#29fa64",
+    backgroundColor: "#3494e6",
+    background: "linear-gradient(to right, #3494e6, #ec6ead)",
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "flex-end",
   },
   logoContainer: {
-    width: "100%",
+    width: (props: StyleProps) => `calc(100% - ${props.navHeight}px - 60px`,
   },
 });
 
 export default function Header() {
-  const classes = useStyles({});
+  const navRef = useRef<HTMLDivElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
+
+  const styleProps: StyleProps = { navHeight };
+  const classes = useStyles(styleProps);
+
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.clientHeight);
+    }
+  }, [navRef]);
 
   return (
     <div className={classes.header}>
       <div className={classes.logoContainer}>
         <Logo />
       </div>
-      <Nav />
+      <Nav ref={navRef} />
     </div>
   );
 }

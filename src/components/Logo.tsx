@@ -2,6 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
 
+interface StyleProps {
+  top: number;
+  left: number;
+}
+
+const baseFontSize = "15vw";
+
 const useStyles = createUseStyles({
   logo: {
     overflow: "hidden",
@@ -18,10 +25,9 @@ const useStyles = createUseStyles({
     color: "#000",
     textTransform: "uppercase",
     textAlign: "center",
-    animation: "$breath 1s infinite",
   },
   main: {
-    fontSize: "200px",
+    fontSize: baseFontSize,
     lineHeight: "0.7",
     opacity: 0.4,
   },
@@ -32,17 +38,9 @@ const useStyles = createUseStyles({
     marginTop: "0",
   },
   subTitle: {
-    fontSize: "60px",
+    fontSize: `calc(${baseFontSize} / 3.57)`,
     lineHeight: "0.7",
     opacity: 0.4,
-  },
-  "@keyframes breath": {
-    "0%, 100%": {
-      transform: "scaleX(1) scaleY(0.97)",
-    },
-    "50%": {
-      transform: "scaleX(0.99) scaleY(1)",
-    },
   },
 });
 
@@ -50,7 +48,12 @@ export default function Logo() {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
-  const classes = useStyles({ top: mouseY, left: mouseX });
+  const styleProps: StyleProps = {
+    top: mouseY,
+    left: mouseX,
+  };
+
+  const classes = useStyles(styleProps);
 
   const logoRef = useRef<HTMLDivElement>(null);
 
