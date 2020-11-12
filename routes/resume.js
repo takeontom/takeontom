@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
-      company: 'Take on Tom',
+      company: 'GeekSmith',
       position: 'Developer & consultant',
       timeperiod: 'Oct 2018 - Nov 2019',
       highlight: true,
@@ -14,14 +14,14 @@ router.get('/', (req, res) => {
           `Using data science techniques to analyse sales and marketing
           performance of local businesses, finding issues and running projects
           to improve them.`,
-          ['Data Sciencee', 'Python', 'Pandas', `Wagtail`, `Django`]
+          ['Data Sciencee', 'Python', 'Pandas', 'Wagtail', 'Django'],
         ],
         [
           `Lead developer for ideaflip.com, a Django based brainstorming app
           for web and tablets.`,
-          [`Django`, `MongoDB`, `Node.js`]
-        ]
-      ]
+          ['Django', 'MongoDB', 'Node.js'],
+        ],
+      ],
     },
     {
       company: 'Metacell',
