@@ -1,7 +1,7 @@
 Take on Tom
 ===========
 
-My portfolio website, https://www.takeontom.com.
+My portfolio website, https://takeontom.com.
 
 
 Quick start
@@ -27,14 +27,14 @@ To perform a build:
 
 .. code:: bash
 
-    $ npx gulp build
+    $ npm run build
 
 
 To clean out the `dist` directory and then build:
 
 .. code:: bash
 
-    $ npx gulp build:full
+    $ npm run build:full
 
 
 To watch file changes and build SCSS, Javascript, optimise images and lint
@@ -42,14 +42,14 @@ automatically:
 
 .. code:: bash
 
-    $ npx gulp watch
+    $ npm run watch
 
 
 To create a PDF of the resume in the `public_dist/resume/` directory:
 
 .. code:: bash
 
-    $ npx gulp resume_pdf
+    $ npm run resume_pdf
 
 
 License

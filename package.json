@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "gulp build",
+    "build:full": "gulp build:full",
+    "watch": "gulp watch",
+    "resume_pdf": "gulp resume_pdf"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
