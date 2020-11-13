@@ -53,6 +53,7 @@
     "singleQuote": true,
     "printWidth": 79,
     "tabWidth": 2,
-    "endOfLine": "auto"
+    "endOfLine": "auto",
+    "functionParenNewline": "never"
   }
 }
