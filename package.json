@@ -7,7 +7,8 @@
     "build": "gulp build",
     "build:full": "gulp build:full",
     "watch": "gulp watch",
-    "resume_pdf": "gulp resume_pdf"
+    "resume_pdf": "gulp resume_pdf",
+    "resume_pdf:watch": "gulp resume_pdf:watch"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -42,5 +43,13 @@
     "uglifyjs-webpack-plugin": "^1.0.0-rc.0",
     "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 79,
+    "tabWidth": 2,
+    "endOfLine": "auto"
   }
 }

@@ -5,21 +5,52 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const experience = [
     {
-      company: 'GeekSmith',
+      company: 'Ideaflip',
+      position: 'Senior developer (contract)',
+      timeperiod: 'May 2019 - Nov 2020',
+      highlight: true,
+      description: [
+        [
+          `Rapid analysis ➜ development cycle to capitalise on
+          sales peak due to Covid lockdown.`,
+          ['Google Analytics', 'Django', 'VueJS', 'Rest Framework'],
+        ],
+        [
+          `Migrated large & aged codebase from Python 2 to 3 with zero downtime
+          and thorough quality control.`,
+          ['Python'],
+        ],
+      ],
+    },
+    {
+      company: 'Kaleider',
+      position: 'Lead developer (part-time contract)',
+      timeperiod: 'Mar 2020 - Oct 2020',
+      highlight: true,
+      description: [
+        [
+          `Led development effort on 'A Portrait Without Borders', an
+          interactive art exhibit, letting members of the public have their
+          portrait drawn by AI powered robots.`,
+          ['Django', 'VueJS', 'Rest Framework'],
+        ],
+        [
+          'Bespoke online shop and backend workflow using Django and Stripe.',
+          ['Ecommerce', 'Stripe'],
+        ],
+      ],
+    },
+    {
+      company: 'Take on Tom',
       position: 'Developer & consultant',
       timeperiod: 'Oct 2018 - Nov 2019',
       highlight: true,
       description: [
         [
-          `Using data science techniques to analyse sales and marketing
-          performance of local businesses, finding issues and running projects
-          to improve them.`,
-          ['Data Sciencee', 'Python', 'Pandas', 'Wagtail', 'Django'],
-        ],
-        [
-          `Lead developer for ideaflip.com, a Django based brainstorming app
-          for web and tablets.`,
-          ['Django', 'MongoDB', 'Node.js'],
+          `Used data science techniques to analyse sales and marketing
+          performance of SMEs, finding issues and running
+          development projects to improve them.`,
+          ['Data Science', 'Python', 'Pandas', 'Wagtail', 'Django'],
         ],
       ],
     },
@@ -33,24 +64,18 @@ router.get('/', (req, res) => {
           `Led an agile team of developers and data scientists in building a
           'big data' ETL platform for Pfizer, one of the world's top 3
           pharmaceutical companies.`,
-          ['Agile', 'Architect', 'Big Data'],
-        ],
-        [
-          `Mission critical, high value data processing with no room for error:
-          So trained, guided and enforced Test Driven Development practices
-          throughout the team.`,
-          ['TDD', 'Training'],
+          ['Agile', 'Architect', 'Big Data', 'LDAP', 'Box.com'],
         ],
         [
           `Developed high quality & flexible Django based framework to provide
           Metacell with a long term, maintainable & commerically viable
-          product.`,
-          ['Django', 'Python', 'Oracle', 'Postgres', 'LDAP', 'Box.com'],
+          product with a cutting-edge React based frontend.`,
+          ['Django', 'Python', 'Oracle', 'Postgres', 'React'],
         ],
-        [
-          'Designed and implementated cutting-edge React based frontend.',
-          ['UX', 'Design', 'React', 'CSS/LESS', 'HTML5'],
-        ],
+        // [
+        //   'Designed and implementated cutting-edge React based frontend.',
+        //   ['UX', 'Design', 'React', 'CSS/LESS', 'HTML5'],
+        // ],
       ],
     },
     {
@@ -65,11 +90,11 @@ router.get('/', (req, res) => {
           key landing pages.`,
           ['SEO', 'Lighthouse', 'Google PageSpeed', 'YSlow'],
         ],
-        [
-          `Integrated Prismic CMS into key areas of website, with automatic
-          setup of A/B testing using Sixpack.`,
-          ['Flask', 'Prismic', 'Sixpack'],
-        ],
+        // [
+        //   `Integrated Prismic CMS into key areas of website, with automatic
+        //   setup of A/B testing using Sixpack.`,
+        //   ['Flask', 'Prismic', 'Sixpack'],
+        // ],
         [
           `Improved On-Site Conversion Rate and Average Revenue Per Order by
           adding ecommerce features and optimising signup process.`,
@@ -78,7 +103,7 @@ router.get('/', (req, res) => {
       ],
     },
     {
-      company: 'The Developer Society (formerly Blanc)',
+      company: 'The Developer Society (formerly "Blanc")',
       position: 'Senior Web Developer (contract)',
       timeperiod: 'Sep 2016 - Jun 2017',
       highlight: true,
@@ -90,18 +115,9 @@ router.get('/', (req, res) => {
         ],
 
         [
-          `As Lead Developer, created the online presence and booking
-            portal for The Compassion Experience.`,
-          [
-            'Django', 'TDD', 'HTML5', 'CSS/LESS', 'JavaScript', 'JQuery',
-            'Twilio',
-          ],
-        ],
-
-        [
-          `Also worked on projects for The Church of England, Civicus and Lumos
-            (JK Rowling's Childrens Charity).`,
-          ['Django', 'SalesForce API', 'Training'],
+          `Senior developer on projects for The Church of England, Civicus and
+          Lumos (JK Rowling's Childrens Charity).`,
+          ['Django', 'SalesForce API', 'Training', 'TDD', 'Twilio'],
         ],
       ],
     },
@@ -118,8 +134,13 @@ router.get('/', (req, res) => {
           `Designed and built many high quality websites using Django-CMS &
             Drupal.`,
           [
-            'Django-CMS', 'Drupal ☹', 'WordPress', 'HTML5', 'CSS/LESS',
-            'JQuery', 'AWS',
+            'Django-CMS',
+            'Drupal ☹',
+            'WordPress',
+            'HTML5',
+            'CSS/LESS',
+            'JQuery',
+            'AWS',
           ],
         ],
       ],
