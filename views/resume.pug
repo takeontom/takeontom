@@ -40,7 +40,7 @@ html(lang="en", dir="ltr")
       content="/images/favicon/browserconfig.xml")
     meta(name="theme-color", content="#ee0979")
 
-  body.layout-resume
+  body(class=['layout-resume', bodyClass || ''])
     .resume
       section.resume-main
         header.resume-header
@@ -83,8 +83,8 @@ html(lang="en", dir="ltr")
                   li #{item.position} - #{item.company} (#{item.timeperiod})
 
       aside.resume-sidebar
-        h3 Contact details
-        ul.resume-contact.resume-sidebar-list
+        h3.hide-anon Contact details
+        ul.resume-contact.resume-sidebar-list.hide-anon
           li.phone: a(href="tel:07507 707 740") 07507 707 740
           li.email: a(href="mailto:hiya@takeontom.com") hiya@takeontom.com
           li.linkedin: a(href="https://uk.linkedin.com/in/takeontom") takeontom
@@ -113,6 +113,6 @@ html(lang="en", dir="ltr")
           I also mentor young developers in partnership with Plymouth
           University.
 
-        p For more information, take a look at my website:
-        ul.resume-sidebar-list
+        p.hide-anon For more information, take a look at my website:
+        ul.resume-sidebar-list.hide-anon
           li.website #[a(href="https://takeontom.com/") takeontom.com]

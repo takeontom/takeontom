@@ -4,6 +4,10 @@ body.layout-resume {
   -webkit-print-color-adjust: exact;
 }
 
+body.anon .hide-anon {
+  display: none;
+}
+
 .resume {
   display: grid;
   grid-template-columns: auto;
@@ -44,16 +48,12 @@ body.layout-resume {
   .resume-sidebar {
     grid-area: sidebar;
 
-    padding: 1cm 0.5cm;
+    padding: 0 0.5cm;
 
     h3 {
       line-height: 1;
       margin: 3rem 0 1.5rem 0;
       padding: 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
     }
   }
 

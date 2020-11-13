@@ -163,6 +163,13 @@ gulp.task('resume_pdf:generate', ['sass'], async () => {
     path: path.join('/tmp/resume.pdf'),
     format: 'A4',
   });
+  await page.goto('http://localhost:3000/resume/anon/', {
+    waitUntil: 'networkidle0',
+  });
+  await page.pdf({
+    path: path.join('/tmp/resume-anon.pdf'),
+    format: 'A4',
+  });
   await browser.close();
 });
 
@@ -170,7 +177,7 @@ gulp.task('resume_pdf:clean', () => del(['./pdfs/']));
 
 gulp.task('resume_pdf', ['resume_pdf:generate'], () =>
   gulp
-    .src('/tmp/resume.pdf')
+    .src(['/tmp/resume.pdf', '/tmp/resume-anon.pdf'])
     .pipe(changed('./pdfs/'))
     .pipe(gulp.dest('./pdfs/')),
 );

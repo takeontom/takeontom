@@ -46,6 +46,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public_dist')));
 
+app.get('/resume/anon/*.pdf', (req, res) => {
+  const options = {
+    headers: {
+      'Content-Disposition': `attachment; filename="${req.baseUrl}"`,
+    },
+  };
+  res.sendFile(path.join(__dirname, 'pdfs/', 'resume-anon.pdf'), options);
+});
+
 app.get('/resume/*.pdf', (req, res) => {
   const options = {
     headers: {
