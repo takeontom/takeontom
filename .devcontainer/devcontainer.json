@@ -4,8 +4,18 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
+	"appPort": ["3000:3000"],
     "remoteUser": "node",
+    "containerUser": "node",
     "workspaceFolder": "/workspace/",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-    "onCreateCommand": ["npm", "install"]
+   "onCreateCommand": [
+		"npm",
+		"install"
+	],
+    "customizations": {
+        "vscode": {
+          "extensions": ["tomoki1207.pdf"]
+        }
+      }
 }
