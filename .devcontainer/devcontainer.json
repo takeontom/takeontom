@@ -1,0 +1,11 @@
+{
+    "name": "takeontom",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "node",
+    "workspaceFolder": "/workspace/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "onCreateCommand": ["npm", "install"]
+}
