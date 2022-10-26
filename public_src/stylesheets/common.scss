@@ -7,6 +7,8 @@
 html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -33,13 +35,11 @@ $c2: #ff6a00;
 
 #background {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    height: 130%;
+    width: 100%;
+    top: 0;
 
     z-index: -800;
-    background-attachment: fixed;
 }
 
 a, a:visited {
