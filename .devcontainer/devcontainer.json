@@ -4,18 +4,21 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-	"appPort": ["3000:3000"],
+    "appPort": ["3000:3000"],
     "remoteUser": "node",
     "containerUser": "node",
     "workspaceFolder": "/workspace/",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-//    "onCreateCommand": [
-// 		"npm",
-// 		"install"
-// 	],
-//     "customizations": {
-//         "vscode": {
-//           "extensions": ["tomoki1207.pdf"]
-//         }
-//       }
+    "onCreateCommand": [
+        "npm",
+        "install"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+            "settings": {
+                "editor.formatOnSave": true
+            }
+        }
+    }
 }
