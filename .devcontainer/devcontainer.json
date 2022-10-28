@@ -9,13 +9,13 @@
     "containerUser": "node",
     "workspaceFolder": "/workspace/",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-   "onCreateCommand": [
-		"npm",
-		"install"
-	],
-    "customizations": {
-        "vscode": {
-          "extensions": ["tomoki1207.pdf"]
-        }
-      }
+//    "onCreateCommand": [
+// 		"npm",
+// 		"install"
+// 	],
+//     "customizations": {
+//         "vscode": {
+//           "extensions": ["tomoki1207.pdf"]
+//         }
+//       }
 }
