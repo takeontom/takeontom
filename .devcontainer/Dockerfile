@@ -13,5 +13,7 @@ RUN apt-get update \
         vim
 
 USER $DEV_USER:$DEV_USER
-RUN echo 'set mouse=\n\
+RUN echo 'runtime! debian.vim\n\
+syntax on\n\
+set mouse=\n\
 set ttymouse=\n' > ~/.vimrc
