@@ -15,9 +15,15 @@
     ],
     "customizations": {
         "vscode": {
-            "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+            "extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens"
+			],
             "settings": {
-                "editor.formatOnSave": true
+                "editor.formatOnSave": true,
+                "typescript.tsdk": "./node_modules/typescript/lib",
+                "typescript.enablePromptUseWorkspaceTsdk": true
             }
         }
     }
