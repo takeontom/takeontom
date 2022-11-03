@@ -1,31 +1,12 @@
-.container {
 
-}
 
-.bg {
-  background: linear-gradient(135deg, #ee0979, #ff6a00);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-}
-
-.main {
-  position: absolute;
-  width: 100%;
-}
 
 .header {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
   h1 {
-    font-family: var(--font-opensans), 'Courier New', Courier, monospace;
     font-size: 4rem;
   }
 }
 
-.footer {
-
-}
