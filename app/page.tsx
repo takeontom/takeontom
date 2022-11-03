@@ -1,7 +1,8 @@
+import EmailIconLink from "../components/email-icon-link";
+import GitHubIconLink from "../components/github-icon-link";
+import LinkedInIconLink from "../components/linkedin-icon-link";
 import PortfolioItem from "../components/portfolio-item";
 import styles from "../styles/Home.module.scss";
-
-import bbcLogo from "/public/images/portfolio/bbc.png";
 
 export default function Home() {
   const fullPortfolio = [
@@ -148,21 +149,13 @@ export default function Home() {
         <h1>Tom Smith</h1>
         <p className={styles.subTitle}>Senior Full Stack Developer</p>
         <address className={styles.contactLinks}>
-          <a href="mailto:hey@takeontom.com">Email</a>
-          <a
-            href="https://uk.linkedin.com/in/takeontom"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <EmailIconLink href="mailto:hey@takeontom.com">Email</EmailIconLink>
+          <LinkedInIconLink href="https://uk.linkedin.com/in/takeontom">
             LinkedIn
-          </a>
-          <a
-            href="https://github.com/takeontom/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          </LinkedInIconLink>
+          <GitHubIconLink href="https://github.com/takeontom/">
             GitHub
-          </a>
+          </GitHubIconLink>
         </address>
       </header>
 
@@ -229,21 +222,13 @@ export default function Home() {
         </p>
 
         <address className={styles.contactLinks}>
-          <a href="mailto:hey@takeontom.com">Email</a>
-          <a
-            href="https://uk.linkedin.com/in/takeontom"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <EmailIconLink href="mailto:hey@takeontom.com">Email</EmailIconLink>
+          <LinkedInIconLink href="https://uk.linkedin.com/in/takeontom">
             LinkedIn
-          </a>
-          <a
-            href="https://github.com/takeontom/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          </LinkedInIconLink>
+          <GitHubIconLink href="https://github.com/takeontom/">
             GitHub
-          </a>
+          </GitHubIconLink>
         </address>
       </section>
     </main>
