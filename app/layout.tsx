@@ -1,9 +1,18 @@
 import "../styles/globals.scss";
 import styles from "../styles/Layout.module.scss";
 
-// import { Open_Sans } from "@next/font/google";
+import { Open_Sans, Source_Sans_Pro } from "@next/font/google";
 
-// const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-opensans" });
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  weight: "400",
+});
+const sourceSansPro = Source_Sans_Pro({
+  subsets: ["latin"],
+  variable: "--font-source-sans-pro",
+  weight: "400",
+});
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -13,8 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <html lang="en" className={openSans.variable}>
-    <html lang="en">
+    <html
+      lang="en"
+      className={[openSans.variable, sourceSansPro.variable].join(" ")}
+    >
+      {/* <html lang="en"> */}
       <head>
         <title>Tom Smith - Senior Full Stack Developer</title>
         <meta

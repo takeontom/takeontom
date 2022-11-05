@@ -146,8 +146,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <h1>Tom Smith</h1>
-        <p className={styles.subTitle}>Senior Full Stack Developer</p>
+        <hgroup>
+          <h1 className={styles.pageTitle}>Tom Smith</h1>
+          <p className={styles.subTitle}>Senior Full Stack Developer</p>
+        </hgroup>
         <address className={styles.contactLinks}>
           <EmailIconLink href="mailto:hey@takeontom.com">Email</EmailIconLink>
           <LinkedInIconLink href="https://uk.linkedin.com/in/takeontom">
@@ -162,27 +164,29 @@ export default function Home() {
       <section>
         <h2>Full stack, quality focussed &amp; experienced.</h2>
 
-        <div>
-          <ul>
-            <li>Python3, Django, Wagtail, DjangoCMS, Flask</li>
-            <li>JavaScript, React, VueJS, HTML5, CSS, LESS, SASS</li>
-            <li>Node.js, Express</li>
-          </ul>
-        </div>
+        <div className={styles.summary}>
+          <div>
+            <ul className={styles.list}>
+              <li>Python3, Django, Wagtail, DjangoCMS, Flask</li>
+              <li>JavaScript, React, VueJS, HTML5, CSS, LESS, SASS</li>
+              <li>Node.js, Express</li>
+            </ul>
+          </div>
 
-        <div>
-          <p>
-            I&apos;m a UK based developer who&apos;s been making commercially
-            successful projects for nearly 20 years.
-          </p>
-          <p>
-            I&apos;m reliable, flexible and a fast learner, who can jump into
-            projects at any stage and slot seamlessly into a team.
-          </p>
-          <p>
-            Why not <a href="mailto:hey@takeontom.com">get in touch</a> and see
-            if I can help with your project?
-          </p>
+          <div>
+            <p>
+              I&apos;m a UK based developer who&apos;s been making commercially
+              successful projects for nearly 20 years.
+            </p>
+            <p>
+              I&apos;m reliable, flexible and a fast learner, who can jump into
+              projects at any stage and slot seamlessly into a team.
+            </p>
+            <p>
+              Why not <a href="mailto:hey@takeontom.com">get in touch</a> and
+              see if I can help with your project?
+            </p>
+          </div>
         </div>
       </section>
 
@@ -215,7 +219,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className={styles.partingThoughts}>
         <p>
           If you have need of a UK based, high quality and experienced full
           stack developer, then just get in touch:

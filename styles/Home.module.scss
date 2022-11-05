@@ -1,9 +1,18 @@
 .header {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1rem auto 3rem auto;
   padding: 0;
-  h1 {
+
+  .pageTitle {
     font-size: 4rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+  }
+
+  .subTitle {
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    font-size: 1.4rem;
   }
 }
 
@@ -14,6 +23,7 @@
 
 .portfolioItems {
   display: grid;
+  margin-bottom: 3rem;
 
   @media screen and (min-width: 0) {
     grid-template-columns: auto;
@@ -31,5 +41,44 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0 0 0 0.5rem;
+    border-left: solid 0.25rem #ffb27e;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-flow: row nowrap;
+
+  > div {
+    width: 50%;
+  }
+}
+
+.partingThoughts {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 3rem 0;
+  border-color: fade-out($color: #fff, $amount: 0.8);
+  border-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  text-align: center;
+
+  p {
+    margin: 0 0 1.5rem;
+    padding: 0;
   }
 }
