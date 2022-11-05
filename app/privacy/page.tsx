@@ -1,7 +1,7 @@
 export default function Privacy() {
   return (
     <main>
-      <h1>Privacy policy</h1>
+      <h2>Privacy policy</h2>
       <p>
         Take on Tom Ltd (&quot;We&quot;) are committed to protecting and
         respecting your privacy.

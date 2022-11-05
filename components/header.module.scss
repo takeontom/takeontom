@@ -1,0 +1,21 @@
+.siteHeader {
+  max-width: 1000px;
+  margin: 1rem auto 3rem auto;
+  padding: 0;
+
+  .pageTitle {
+    font-size: 4rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .subTitle {
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    font-size: 1.4rem;
+  }
+}
