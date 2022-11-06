@@ -1,6 +1,6 @@
 import ContactLinks from "../components/contact-links";
 import Portfolio from "../components/portfolio";
-import styles from "../styles/Home.module.scss";
+import styles from "./styles/Home.module.scss";
 
 export default function HomePage() {
   return (
