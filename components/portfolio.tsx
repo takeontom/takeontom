@@ -2,11 +2,29 @@ import PortfolioItem from "./portfolio-item";
 
 import styles from "./portfolio.module.scss";
 
+import pfizerLogo from "/public/images/portfolio/pfizer.png";
+import oxfamLogo from "/public/images/portfolio/oxfam.png";
+import theDeveloperSocietyLogo from "/public/images/portfolio/the-developer-society.png";
+import pepsiLogo from "/public/images/portfolio/pepsi.png";
+import brotherLogo from "/public/images/portfolio/brother.png";
+import compassionExperienceLogo from "/public/images/portfolio/compassion-experience.png";
+import churchOfEnglandLogo from "/public/images/portfolio/church-of-england.png";
+import corporateRewardsLogo from "/public/images/portfolio/corporate-rewards.png";
+import civicusLogo from "/public/images/portfolio/civicus.png";
+import tailsLogo from "/public/images/portfolio/tails.png";
+import lumosLogo from "/public/images/portfolio/lumos.png";
+import itvLogo from "/public/images/portfolio/itv.png";
+import childrensSocietyLogo from "/public/images/portfolio/childrens-society.png";
+import datelineLogo from "/public/images/portfolio/dateline.png";
+import protecInnovationsLogo from "/public/images/portfolio/protec-innovations.png";
+import hmCourtsTribunalsServiceLogo from "/public/images/portfolio/hm-courts-tribunals-service.jpg";
+import connectCashlessParkingLogo from "/public/images/portfolio/connect-cashless-parking.png";
+
 export default function Portfolio() {
   const fullPortfolio = [
     {
       name: "Pfizer",
-      logo: "pfizer.png",
+      logo: pfizerLogo,
       display: true,
       desc: `Led an agile team of developers and data scientists in building a
             cutting edge big-data ETL platform for one of the world's top 3
@@ -14,14 +32,14 @@ export default function Portfolio() {
     },
     {
       name: "Oxfam",
-      logo: "oxfam.png",
+      logo: oxfamLogo,
       display: true,
       desc: `Developed "Act" - Oxfam's international hub for raising awareness
             and promoting action for problems around the world.`,
     },
     {
       name: "The Developer Society",
-      logo: "the-developer-society.png",
+      logo: theDeveloperSocietyLogo,
       display: true,
       desc: `Consultant to the lovely people at Dev to introduce Test Driven
             Development and team focussed development processes... and ate too many
@@ -29,7 +47,7 @@ export default function Portfolio() {
     },
     {
       name: "Pepsi",
-      logo: "pepsi.png",
+      logo: pepsiLogo,
       display: true,
       desc: `Lead Developer on an advanced and highly regarded reporting tool
             for Pepsi's ground breaking "Max-It for a Million" marketing
@@ -37,28 +55,28 @@ export default function Portfolio() {
     },
     {
       name: "Brother",
-      logo: "brother.png",
+      logo: brotherLogo,
       display: true,
       desc: `As Product Manager, designed, coordinated and oversaw development
             of Brother UK's staff training and development portal.`,
     },
     {
       name: "The Compassion Experience UK",
-      logo: "compassion-experience.png",
+      logo: compassionExperienceLogo,
       display: true,
       desc: `As Lead Developer, created the online presence and booking portal
             for this powerful educational experience.`,
     },
     {
       name: "The Church of England",
-      logo: "church-of-england.png",
+      logo: churchOfEnglandLogo,
       display: true,
       desc: `Created the official mobile first e-learning site to help
             encourage better safeguarding practices within the Church of England.`,
     },
     {
       name: "Corporate Rewards",
-      logo: "corporate-rewards.png",
+      logo: corporateRewardsLogo,
       display: true,
       urls: ["https://www.corporaterewards.co.uk/"],
       desc: `As Product Manager, oversaw and coordinated the development of
@@ -69,7 +87,7 @@ export default function Portfolio() {
     },
     {
       name: "Civicus Monitor",
-      logo: "civicus.png",
+      logo: civicusLogo,
       display: true,
       desc: `Developed high profile website to track and increase awareness of
             civic freedom and repression around the world.`,
@@ -77,7 +95,7 @@ export default function Portfolio() {
     },
     {
       name: "tails.com",
-      logo: "tails.png",
+      logo: tailsLogo,
       display: true,
       desc: `As full-stack developer, optimised the signup funnel for this
             leading pet nutrition company. Worked with the management team to
@@ -86,28 +104,28 @@ export default function Portfolio() {
     },
     {
       name: "Lumos",
-      logo: "lumos.png",
+      logo: lumosLogo,
       display: true,
       desc: `Implemented payment and SalesForce integrations for JK Rowling's
             children charity, Lumos.`,
     },
     {
       name: "ITV",
-      logo: "itv.png",
+      logo: itvLogo,
       display: true,
       desc: `Created internal admin system and public facing Web integrations
             for flagship live TV show.`,
     },
     {
       name: "The Children's Society",
-      logo: "childrens-society.png",
+      logo: childrensSocietyLogo,
       display: true,
       desc: `Invited to provide training to regional reps on network marketing
             and ways of communicating effectively with small businesses.`,
     },
     {
       name: "Dateline",
-      logo: "dateline.png",
+      logo: datelineLogo,
       display: true,
       urls: ["http://dateline.co.uk/"],
       desc: `Lead Developer for the successful and complete redevelopment of
@@ -115,7 +133,7 @@ export default function Portfolio() {
     },
     {
       name: "Protec Innovations",
-      logo: "protec-innovations.png",
+      logo: protecInnovationsLogo,
       display: true,
       desc: `As Product Manager, I recruited and managed a 6 person development
             team building the ambitious Phase4 project which radically improves the
@@ -123,14 +141,14 @@ export default function Portfolio() {
     },
     {
       name: "HM Courts & Tribunals Service",
-      logo: "hm-courts-tribunals-service.jpg",
+      logo: hmCourtsTribunalsServiceLogo,
       display: true,
       desc: `As Lead Developer, designed, developed & managed core database
             for the court's liquor licensing modernisation process.`,
     },
     {
       name: "Connect Cashless Parking",
-      logo: "connect-cashless-parking.png",
+      logo: connectCashlessParkingLogo,
       display: true,
       desc: `Developed the customer facing website and comprehensive reporting
             system for this national SMS based car parking solution.`,

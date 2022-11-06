@@ -9,6 +9,10 @@
   }
 
   .logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
     flex: 1;
     min-height: 100px;
     padding: 1rem 0;
