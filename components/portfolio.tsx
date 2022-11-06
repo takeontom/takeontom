@@ -155,13 +155,13 @@ export default function Portfolio() {
     },
   ];
 
-  //   const portfolio = fullPortfolio.filter(
-  //     (item) => item.desc && item.logo && item.display
-  //   );
+  const portfolio = fullPortfolio.filter(
+    (item) => item.desc && item.logo && item.display
+  );
 
   return (
     <div className={styles.portfolioItems}>
-      {fullPortfolio.map((item) => (
+      {portfolio.map((item) => (
         <PortfolioItem key={item.name} name={item.name} logo={item.logo}>
           <p>{item.desc}</p>
         </PortfolioItem>
