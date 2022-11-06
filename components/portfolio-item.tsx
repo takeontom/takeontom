@@ -11,7 +11,11 @@ export default function PortfolioItem(portfolio: PortfolioItemProps) {
   return (
     <div className={styles.portfolioItem}>
       <div className={styles.logo}>
-        <Image src={portfolio.logo} alt="" />
+        <Image
+          className={styles.logoImage}
+          src={portfolio.logo}
+          alt={`${portfolio.name} logo`}
+        />
       </div>
       <div className={styles.info}>
         <h3 className={styles.name}>{portfolio.name}</h3>

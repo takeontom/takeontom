@@ -13,18 +13,18 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    min-height: 100px;
-    padding: 1rem 0;
+    padding: 2rem 0;
     background-color: rgba(255, 255, 255, 0.5);
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
       padding: 2rem;
     }
 
     .logoImage {
-      display: block;
-      margin: auto;
+      @media screen and (max-width: 600px) {
+        margin: auto;
+        width: 100px;
+      }
     }
   }
 
