@@ -2,6 +2,7 @@ import styles from "./Portfolio.module.scss";
 
 import PortfolioItem from "../PortfolioItem";
 import fullPortfolio from "../../data/portfolio";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export default function Portfolio() {
   return (
@@ -10,7 +11,7 @@ export default function Portfolio() {
         .filter((item) => item.desc && item.logo && item.display)
         .map((item) => (
           <PortfolioItem key={item.name} name={item.name} logo={item.logo}>
-            <p>{item.desc}</p>
+            {item.desc && <ReactMarkdown>{item.desc}</ReactMarkdown>}
           </PortfolioItem>
         ))}
 
@@ -20,11 +21,14 @@ export default function Portfolio() {
           <div className="item desc">
             <p>
               In addition to working on dozens of other successful projects,
-              I&apos;ve advised major charities and trade groups on digital
-              strategy, appeared on BBC radio a few times, rebranded a PLC,
-              content audited an exemplar GDS service, been a <em>fearsome</em>
-              cake judge at baking competitions and was a semi-pro gamer...
-              unfortunately, before that sort of thing was cool.
+              I&apos;ve{" "}
+              <strong>advised major charities and trade groups</strong> on
+              digital strategy, <strong>appeared on BBC radio</strong> a few
+              times, <strong>rebranded a PLC</strong>, content{" "}
+              <strong>audited an exemplar GDS service</strong>, been a{" "}
+              <strong>fearsome cake judge</strong> at baking competitions and
+              was a <strong>semi-pro gamer</strong>... unfortunately, before
+              that sort of thing was cool.
             </p>
           </div>
         </div>

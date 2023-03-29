@@ -8,7 +8,7 @@ import SiteHeader from "../components/SiteHeader";
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 const sourceSansPro = Source_Sans_Pro({

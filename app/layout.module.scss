@@ -1,12 +1,13 @@
+@use "app/mixins.scss";
+
 .pageContainer {
   position: absolute;
   width: 100%;
 }
 
 .container {
+  @include mixins.pageContainer;
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem;
 }
 

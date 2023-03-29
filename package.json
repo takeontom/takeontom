@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "images": "sharp -i src/images/portfolio/* -o public/images/portfolio/ resize 100",
+    "images": "npm run images:clean && npm run images:generate",
+    "images:generate": "sharp -f png -i src/images/portfolio/* -o public/images/portfolio/ resize 100",
+    "images:clean": "rm -rf public/images/portfolio/*",
     "check-types": "tsc --noemit",
     "lint": "npm run check-types && next lint",
     "tsc-watch": "tsc --watch",
@@ -20,6 +22,7 @@
     "next": "~13.2.0",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
+    "react-markdown": "^8.0.6",
     "typescript": "^4.9.5"
   },
   "devDependencies": {

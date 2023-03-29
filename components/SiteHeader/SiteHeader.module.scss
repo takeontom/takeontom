@@ -1,5 +1,7 @@
+@use "app/mixins.scss";
+
 .siteHeader {
-  max-width: 1000px;
+  @include mixins.pageContainer;
   margin: 1rem auto 3rem auto;
   padding: 0;
 

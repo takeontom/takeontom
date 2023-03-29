@@ -9,7 +9,7 @@ export default function SiteHeader() {
         <h1 className={styles.pageTitle}>
           <Link href="/">Tom Smith</Link>
         </h1>
-        <p className={styles.subTitle}>Senior Full Stack Developer</p>
+        <p className={styles.subTitle}>Technical Leader and Senior Developer</p>
       </hgroup>
       <ContactLinks />
     </header>
