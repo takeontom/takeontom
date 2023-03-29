@@ -10,11 +10,23 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
   weight: "400",
 });
+
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
   variable: "--font-source-sans-pro",
   weight: "400",
 });
+
+export async function generateMetadata() {
+  return {
+    title: {
+      default: "Tom Smith - Experienced Developer & Technical Leader",
+      template: "%s | Tom Smith - Experienced Developer & Technical Leader",
+    },
+    description: "Experienced developer and leader based in the UK",
+    manifest: "/site.webmanifest",
+  };
+}
 
 export default function RootLayout({
   // Layouts must accept a children prop.
