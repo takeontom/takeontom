@@ -5,17 +5,17 @@
 
 .container {
   position: relative;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  max-width: 1000px;
 }
 
 .bg {
-  background: linear-gradient(135deg, #ee0979, #ff6a00);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
   z-index: -1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-orange));
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -1,13 +1,13 @@
 .list {
-  list-style: none;
   margin: 0 0 0 1rem;
   padding: 0;
+  list-style: none;
 
   li {
-    list-style: none;
     margin: 0 0 1.5rem 0;
     padding: 0 0 0 0.5rem;
-    border-left: solid 0.25rem #ffb27e;
+    border-left: solid 0.25rem var(--color-yellow);
+    list-style: none;
   }
 }
 
@@ -37,10 +37,10 @@
   flex-flow: column nowrap;
   align-items: center;
   padding: 3rem 0;
-  border-color: fade-out($color: #fff, $amount: 0.8);
   border-width: 1px;
   border-top-style: solid;
   border-bottom-style: solid;
+  border-color: var(--color-faded-white);
   text-align: center;
 
   p {
