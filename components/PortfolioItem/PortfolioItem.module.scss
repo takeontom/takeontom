@@ -1,7 +1,9 @@
 .portfolioItem {
   display: flex;
   flex-flow: column nowrap;
-  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--color-very-faded-white);
   color: var(--color-white);
 
   @media screen and (min-width: 600px) {
@@ -14,7 +16,11 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--color-faded-white);
+    background: radial-gradient(
+      var(--color-faded-white2),
+      var(--color-faded-white)
+    );
 
     @media screen and (min-width: 600px) {
       padding: 2rem;
