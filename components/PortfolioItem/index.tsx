@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import styles from "./portfolio-item.module.scss";
+import styles from "./PortfolioItem.module.scss";
 
 interface PortfolioItemProps {
   name: string;

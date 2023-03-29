@@ -1,6 +1,4 @@
-import PortfolioItem from "./portfolio-item";
-
-import styles from "./portfolio.module.scss";
+import styles from "./Portfolio.module.scss";
 
 import pfizerLogo from "/public/images/portfolio/pfizer.png";
 import oxfamLogo from "/public/images/portfolio/oxfam.png";
@@ -19,6 +17,7 @@ import datelineLogo from "/public/images/portfolio/dateline.png";
 import protecInnovationsLogo from "/public/images/portfolio/protec-innovations.png";
 import hmCourtsTribunalsServiceLogo from "/public/images/portfolio/hm-courts-tribunals-service.jpg";
 import connectCashlessParkingLogo from "/public/images/portfolio/connect-cashless-parking.png";
+import PortfolioItem from "../PortfolioItem";
 
 export default function Portfolio() {
   const fullPortfolio = [

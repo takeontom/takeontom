@@ -1,9 +1,9 @@
-import "./styles/globals.scss";
-import styles from "./styles/Layout.module.scss";
+import "./globals.scss";
+import styles from "./layout.module.scss";
 
 import { Open_Sans, Source_Sans_Pro } from "next/font/google";
-import SiteHeader from "../components/site-header";
-import SiteFooter from "../components/site-footer";
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 const openSans = Open_Sans({
   subsets: ["latin"],

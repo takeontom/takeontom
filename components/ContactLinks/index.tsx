@@ -1,7 +1,5 @@
-import styles from "./contact-links.module.scss";
-import EmailIconLink from "./email-icon-link";
-import GitHubIconLink from "./github-icon-link";
-import LinkedInIconLink from "./linkedin-icon-link";
+import { EmailIconLink, LinkedInIconLink, GitHubIconLink } from "../IconLink";
+import styles from "./ContactLinks.module.scss";
 
 export default function ContactLinks() {
   return (

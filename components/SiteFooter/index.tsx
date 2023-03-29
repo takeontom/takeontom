@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./site-footer.module.scss";
+import styles from "./SiteFooter.module.scss";
 
 export default function SiteFooter() {
   return (

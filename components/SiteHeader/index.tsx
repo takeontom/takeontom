@@ -1,6 +1,6 @@
 import Link from "next/link";
-import ContactLinks from "./contact-links";
-import styles from "./site-header.module.scss";
+import ContactLinks from "../ContactLinks";
+import styles from "./SiteHeader.module.scss";
 
 export default function SiteHeader() {
   return (
