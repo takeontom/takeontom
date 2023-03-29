@@ -1,5 +1,5 @@
-import ContactLinks from "../components/ContactLinks";
-import Portfolio from "../components/Portfolio";
+import ContactLinks from "../../components/ContactLinks";
+import Portfolio from "../../components/Portfolio";
 import styles from "./HomePage.module.scss";
 
 export default async function Page() {

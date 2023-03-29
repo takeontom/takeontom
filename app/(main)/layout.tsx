@@ -1,9 +1,9 @@
-import "./globals.scss";
+import "app/globals.scss";
 import styles from "./layout.module.scss";
 
 import { Open_Sans, Source_Sans_Pro } from "next/font/google";
-import SiteFooter from "../components/SiteFooter";
-import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -29,8 +29,6 @@ export async function generateMetadata() {
 }
 
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children,
 }: {
   children: React.ReactNode;
