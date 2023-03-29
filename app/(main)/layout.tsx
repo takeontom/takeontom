@@ -14,7 +14,7 @@ const openSans = Open_Sans({
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
   variable: "--font-source-sans-pro",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 export async function generateMetadata() {
