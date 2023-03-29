@@ -1,7 +1,7 @@
 import "./styles/globals.scss";
 import styles from "./styles/Layout.module.scss";
 
-import { Open_Sans, Source_Sans_Pro } from "@next/font/google";
+import { Open_Sans, Source_Sans_Pro } from "next/font/google";
 import SiteHeader from "../components/site-header";
 import SiteFooter from "../components/site-footer";
 
