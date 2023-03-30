@@ -181,12 +181,17 @@ function Role({ role }: { role: IRole }) {
 function SummaryRole({ role }: { role: IRole }) {
   return (
     <li className={styles.SummaryRole}>
-      {role.positions.map((p, k) => (
-        <span key={k} className={styles.RolePosition}>
-          {p}
-        </span>
-      ))}{" "}
-      - {role.name} ({role.start} - {role.end})
+      <span className={styles.RolePositions}>
+        {role.positions.map((p, k) => (
+          <span key={k} className={styles.RolePosition}>
+            {p}
+          </span>
+        ))}
+      </span>
+      <span className={styles.RoleName}>{role.name}</span>
+      <span className={styles.RoleDates}>
+        {role.start} - {role.end}
+      </span>
     </li>
   );
 }

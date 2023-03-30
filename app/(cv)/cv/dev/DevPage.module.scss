@@ -59,12 +59,6 @@
   .Content {
   }
 
-  .RoleName {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-  }
-
   .Role {
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
@@ -113,6 +107,8 @@
     }
 
     .RoleName {
+      margin: 0;
+      padding: 0;
       color: var(--color-orange);
       font-size: 0.8rem;
     }
@@ -172,7 +168,16 @@
   }
 
   .SummaryRole {
-    margin: 0.25rem 0;
+    display: grid;
+    grid-template-columns: 2fr 2fr auto;
+    margin: 0.5rem 0;
+  }
+
+  .RoleName {
+    text-align: left;
+  }
+  .RoleDates {
+    text-align: right;
   }
 }
 

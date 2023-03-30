@@ -228,7 +228,7 @@ const Roles: IRole[] = [
     name: "Plymouth District Magistrates' Court",
     positions: ["Database Developer"],
     start: "Dec 2003",
-    end: "March 2005",
+    end: "Mar 2005",
     highlight: false,
   },
 
