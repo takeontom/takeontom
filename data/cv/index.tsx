@@ -31,8 +31,8 @@ const Roles: IRole[] = [
     highlight: true,
     skills: ["Python", "Django", "VueJS", "Rest Framework"],
     points: [
-      `* Rapid analysis ➜ development cycle to capitalise on sales peak due to Covid lockdown.`,
-      `* Migrated large & aged codebase from Python 2 to 3 with zero downtime and thorough quality
+      `Rapid analysis ➜ development cycle to capitalise on sales peak due to Covid lockdown.`,
+      `Migrated large & aged codebase from Python 2 to 3 with zero downtime and thorough quality
       control.`,
     ],
   },
@@ -45,10 +45,10 @@ const Roles: IRole[] = [
     highlight: true,
     skills: ["Django", "VueJS", "Rest Framework", "Ecommerce", "Stripe"],
     points: [
-      `* Led development effort on 'A Portrait Without Borders', an
+      `Led development effort on 'A Portrait Without Borders', an
         interactive art exhibit, letting members of the public have their
         portrait drawn by AI powered robots.`,
-      "* Bespoke online shop and backend workflow using Django and Stripe.",
+      "Bespoke online shop and backend workflow using Django and Stripe.",
     ],
   },
 
@@ -60,7 +60,7 @@ const Roles: IRole[] = [
     highlight: true,
     skills: ["Data Science", "Python", "Pandas", "Wagtail", "Django"],
     points: [
-      `* Used data science techniques to analyse sales and marketing
+      `Used data science techniques to analyse sales and marketing
         performance of SMEs, finding issues and running
         development projects to improve them.`,
     ],
@@ -85,10 +85,10 @@ const Roles: IRole[] = [
       "Box.com",
     ],
     points: [
-      `* Led an agile team of developers and data scientists in building a
+      `Led an agile team of developers and data scientists in building a
         'big data' ETL platform for Pfizer, one of the world's top 3
         pharmaceutical companies.`,
-      `* Developed high quality & flexible Django based framework to provide
+      `Developed high quality & flexible Django based framework to provide
         Metacell with a long term, maintainable & commerically viable
         product with a cutting-edge React based frontend.`,
     ],
@@ -111,15 +111,15 @@ const Roles: IRole[] = [
       "YSlow",
     ],
     points: [
-      `* Full technical SEO sweep, applying modern techniques such as lazy
+      `Full technical SEO sweep, applying modern techniques such as lazy
         loading images & asynchronous CSS loading. 85% speed improvement on
         key landing pages.`,
-      `* Improved On-Site Conversion Rate and Average Revenue Per Order by
+      `Improved On-Site Conversion Rate and Average Revenue Per Order by
         adding ecommerce features and optimising signup process.`,
     ],
   },
   {
-    name: 'The Developer Society (formerly "Blanc")',
+    name: 'DEV (formerly "Blanc")',
     positions: ["Senior Web Developer"],
     start: "Sep 2016",
     end: "Jun 2017",
@@ -137,9 +137,9 @@ const Roles: IRole[] = [
       "Twilio",
     ],
     points: [
-      `* Developed "Act", Oxfam's international hub for raising
+      `Developed "Act", Oxfam's international hub for raising
         awareness and promoting action around the world.`,
-      `* Senior developer on projects for The Church of England, Civicus and
+      `Senior developer on projects for The Church of England, Civicus and
         Lumos (JK Rowling's Childrens Charity).`,
     ],
   },
@@ -159,9 +159,9 @@ const Roles: IRole[] = [
       "AWS",
     ],
     points: [
-      `* Co-created FizzyNova, a digital agency to help SMEs be more successful
+      `Co-created FizzyNova, a digital agency to help SMEs be more successful
         online.`,
-      `* Designed and built many high quality websites using Django-CMS &
+      `Designed and built many high quality websites using Django-CMS &
           Drupal.`,
     ],
   },
@@ -179,9 +179,9 @@ const Roles: IRole[] = [
       "Product Design",
     ],
     points: [
-      `* Managed and coordinated the development of performance reward
+      `Managed and coordinated the development of performance reward
           websites for major names such as Microsoft, HP & Samsung.`,
-      `* Sourced a new development team and drastically modernised the
+      `Sourced a new development team and drastically modernised the
           technology behind the company's services.`,
     ],
   },
@@ -193,7 +193,7 @@ const Roles: IRole[] = [
     highlight: false,
     skills: ["Management", "Hiring", "Scrum Master", "PHP5", "AWS"],
     points: [
-      `* Recruited and managed a 6 person development team building the
+      `Recruited and managed a 6 person development team building the
           ambitious Phase4 project which radically improved the aftersales
           customer service industry.`,
     ],

@@ -27,12 +27,15 @@
   }
 
   .Header {
-    padding: 0 0 1rem 0;
-    border-bottom: 0.25mm solid var(--color-pink);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    padding: 0 0 0.5rem 0;
     .Name {
       margin: 0;
-      padding: 0 2rem 0.5rem 0;
-
+      padding: 0;
+      color: var(--color-pink);
+      font-weight: bold;
       font-size: 1.5rem;
       line-height: 1;
     }
@@ -40,13 +43,16 @@
       margin: 0;
       padding: 0;
       color: var(--color-grey);
+      font-weight: bold;
       font-size: 1.1rem;
       line-height: 1;
     }
   }
 
   .Summary {
-    font-style: italic;
+    margin: 0 0 1rem 0;
+    padding: 0 0 0.5rem 0;
+    border-bottom: 0.5mm solid var(--color-pink);
     font-size: 0.8rem;
   }
 
@@ -69,14 +75,14 @@
   }
 
   .Role {
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: solid 0.25mm var(--color-grey-light);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: dotted 0.25mm var(--color-grey);
 
     .RoleHeader {
       display: flex;
       flex-flow: row nowrap;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: space-between;
     }
 
@@ -85,19 +91,26 @@
       padding: 0;
     }
     .RoleSkill {
-      padding-right: 1em;
+      padding-right: 0.75em;
       color: var(--color-grey);
       font-size: 0.6rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
     .RolePositions {
       margin: 0;
       padding: 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
 
     .RolePosition {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
+      &:last-of-type {
+        font-size: 0.8rem;
+      }
     }
 
     .RoleName,
@@ -109,6 +122,8 @@
     }
 
     .RoleName {
+      color: var(--color-orange);
+      font-size: 0.8rem;
     }
 
     .RoleDates {
@@ -117,14 +132,19 @@
 
     .RolePoint {
       ul {
-        margin: 0.5rem 0 0 0;
+        margin: 0 0 0 0;
         padding: 0 0 0 0;
         list-style: none;
       }
       p,
       li {
-        margin: 0;
-        padding: 0;
+        margin: 0.25rem 0 0.25rem 0;
+        padding: 0 0 0 0.25rem;
+        border-left: solid 0.5mm var(--color-pink);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -132,6 +152,7 @@
   .RolePosition {
     padding-right: 0.5ex;
     color: var(--color-grey);
+    font-style: italic;
 
     &::after {
       padding-left: 0.5ex;
@@ -140,12 +161,26 @@
 
     &:last-of-type {
       padding-right: 0;
-      color: var(--color-black);
+      color: var(--color-pink);
+      font-style: normal;
 
       &::after {
         padding-left: 0;
         content: "";
       }
     }
+  }
+}
+
+.SummaryHistory {
+  &,
+  .SummaryRole {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .SummaryRole {
+    margin: 0.25rem 0;
   }
 }

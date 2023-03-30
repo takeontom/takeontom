@@ -8,7 +8,7 @@ export default function Page() {
       <div className={styles.Main}>
         <header className={styles.Header}>
           <h1 className={styles.Name}>Tom Smith</h1>
-          <p className={styles.TagLine}>Senior Full Stack Developer</p>
+          <p className={styles.TagLine}>&nbsp;: Senior Full Stack Developer</p>
         </header>
 
         <p className={styles.Summary}>
@@ -79,7 +79,7 @@ function Role({ role }: { role: IRole }) {
 
 function SummaryRole({ role }: { role: IRole }) {
   return (
-    <li>
+    <li className={styles.SummaryRole}>
       {role.positions.map((p, k) => (
         <span key={k} className={styles.RolePosition}>
           {p}
