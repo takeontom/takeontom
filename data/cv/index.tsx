@@ -11,7 +11,7 @@ export interface IRole {
 
 export const Skills: string[][] = [
   ["Python3", "Django", "Flask", "Rest Framework", "Wagtail", "DjangoCMS"],
-  ["JavaScript ES6", "VueJS", "React", "JQuery"],
+  ["JavaScript ES6", "Vue", "React", "JQuery"],
   ["Node.js", "Express"],
   ["HTML5", "CSS", "SASS", "LESS"],
   ["Docker", "AWS"],
@@ -29,7 +29,15 @@ const Roles: IRole[] = [
       "Director of Engineering",
     ],
     highlight: true,
-    skills: ["Python", "Django"],
+    skills: ["Python", "Django", "Vue", "Management", "Hiring", "Strategy"],
+    points: [
+      `Led team of 15 devs, designers and QAs in delivering software crucial to over
+      50% of schools in the country.`,
+      `Transitioned product development lifecycle from SCRUM to ShapeUp, mentored and
+      actively upskilled development team, oversaw complete infrastructure change from
+      monoliths to microservices.`,
+      `Hands on bringing best practice development approaches to products and team.`,
+    ],
   },
   {
     name: "Ideaflip",
@@ -38,11 +46,10 @@ const Roles: IRole[] = [
     contract: true,
     positions: ["Senior developer"],
     highlight: true,
-    skills: ["Python", "Django", "VueJS", "Rest Framework"],
+    skills: ["Python", "Django", "Vue", "Rest Framework"],
     points: [
-      `Rapid analysis ➜ development cycle to capitalise on sales peak due to Covid lockdown.`,
-      `Migrated large & aged codebase from Python 2 to 3 with zero downtime and thorough quality
-      control.`,
+      `Rapid analysis & development cycle for an ambitious cooperative whiteboard
+      product to capitalise on sales peak due to Covid lockdown.`,
     ],
   },
   {
@@ -52,7 +59,7 @@ const Roles: IRole[] = [
     contract: true,
     positions: ["Lead developer"],
     highlight: true,
-    skills: ["Django", "VueJS", "Rest Framework", "Ecommerce", "Stripe"],
+    skills: ["Django", "Vue", "Rest Framework", "Ecommerce", "Stripe"],
     points: [
       `Led development effort on 'A Portrait Without Borders', an
         interactive art exhibit, letting members of the public have their
@@ -63,15 +70,14 @@ const Roles: IRole[] = [
 
   {
     name: "Take on Tom",
-    positions: ["Developer & consultant"],
+    positions: ["Data scientist & consultant"],
     start: "Oct 2018",
     end: "Nov 2019",
     highlight: true,
     skills: ["Data Science", "Python", "Pandas", "Wagtail", "Django"],
     points: [
-      `Used data science techniques to analyse sales and marketing
-        performance of SMEs, finding issues and running
-        development projects to improve them.`,
+      `Used data science techniques to analyse and improve the sales and marketing
+        performance of SMEs.`,
     ],
   },
   {
@@ -90,15 +96,13 @@ const Roles: IRole[] = [
       "Agile",
       "Architect",
       "Big Data",
-      "LDAP",
-      "Box.com",
     ],
     points: [
       `Led an agile team of developers and data scientists in building a
         'big data' ETL platform for Pfizer, one of the world's top 3
         pharmaceutical companies.`,
-      `Developed high quality & flexible Django based framework to provide
-        Metacell with a long term, maintainable & commerically viable
+      `Developed high quality & flexible Django based framework with 100% test coverage
+        to provide Metacell with a long term, maintainable & commerically viable
         product with a cutting-edge React based frontend.`,
     ],
   },
@@ -109,16 +113,7 @@ const Roles: IRole[] = [
     end: "Feb 2018",
     contract: true,
     highlight: true,
-    skills: [
-      "Flask",
-      "HTML",
-      "CSS/LESS",
-      "JavaScript",
-      "SEO",
-      "Lighthouse",
-      "Google PageSpeed",
-      "YSlow",
-    ],
+    skills: ["Flask", "HTML", "CSS/LESS", "JavaScript", "SEO", "Lighthouse"],
     points: [
       `Full technical SEO sweep, applying modern techniques such as lazy
         loading images & asynchronous CSS loading. 85% speed improvement on
@@ -138,10 +133,8 @@ const Roles: IRole[] = [
       "Django",
       "HTML5",
       "CSS/LESS",
-      "JavaScript",
       "JQuery",
       "SalesForce API",
-      "Training",
       "TDD",
       "Twilio",
     ],
