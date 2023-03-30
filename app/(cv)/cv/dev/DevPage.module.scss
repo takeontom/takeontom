@@ -1,0 +1,151 @@
+.DevPage {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 210mm;
+  height: 297mm;
+  margin: 1rem auto;
+  overflow: hidden;
+  background-color: #fff;
+  color: var(--color-black);
+
+  &,
+  p,
+  li {
+    font-size: 0.7rem;
+  }
+
+  strong {
+    color: inherit;
+  }
+
+  @media print {
+    margin: 0;
+  }
+
+  .Main {
+    padding: 1rem;
+  }
+
+  .Header {
+    padding: 0 0 1rem 0;
+    border-bottom: 0.25mm solid var(--color-pink);
+    .Name {
+      margin: 0;
+      padding: 0 2rem 0.5rem 0;
+
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .TagLine {
+      margin: 0;
+      padding: 0;
+      color: var(--color-grey);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+  }
+
+  .Summary {
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  .Content {
+  }
+
+  .SideBar {
+    height: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--color-pink), var(--color-orange));
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+  }
+
+  .RoleName {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .Role {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: solid 0.25mm var(--color-grey-light);
+
+    .RoleHeader {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .RoleSkills {
+      margin: 0;
+      padding: 0;
+    }
+    .RoleSkill {
+      padding-right: 1em;
+      color: var(--color-grey);
+      font-size: 0.6rem;
+    }
+
+    .RolePositions {
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    .RolePosition {
+      font-size: 0.8rem;
+    }
+
+    .RoleName,
+    .RoleDates {
+      margin: 0;
+      padding: 0;
+      font-size: 0.7rem;
+      text-align: right;
+    }
+
+    .RoleName {
+    }
+
+    .RoleDates {
+      font-size: 0.6rem;
+    }
+
+    .RolePoint {
+      ul {
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 0;
+        list-style: none;
+      }
+      p,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .RolePosition {
+    padding-right: 0.5ex;
+    color: var(--color-grey);
+
+    &::after {
+      padding-left: 0.5ex;
+      content: "➜";
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+      color: var(--color-black);
+
+      &::after {
+        padding-left: 0;
+        content: "";
+      }
+    }
+  }
+}
