@@ -22,8 +22,8 @@ export default function Page() {
         </header>
 
         <p className={styles.Summary}>
-          Reliable, flexible and highly skilled. Delivering top notch projects
-          for over 20 years.
+          Experienced, impactful and highly skilled. Delivering top notch
+          projects for over 20 years.
         </p>
         <section className={styles.DetailedHistory}>
           {Roles.filter((role) => role.highlight).map((role, key) => (
@@ -48,18 +48,18 @@ export default function Page() {
           <p>
             In addition to delivering dozens of successful projects, I&apos;ve
             advised major charities and trade groups on digital strategy,
-            appeared on BBC radio a few times, been a <em>fearsome</em> cake
-            judge at baking competitions and was a semi-pro gamer...
-            unfortunately, before that sort of thing was cool.
+            mentored young developers in partnership with universities, appeared
+            on BBC radio a few times, been a <em>fearsome</em> cake judge and
+            design &amp; 3D print my own hydroponics systems. 🌱
           </p>
           <p>
-            I also mentor young developers in partnership with Plymouth
-            University.
+            I&apos;m also a keen (but terrible) squash player, nature
+            photographer and drone pilot.
           </p>
         </SideBarSection>
 
         <SideBarSection>
-          <p>Get the latest version of my CV:</p>
+          <p>View this CV on my website:</p>
           <div className={styles.QRCodeContainer}>
             <QRCode value="https://takeontom.com/cv/dev" />
           </div>

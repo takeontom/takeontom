@@ -24,14 +24,14 @@ const Roles: IRole[] = [
     start: "Dec 2020",
     end: "Dec 2022",
     positions: [
-      "Senior developer",
-      "Development manager",
       "Director of Engineering",
+      "Development manager",
+      "Senior developer",
     ],
     highlight: true,
     skills: ["Python", "Django", "Vue", "Management", "Hiring", "Strategy"],
     points: [
-      `Led team of 15 devs, designers and QAs in delivering software crucial to over
+      `Led team of 14 devs, designers and QAs in delivering software crucial to over
       50% of schools in the country.`,
       `Transitioned product development lifecycle from SCRUM to ShapeUp, mentored and
       actively upskilled development team, oversaw complete infrastructure change from
@@ -189,7 +189,7 @@ const Roles: IRole[] = [
   },
   {
     name: "Protec Innovations",
-    positions: ["Lead Developer", "Product Manager"],
+    positions: ["Product Manager", "Lead Developer"],
     start: "Jul 2010",
     end: "Feb 2013",
     highlight: false,
@@ -203,7 +203,7 @@ const Roles: IRole[] = [
 
   {
     name: "mirada PLC",
-    positions: ["Junior", "Senior", "Lead Web Developer"],
+    positions: ["Lead Web Developer", "Senior", "Junior"],
     start: "Feb 2007",
     end: "Jun 2010",
     highlight: false,
