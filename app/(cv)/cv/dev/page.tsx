@@ -12,6 +12,14 @@ import QRCode from "react-qr-code";
 import styles from "./DevPage.module.scss";
 import CheckmarkIcon from "@/public/images/icons/checkmark.svg";
 
+export async function generateMetadata() {
+  return {
+    title: "Tom Smith - Senior Full Stack Developer",
+    description: "Experienced developer and leader based in the UK",
+    manifest: "/site.webmanifest",
+  };
+}
+
 export default function Page() {
   return (
     <main className={styles.DevPage}>

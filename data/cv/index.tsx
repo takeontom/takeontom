@@ -10,11 +10,11 @@ export interface IRole {
 }
 
 export const Skills: string[][] = [
-  ["Python3", "Django", "Flask", "Rest Framework", "Wagtail", "DjangoCMS"],
-  ["JavaScript ES6", "Vue", "React", "JQuery"],
-  ["Node.js", "Express"],
+  ["Python3", "Django", "Flask", "Rest Framework", "Wagtail"],
+  ["JavaScript ES6", "React", "Vue"],
+  ["Next.js", "Node.js", "Express"],
   ["HTML5", "CSS", "SASS", "LESS"],
-  ["Docker", "AWS"],
+  ["Docker", "AWS", "GCP"],
   ["Basic security clearance (Disclosure Scotland)"],
 ];
 
