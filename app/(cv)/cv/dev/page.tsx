@@ -6,6 +6,7 @@ import {
 import Roles, { IRole, Skills } from "@/data/cv";
 import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import QRCode from "react-qr-code";
 import styles from "./DevPage.module.scss";
 
 export default function Page() {
@@ -53,15 +54,25 @@ export default function Page() {
             University.
           </p>
         </SideBarSection>
+
+        <SideBarSection>
+          <p>Get the latest version of my CV:</p>
+          <div className={styles.QRCodeContainer}>
+            <QRCode value="https://takeontom.com/cv/dev" />
+          </div>
+        </SideBarSection>
       </aside>
     </main>
   );
 }
 
-function SideBarSection(props: { heading: string; children: React.ReactNode }) {
+function SideBarSection(props: {
+  heading?: string;
+  children: React.ReactNode;
+}) {
   return (
     <section className={styles.SideBarSection}>
-      <h2>{props.heading}</h2>
+      {props.heading && <h2>{props.heading}</h2>}
       {props.children}
     </section>
   );

@@ -186,7 +186,7 @@
   &,
   p,
   li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .SideBarSection {
@@ -220,5 +220,14 @@
         }
       }
     }
+  }
+}
+
+.QRCodeContainer {
+  max-width: 100%;
+  text-align: center;
+  svg {
+    max-width: 50%;
+    height: auto;
   }
 }
