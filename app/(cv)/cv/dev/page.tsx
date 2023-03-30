@@ -2,6 +2,8 @@ import {
   EmailIconLink,
   GitHubIconLink,
   LinkedInIconLink,
+  LinkIconLink,
+  PhoneIconLink,
 } from "@/components/IconLink";
 import Roles, { IRole, Skills } from "@/data/cv";
 import React from "react";
@@ -82,9 +84,12 @@ function ContactLinks() {
   return (
     <ul className={styles.ContactLinks}>
       <li className={styles.ContactItem}>
-        <GitHubIconLink href="https://github.com/takeontom/">
-          takeontom
-        </GitHubIconLink>{" "}
+        <PhoneIconLink href="tel:+447507707740">07507 707 740</PhoneIconLink>{" "}
+      </li>
+      <li className={styles.ContactItem}>
+        <EmailIconLink href="mailto:hiya@takeontom.com">
+          hiya@takeontom.com
+        </EmailIconLink>
       </li>
       <li className={styles.ContactItem}>
         <LinkedInIconLink href="https://uk.linkedin.com/in/takeontom">
@@ -92,9 +97,12 @@ function ContactLinks() {
         </LinkedInIconLink>
       </li>
       <li className={styles.ContactItem}>
-        <EmailIconLink href="mailto:hiya@takeontom.com">
-          hiya@takeontom.com
-        </EmailIconLink>
+        <GitHubIconLink href="https://github.com/takeontom/">
+          takeontom
+        </GitHubIconLink>{" "}
+      </li>
+      <li className={styles.ContactItem}>
+        <LinkIconLink href="https://takeontom.com">takeontom.com</LinkIconLink>
       </li>
     </ul>
   );
