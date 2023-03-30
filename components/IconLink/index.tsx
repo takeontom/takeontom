@@ -3,60 +3,58 @@ import GitHubIcon from "/public/images/icons/github.svg";
 import EnvelopeIcon from "/public/images/icons/envelope.svg";
 import LinkedInIcon from "/public/images/icons/linkedin2.svg";
 
-interface IconLinkProps {
+interface IconLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string;
   icon: React.ReactNode;
   children: React.ReactNode;
   newTab?: boolean;
 }
-
-interface LinkProps {
+interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: React.ReactNode;
 }
 
-export default function IconLink(link: IconLinkProps) {
-  if (link.newTab) {
-    return (
-      <a
-        className={styles.iconLink}
-        href={link.href}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span className={styles.linkIcon}>{link.icon}</span>
-        {link.children}
-      </a>
-    );
-  }
+export default function IconLink({
+  href,
+  className,
+  newTab,
+  icon,
+  ...props
+}: IconLinkProps) {
   return (
-    <a className={styles.iconLink} href={link.href}>
-      <span className={styles.linkIcon}>{link.icon}</span>
-      {link.children}
+    <a
+      className={["gIconLink", styles.iconLink, className].join(" ")}
+      href={href}
+      target={newTab ? "_blank" : undefined}
+      rel={newTab ? "noreferrer" : undefined}
+      {...props}
+    >
+      <span className={["gLinkIcon", styles.linkIcon].join(" ")}>{icon}</span>
+      {props.children}
     </a>
   );
 }
 
-export function GitHubIconLink(link: LinkProps) {
+export function GitHubIconLink(props: LinkProps) {
   return (
-    <IconLink icon={<GitHubIcon />} href={link.href} newTab={true}>
-      {link.children}
+    <IconLink icon={<GitHubIcon />} newTab={true} {...props}>
+      {props.children}
     </IconLink>
   );
 }
 
-export function EmailIconLink(link: LinkProps) {
+export function EmailIconLink(props: LinkProps) {
   return (
-    <IconLink icon={<EnvelopeIcon />} href={link.href}>
-      {link.children}
+    <IconLink icon={<EnvelopeIcon />} {...props}>
+      {props.children}
     </IconLink>
   );
 }
 
-export function LinkedInIconLink(link: LinkProps) {
+export function LinkedInIconLink(props: LinkProps) {
   return (
-    <IconLink icon={<LinkedInIcon />} href={link.href} newTab={true}>
-      {link.children}
+    <IconLink icon={<LinkedInIcon />} newTab={true} {...props}>
+      {props.children}
     </IconLink>
   );
 }

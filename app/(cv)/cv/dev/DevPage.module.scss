@@ -59,15 +59,6 @@
   .Content {
   }
 
-  .SideBar {
-    height: 100%;
-    padding: 1rem;
-    background: linear-gradient(135deg, var(--color-pink), var(--color-orange));
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-white);
-  }
-
   .RoleName {
     margin: 0;
     padding: 0;
@@ -77,7 +68,7 @@
   .Role {
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: dotted 0.25mm var(--color-grey);
+    border-bottom: solid 0.25mm var(--color-grey-light);
 
     .RoleHeader {
       display: flex;
@@ -182,5 +173,52 @@
 
   .SummaryRole {
     margin: 0.25rem 0;
+  }
+}
+
+.SideBar {
+  height: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-orange));
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  &,
+  p,
+  li {
+    font-size: 0.9rem;
+  }
+
+  .SideBarSection {
+    h2 {
+      margin: 0 0 1rem 0;
+      padding: 0;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.ContactLinks {
+  &,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ContactItem {
+    margin-bottom: 1rem;
+    :global {
+      a.gIconLink {
+        margin-right: 0;
+        color: var(--color-white);
+        font-size: 0.9rem;
+        .gLinkIcon {
+          padding-right: 0.5rem;
+          svg {
+            fill: var(--color-white);
+          }
+        }
+      }
+    }
   }
 }

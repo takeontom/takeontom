@@ -1,4 +1,10 @@
-import Roles, { IRole } from "@/data/cv";
+import {
+  EmailIconLink,
+  GitHubIconLink,
+  LinkedInIconLink,
+} from "@/components/IconLink";
+import Roles, { IRole, Skills } from "@/data/cv";
+import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import styles from "./DevPage.module.scss";
 
@@ -28,9 +34,79 @@ export default function Page() {
       </div>
 
       <aside className={styles.SideBar}>
-        <h2>Contact details</h2>
+        <SideBarSection heading="Contact details">
+          <ContactLinks />
+        </SideBarSection>
+        <SideBarSection heading="Skills">
+          <SkillsList />
+        </SideBarSection>
+        <SideBarSection heading="More about me">
+          <p>
+            In addition to delivering dozens of successful projects, I&apos;ve
+            advised major charities and trade groups on digital strategy,
+            appeared on BBC radio a few times, been a <em>fearsome</em> cake
+            judge at baking competitions and was a semi-pro gamer...
+            unfortunately, before that sort of thing was cool.
+          </p>
+          <p>
+            I also mentor young developers in partnership with Plymouth
+            University.
+          </p>
+        </SideBarSection>
       </aside>
     </main>
+  );
+}
+
+function SideBarSection(props: { heading: string; children: React.ReactNode }) {
+  return (
+    <section className={styles.SideBarSection}>
+      <h2>{props.heading}</h2>
+      {props.children}
+    </section>
+  );
+}
+
+function ContactLinks() {
+  return (
+    <ul className={styles.ContactLinks}>
+      <li className={styles.ContactItem}>
+        <GitHubIconLink href="https://github.com/takeontom/">
+          takeontom
+        </GitHubIconLink>{" "}
+      </li>
+      <li className={styles.ContactItem}>
+        <LinkedInIconLink href="https://uk.linkedin.com/in/takeontom">
+          takeontom
+        </LinkedInIconLink>
+      </li>
+      <li className={styles.ContactItem}>
+        <EmailIconLink href="mailto:hiya@takeontom.com">
+          hiya@takeontom.com
+        </EmailIconLink>
+      </li>
+    </ul>
+  );
+}
+
+function SkillsList() {
+  return (
+    <ul className={styles.SkillsList}>
+      {Skills.map((skills, key) => {
+        return (
+          <li key={key} className={styles.Skills}>
+            {skills.map((s, i) => {
+              return (
+                <span className={styles.Skill} key={i}>
+                  {s}
+                  {i < skills.length - 1 ? ", " : ""}
+                </span>
+              );
+            })}
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

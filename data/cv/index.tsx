@@ -9,6 +9,15 @@ export interface IRole {
   highlight?: boolean;
 }
 
+export const Skills: string[][] = [
+  ["Python3", "Django", "Flask", "Rest Framework", "Wagtail", "DjangoCMS"],
+  ["JavaScript ES6", "VueJS", "React", "JQuery"],
+  ["Node.js", "Express"],
+  ["HTML5", "CSS", "SASS", "LESS"],
+  ["Docker", "AWS"],
+  ["Basic security clearance (Disclosure Scotland)"],
+];
+
 const Roles: IRole[] = [
   {
     name: "The Key",
