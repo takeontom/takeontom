@@ -128,7 +128,7 @@ const Roles: IRole[] = [
     ],
   },
   {
-    name: 'DEV (formerly "Blanc")',
+    name: "DEV / Blanc",
     positions: ["Senior Web Developer"],
     start: "Sep 2016",
     end: "Jun 2017",

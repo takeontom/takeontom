@@ -10,6 +10,7 @@ import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import QRCode from "react-qr-code";
 import styles from "./DevPage.module.scss";
+import CheckmarkIcon from "@/public/images/icons/checkmark.svg";
 
 export default function Page() {
   return (
@@ -114,14 +115,19 @@ function SkillsList() {
       {Skills.map((skills, key) => {
         return (
           <li key={key} className={styles.Skills}>
-            {skills.map((s, i) => {
-              return (
-                <span className={styles.Skill} key={i}>
-                  {s}
-                  {i < skills.length - 1 ? ", " : ""}
-                </span>
-              );
-            })}
+            <span className={styles.SkillIcon}>
+              <CheckmarkIcon />
+            </span>
+            <span className={styles.SkillsText}>
+              {skills.map((s, i) => {
+                return (
+                  <span className={styles.Skill} key={i}>
+                    {s}
+                    {i < skills.length - 1 ? ", " : ""}
+                  </span>
+                );
+              })}
+            </span>
           </li>
         );
       })}
