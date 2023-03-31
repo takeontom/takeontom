@@ -1,9 +1,10 @@
 import { ICV } from "@/types";
 import shortid from "shortid";
 
-const DevCV: ICV = {
+const ManagerCV: ICV = {
+  slug: "manager",
   name: "Tom Smith",
-  targetPosition: "Senior Full Stack Developer",
+  targetPosition: "Technical Leader",
   summary:
     "Experienced, impactful and highly skilled. Delivering top notch projects for over 20 years.",
   about: (
@@ -13,7 +14,7 @@ const DevCV: ICV = {
         advised major charities and trade groups on digital strategy, mentored
         young developers in partnership with universities, appeared on BBC radio
         a few times, been a <em>fearsome</em> cake judge and design &amp; 3D
-        print my own hydroponics systems. 🌱
+        print hydroponics systems. 🌱
       </p>
       <p>
         I&apos;m also a keen (but terrible) squash player, nature photographer
@@ -290,4 +291,4 @@ const DevCV: ICV = {
   ],
 };
 
-export default DevCV;
+export default ManagerCV;

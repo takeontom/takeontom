@@ -47,7 +47,7 @@ export default function CV({ cv }: CVProps) {
         <SideBarSection heading="More about me">{cv.about}</SideBarSection>
 
         <SideBarSection>
-          <QRCodeLink href="https://takeontom.com/cv/dev" />
+          <QRCodeLink href={`https://takeontom.com/cv/${cv.slug}`} />
         </SideBarSection>
       </aside>
     </div>

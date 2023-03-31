@@ -11,6 +11,7 @@
     "images:clean": "rm -rf public/images/portfolio/*",
     "check-types": "tsc --noemit",
     "lint": "npm run check-types && next lint",
+    "next:lint": "next lint",
     "tsc-watch": "tsc --watch",
     "eslint": "eslint .",
     "eslint-fix": "eslint . --fix"
