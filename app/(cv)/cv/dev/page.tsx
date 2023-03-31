@@ -67,7 +67,10 @@ export default function Page() {
         </SideBarSection>
 
         <SideBarSection>
-          <p>View this CV on my website:</p>
+          <p>
+            View this CV{" "}
+            <a href="https://takeontom.com/cv/dev">on my website</a>:
+          </p>
           <div className={styles.QRCodeContainer}>
             <QRCode value="https://takeontom.com/cv/dev" />
           </div>
