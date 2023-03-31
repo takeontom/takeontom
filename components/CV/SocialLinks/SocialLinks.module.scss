@@ -1,0 +1,26 @@
+.SocialLinks {
+  &,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ContactItem {
+    margin-bottom: 1rem;
+    :global {
+      a.gIconLink {
+        margin-right: 0;
+        color: var(--color-white);
+        font-size: 0.9rem;
+        .gLinkIcon {
+          padding-right: 0.5rem;
+          svg {
+            fill: var(--color-white);
+            width: 0.8rem;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

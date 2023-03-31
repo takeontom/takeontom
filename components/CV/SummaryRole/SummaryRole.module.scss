@@ -1,0 +1,41 @@
+.SummaryRole {
+  display: grid;
+  grid-template-columns: 2fr 2fr auto;
+  margin: 0;
+  margin: 0.3rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.RoleName {
+  text-align: left;
+}
+.RoleDates {
+  text-align: right;
+}
+
+.RolePosition {
+  padding-right: 0.5ex;
+  color: var(--color-grey);
+  font-style: italic;
+
+  &::after {
+    padding-left: 0.5ex;
+    content: "🠘";
+    color: var(--color-grey);
+  }
+
+  &:first-of-type {
+    color: var(--color-pink);
+    font-style: normal;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+
+    &::after {
+      padding-left: 0;
+      content: "";
+    }
+  }
+}
