@@ -64,9 +64,9 @@ const DevCV: ICV = {
           to over 50% of schools in the country.
         </p>,
         <p key={shortid.generate()}>
-          Led from the front with best practice Python, Django & Vue
-          development, transforming troubled, large, legacy, monolith codebases
-          into cutting edge SPA services.
+          Hands on, leading from the front with best practice Python, Django &
+          Vue development, transforming troubled, large, legacy, monolith
+          codebases into cutting edge SPA services.
         </p>,
         <p key={shortid.generate()}>
           Senior member of the Security Team, driving ISO27001 compliance
