@@ -48,20 +48,29 @@ const DevCV: ICV = {
         "Senior developer",
       ],
       highlight: true,
-      skills: ["Python", "Django", "Vue", "Management", "Hiring", "Strategy"],
+      skills: [
+        "Python",
+        "Django",
+        "Vue",
+        "Mentoring",
+        "Best practices",
+        "Management",
+        "Hiring",
+        "ISO27001",
+      ],
       points: [
         <p key={shortid.generate()}>
           Led team of 14 devs, designers and QAs in delivering software crucial
           to over 50% of schools in the country.
         </p>,
         <p key={shortid.generate()}>
-          Transitioned product development lifecycle from SCRUM to ShapeUp,
-          mentored and actively upskilled development team, oversaw complete
-          infrastructure change from monoliths to microservices.
+          Led from the front with best practice Python, Django & Vue
+          development, transforming troubled, large, legacy, monolith codebases
+          into cutting edge SPA services.
         </p>,
         <p key={shortid.generate()}>
-          Hands on bringing best practice development approaches to products and
-          team.
+          Senior member of the Security Team, driving ISO27001 compliance
+          throughout the company.
         </p>,
       ],
     },
