@@ -31,3 +31,11 @@ export interface IRole {
   points?: React.ReactNode[];
   highlight?: boolean;
 }
+
+export interface IPost {
+  title: string;
+  slug: string;
+  publishDate: string;
+  content: string;
+  html?: string;
+}
