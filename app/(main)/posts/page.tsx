@@ -9,13 +9,13 @@ export default async function Page() {
       {postFilenames.map((filename, key) => {
         const post = getPostByFilename(filename);
 
-        if (isAfter(new Date(post.publishDate), new Date())) {
+        if (isAfter(new Date(post.data.publishDate), new Date())) {
           return null;
         }
 
         return (
           <li key={key}>
-            <a href={`/posts/${post.slug}`}>{post.title}</a>
+            <a href={`/posts/${post.data.slug}`}>{post.data.title}</a>
           </li>
         );
       })}

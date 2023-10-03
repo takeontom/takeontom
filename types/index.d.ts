@@ -32,10 +32,24 @@ export interface IRole {
   highlight?: boolean;
 }
 
-export interface IPost {
+export interface IPostImage {
+  path: string;
+  width: number;
+  height: number;
+  alt?: string;
+}
+
+export interface IPostData {
   title: string;
   slug: string;
+  image: IPostImage;
   publishDate: string;
+}
+
+export interface IPost {
+  data: IPostData;
   content: string;
-  html?: string;
+  contentHtml?: string;
+  abstract?: string;
+  abstractHtml?: string;
 }
