@@ -1,30 +1,32 @@
+"use client";
+
 import { IPost } from "@/types";
 import Image from "next/image";
 import styles from "./Post.module.scss";
 
-interface IPostParams {
+import { MDXRemote } from "next-mdx-remote";
+
+interface IPostProps {
   post: IPost;
+  mdx: any;
 }
 
-export default function Post(params: IPostParams) {
+export default function Post(props: IPostProps) {
   return (
     <article className={styles.Post}>
       <Image
         className={styles.PostImage}
-        src={params.post.data.image.path}
-        alt={params.post.data.image.alt || params.post.data.title}
-        width={params.post.data.image.width}
-        height={params.post.data.image.height}
+        src={props.post.data.image.path}
+        alt={props.post.data.image.alt || props.post.data.title}
+        width={props.post.data.image.width}
+        height={props.post.data.image.height}
       />
       <h2>Excerpt:</h2>
       <div
-        dangerouslySetInnerHTML={{ __html: params.post.abstractHtml || "" }}
+        dangerouslySetInnerHTML={{ __html: props.post.abstractHtml || "" }}
       />
       <h2>Content:</h2>
-      <div
-        className={styles.PostContent}
-        dangerouslySetInnerHTML={{ __html: params.post.contentHtml || "" }}
-      />
+      <MDXRemote {...props.mdx} />
     </article>
   );
 }
