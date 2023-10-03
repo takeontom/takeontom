@@ -4,12 +4,15 @@ import { IPost } from "@/types";
 import Image from "next/image";
 import styles from "./Post.module.scss";
 
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { GitHubIconLink } from "../IconLink";
 
 interface IPostProps {
   post: IPost;
-  mdx: any;
+  mdx: MDXRemoteSerializeResult;
 }
+
+const components = { GitHubIconLink };
 
 export default function Post(props: IPostProps) {
   return (
@@ -26,7 +29,7 @@ export default function Post(props: IPostProps) {
         dangerouslySetInnerHTML={{ __html: props.post.abstractHtml || "" }}
       />
       <h2>Content:</h2>
-      <MDXRemote {...props.mdx} />
+      <MDXRemote {...props.mdx} components={components} />
     </article>
   );
 }
