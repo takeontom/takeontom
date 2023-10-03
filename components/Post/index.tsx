@@ -1,18 +1,14 @@
-"use client";
-
 import { IPost } from "@/types";
 import Image from "next/image";
 import styles from "./Post.module.scss";
 
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { GitHubIconLink } from "../IconLink";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import PostContent from "../PostContent";
 
 interface IPostProps {
   post: IPost;
   mdx: MDXRemoteSerializeResult;
 }
-
-const components = { GitHubIconLink };
 
 export default function Post(props: IPostProps) {
   return (
@@ -29,7 +25,7 @@ export default function Post(props: IPostProps) {
         dangerouslySetInnerHTML={{ __html: props.post.abstractHtml || "" }}
       />
       <h2>Content:</h2>
-      <MDXRemote {...props.mdx} components={components} />
+      <PostContent post={props.post} mdx={props.mdx} />
     </article>
   );
 }

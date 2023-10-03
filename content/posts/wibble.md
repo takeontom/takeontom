@@ -18,5 +18,3 @@ Which is **nice**"
 Wibble wobble bobble.
 
 <GitHubIconLink href="http://example.com">A link</GitHubIconLink>
-
-![playing](/content/posts/PXL_20230918_162749156.jpg)

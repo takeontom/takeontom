@@ -1,3 +1,4 @@
+import PostCard from "@/components/PostCard";
 import { getPostByFilename, getPostFilenames } from "@/services/content";
 import { isAfter } from "date-fns";
 import styles from "./PostsPage.module.scss";
@@ -13,11 +14,7 @@ export default async function Page() {
           return null;
         }
 
-        return (
-          <li key={key}>
-            <a href={`/posts/${post.data.slug}`}>{post.data.title}</a>
-          </li>
-        );
+        return <PostCard key={key} post={post} />;
       })}
     </main>
   );
