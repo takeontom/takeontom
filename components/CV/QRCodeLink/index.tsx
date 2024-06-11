@@ -16,8 +16,8 @@ export default function QRCodeLink({ href }: QRCodeLinkProps) {
         <QRCode
           value={href}
           qrStyle="dots"
-          size={120}
-          quietZone={5}
+          size={110}
+          quietZone={0}
           eyeRadius={360}
           eyeColor="#f5f5f5"
           fgColor="#f5f5f5"
