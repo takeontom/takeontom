@@ -1,4 +1,5 @@
-import QRCode from "react-qr-code";
+"use client";
+import { QRCode } from "react-qrcode-logo";
 import styles from "./QRCodeLink.module.scss";
 
 interface QRCodeLinkProps {
@@ -12,7 +13,17 @@ export default function QRCodeLink({ href }: QRCodeLinkProps) {
         View this CV <a href={href}>on my website</a>:
       </p>
       <div className={styles.QRCodeContainer}>
-        <QRCode value={href} />
+        <QRCode
+          value={href}
+          qrStyle="dots"
+          size={120}
+          quietZone={5}
+          eyeRadius={360}
+          eyeColor="#f5f5f5"
+          fgColor="#f5f5f5"
+          bgColor="transparent"
+          ecLevel="L"
+        />
       </div>
     </div>
   );

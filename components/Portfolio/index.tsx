@@ -2,7 +2,7 @@ import styles from "./Portfolio.module.scss";
 
 import PortfolioItem from "../PortfolioItem";
 import fullPortfolio from "../../data/portfolio";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Markdown from "react-markdown";
 
 export default function Portfolio() {
   return (
@@ -11,7 +11,7 @@ export default function Portfolio() {
         .filter((item) => item.desc && item.logo && item.display)
         .map((item) => (
           <PortfolioItem key={item.name} name={item.name} logo={item.logo}>
-            {item.desc && <ReactMarkdown>{item.desc}</ReactMarkdown>}
+            {item.desc && <Markdown>{item.desc}</Markdown>}
           </PortfolioItem>
         ))}
 
