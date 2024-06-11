@@ -16,6 +16,8 @@ function getCV(slug: flavour): ICV {
       return DevCV;
     case "manager":
       return ManagerCV;
+    default:
+      return ManagerCV;
   }
 }
 

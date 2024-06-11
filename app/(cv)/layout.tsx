@@ -1,6 +1,6 @@
 import "@/app/globals.scss";
 import styles from "./CVLayout.module.scss";
-import { Open_Sans, Source_Sans_Pro } from "next/font/google";
+import { Open_Sans, Source_Sans_3 } from "next/font/google";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -8,7 +8,7 @@ const openSans = Open_Sans({
   weight: ["400", "700"],
 });
 
-const sourceSansPro = Source_Sans_Pro({
+const sourceSansPro = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans-pro",
   weight: ["400", "700"],

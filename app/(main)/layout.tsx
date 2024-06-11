@@ -1,7 +1,7 @@
 import "app/globals.scss";
 import styles from "./layout.module.scss";
 
-import { Open_Sans, Source_Sans_Pro } from "next/font/google";
+import { Open_Sans, Source_Sans_3 } from "next/font/google";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -11,7 +11,7 @@ const openSans = Open_Sans({
   weight: ["400", "700"],
 });
 
-const sourceSansPro = Source_Sans_Pro({
+const sourceSansPro = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans-pro",
   weight: ["400", "700"],
