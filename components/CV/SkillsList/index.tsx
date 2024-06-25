@@ -19,7 +19,7 @@ export default function SkillsList({ skills }: SkillsListProps) {
               {skillsSet.map((s, i) => {
                 return (
                   <span className={styles.Skill} key={i}>
-                    {s}
+                    <span className={styles.skillLabel}>{s}</span>
                     {i < skillsSet.length - 1 ? ", " : ""}
                   </span>
                 );

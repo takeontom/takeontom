@@ -2,7 +2,6 @@ import { ICV } from "@/types";
 import shortid from "shortid";
 
 const DevCV: ICV = {
-  slug: "dev",
   name: "Tom Smith",
   targetPosition: "Senior Full Stack Developer",
   summary:
@@ -11,15 +10,12 @@ const DevCV: ICV = {
     <>
       <p>
         In addition to delivering dozens of successful projects, I&apos;ve
-        advised major charities and trade groups on digital strategy, mentored
-        young developers in partnership with universities, appeared on BBC radio
-        a few times, been a <em>fearsome</em> cake judge and design &amp; 3D
-        print hydroponics systems. 🌱
+        designed &amp; 3D printed hydroponics systems 🌱, advised major
+        charities &amp; trade groups on digital strategy, mentored young
+        developers in partnership with universities, appeared on BBC radio a few
+        times and was a <em>fearsome</em> cake judge!
       </p>
-      <p>
-        I&apos;m also a keen (but terrible) squash player, nature photographer
-        and drone pilot.
-      </p>
+      <p>I&apos;m a keen swimmer, nature photographer and snorkeler. 🤿</p>
     </>
   ),
   socials: {
@@ -33,11 +29,40 @@ const DevCV: ICV = {
     ["Python3", "Django", "Flask", "Rest Framework", "Wagtail"],
     ["Typescript", "React", "Vue"],
     ["Next.js", "Node.js", "Express"],
-    ["HTML5", "SCSS", "LESS"],
-    ["Docker", "AWS"],
+    ["HTML5", "SCSS"],
+    ["Docker", "AWS", "GCP", "Postgres"],
     ["Basic security clearance (Disclosure Scotland)"],
   ],
   roles: [
+    {
+      name: "Good Tech Tom",
+      start: "Sep 2023",
+      end: "Jul 2024",
+      positions: ["Technical Lead"],
+      highlight: true,
+      skills: [
+        "Typescript",
+        "GPT",
+        "Python",
+        "Sales & Marketing",
+        "SEO",
+        "Tech for Good",
+      ],
+      points: [
+        <p key={shortid.generate()}>
+          Bringing impactful, ethical and meaningful change for good through a
+          smart and focussed use of tech.
+        </p>,
+        <p key={shortid.generate()}>
+          Introduced ethical AI to SMEs to boost and optimise their marketing
+          and sales activity.
+        </p>,
+        <p key={shortid.generate()}>
+          Created ethically minded, browser based RPG game &amp; engine in pure
+          Typescript.
+        </p>,
+      ],
+    },
     {
       name: "The Key",
       start: "Dec 2020",
@@ -75,33 +100,29 @@ const DevCV: ICV = {
       ],
     },
     {
-      name: "Ideaflip",
+      name: "Kaleider / Ideaflip",
       start: "May 2019",
       end: "Nov 2020",
       contract: true,
-      positions: ["Senior developer"],
+      positions: ["Lead developer", "Senior developer"],
       highlight: true,
-      skills: ["Python", "Django", "Vue", "Rest Framework"],
-      points: [
-        <p key={shortid.generate()}>
-          Rapid analysis & development cycle for an ambitious cooperative
-          whiteboard product to capitalise on sales peak due to Covid lockdown.
-        </p>,
+      skills: [
+        "Python",
+        "Django",
+        "Vue",
+        "Rest Framework",
+        "Ecommerce",
+        "Stripe",
       ],
-    },
-    {
-      name: "Kaleider",
-      start: "Mar 2020",
-      end: "Oct 2020",
-      contract: true,
-      positions: ["Lead developer"],
-      highlight: true,
-      skills: ["Django", "Vue", "Rest Framework", "Ecommerce", "Stripe"],
       points: [
         <p key={shortid.generate()}>
           Led development effort on &apos;A Portrait Without Borders&apos;, an
           interactive art exhibit, letting members of the public have their
           portrait drawn by AI powered robots.
+        </p>,
+        <p key={shortid.generate()}>
+          Rapid analysis & development cycle for an ambitious cooperative
+          whiteboard product to capitalise on sales peak due to Covid lockdown.
         </p>,
         <p key={shortid.generate()}>
           Bespoke online shop and backend workflow using Django and Stripe.
@@ -110,8 +131,8 @@ const DevCV: ICV = {
     },
 
     {
-      name: "Take on Tom",
-      positions: ["Data scientist & consultant"],
+      name: "Take on Tom Ltd",
+      positions: ["Technical Lead"],
       start: "Oct 2018",
       end: "Nov 2019",
       highlight: true,
@@ -161,17 +182,17 @@ const DevCV: ICV = {
       contract: true,
       highlight: true,
       skills: ["Flask", "HTML", "CSS/LESS", "JavaScript", "SEO", "Lighthouse"],
-      points: [
-        <p key={shortid.generate()}>
-          Full technical SEO sweep, applying modern techniques such as lazy
-          loading images & asynchronous CSS loading. 85% speed improvement on
-          key landing pages.
-        </p>,
-        <p key={shortid.generate()}>
-          Improved On-Site Conversion Rate and Average Revenue Per Order by
-          adding ecommerce features and optimising signup process.
-        </p>,
-      ],
+      // points: [
+      //   <p key={shortid.generate()}>
+      //     Full technical SEO sweep, applying modern techniques such as lazy
+      //     loading images & asynchronous CSS loading. 85% speed improvement on
+      //     key landing pages.
+      //   </p>,
+      //   <p key={shortid.generate()}>
+      //     Improved On-Site Conversion Rate and Average Revenue Per Order by
+      //     adding ecommerce features and optimising signup process.
+      //   </p>,
+      // ],
     },
     {
       name: "DEV / Blanc",

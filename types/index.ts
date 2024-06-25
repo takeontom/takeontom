@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface ICV {
-  slug: string;
+  slug?: string;
   name: string;
   targetPosition: string;
   summary: string;

@@ -15,10 +15,10 @@ export default function QRCodeLink({ href }: QRCodeLinkProps) {
       <div className={styles.QRCodeContainer}>
         <QRCode
           value={href}
-          qrStyle="dots"
+          qrStyle="squares"
           size={110}
           quietZone={0}
-          eyeRadius={360}
+          eyeRadius={2}
           eyeColor="#f5f5f5"
           fgColor="#f5f5f5"
           bgColor="transparent"

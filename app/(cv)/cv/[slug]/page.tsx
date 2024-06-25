@@ -2,23 +2,36 @@ import React from "react";
 import CV from "@/components/CV";
 import { ICV } from "@/types";
 import DevCV from "@/data/cv/dev";
-import ManagerCV from "@/data/cv/manager";
 
-type flavour = "dev" | "manager";
+type flavour = "dev" | "manager" | "tech-lead" | "python" | "frontend";
 
 interface PageParams {
   params: { slug: flavour };
 }
 
 function getCV(slug: flavour): ICV {
+  const cv: ICV = { ...DevCV };
   switch (slug) {
     case "dev":
-      return DevCV;
+      cv.slug = "dev";
+      break;
+    case "python":
+      cv.slug = "python";
+      cv.targetPosition = "Senior Python Developer";
+      break;
     case "manager":
-      return ManagerCV;
+      cv.slug = "manager";
+      cv.targetPosition = "Technical Leader";
+      break;
+    case "tech-lead":
+      cv.slug = "tech-lead";
+      cv.targetPosition = "Technical Leader";
+      break;
     default:
-      return ManagerCV;
+      cv.slug = "dev";
   }
+
+  return cv;
 }
 
 export async function generateMetadata({ params }: PageParams) {

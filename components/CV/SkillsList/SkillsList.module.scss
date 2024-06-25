@@ -36,5 +36,10 @@
   .SkillsText {
     display: block;
     margin-left: 0.5rem;
+    color: var(--color-faded-white);
+
+    .skillLabel {
+      color: var(--color-white);
+    }
   }
 }
