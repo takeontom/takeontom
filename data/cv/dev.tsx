@@ -70,8 +70,8 @@ const DevCV: ICV = {
       end: "Dec 2022",
       positions: [
         "Director of Engineering",
-        "Development manager",
-        "Senior developer",
+        "Development Manager",
+        "Senior Developer",
       ],
       highlight: true,
       skills: [
@@ -105,7 +105,7 @@ const DevCV: ICV = {
       start: "May 2019",
       end: "Nov 2020",
       contract: true,
-      positions: ["Lead developer", "Senior developer"],
+      positions: ["Lead Developer", "Senior Developer"],
       highlight: true,
       skills: [
         "Python",
