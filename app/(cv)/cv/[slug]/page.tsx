@@ -3,13 +3,11 @@ import CV from "@/components/CV";
 import { ICV } from "@/types";
 import DevCV from "@/data/cv/dev";
 
-type flavour = "dev" | "manager" | "tech-lead" | "python" | "frontend";
-
 interface PageParams {
-  params: { slug: flavour };
+  params: { slug: string };
 }
 
-function getCV(slug: flavour): ICV {
+function getCV(slug: string): ICV {
   const cv: ICV = { ...DevCV };
   switch (slug) {
     case "dev":
@@ -18,6 +16,10 @@ function getCV(slug: flavour): ICV {
     case "python":
       cv.slug = "python";
       cv.targetPosition = "Senior Python Developer";
+      break;
+    case "django":
+      cv.slug = "django";
+      cv.targetPosition = "Senior Python & Django Developer";
       break;
     case "manager":
       cv.slug = "manager";

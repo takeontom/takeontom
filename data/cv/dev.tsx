@@ -41,9 +41,10 @@ const DevCV: ICV = {
       positions: ["Technical Lead"],
       highlight: true,
       skills: [
+        "Python",
+        "Django",
         "Typescript",
         "GPT",
-        "Python",
         "Sales & Marketing",
         "SEO",
         "Tech for Good",
