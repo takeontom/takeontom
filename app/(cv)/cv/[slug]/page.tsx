@@ -29,6 +29,10 @@ function getCV(slug: string): ICV {
       cv.slug = "tech-lead";
       cv.targetPosition = "Technical Leader";
       break;
+    case "senior-dev":
+      cv.slug = "senior-dev";
+      cv.targetPosition = "Senior Developer";
+      break;
     default:
       cv.slug = "dev";
   }
