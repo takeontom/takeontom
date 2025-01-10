@@ -17,6 +17,7 @@ import hmCourtsTribunalsServiceLogo from "/public/images/portfolio/hm-courts-tri
 import connectCashlessParkingLogo from "/public/images/portfolio/connect-cashless-parking.png";
 import theKeyLogo from "/public/images/portfolio/the-key.png";
 import goodTechTomLogo from "/public/images/portfolio/good-tech-tom-logo.png";
+import brskLogo from "/public/images/portfolio/brsk-logo.png";
 import { StaticImageData } from "next/image";
 
 interface PortfolioItem {
@@ -28,6 +29,15 @@ interface PortfolioItem {
 }
 
 const fullPortfolio: PortfolioItem[] = [
+  {
+    name: "Brsk",
+    logo: brskLogo,
+    display: true,
+    desc: `Lead developer on the Fibre Network and Installation systems for
+          the **UK's 3rd largest fibre broadband provider**, transitioned to a Hexagonal
+          / Domain Driven Design architecture for an estimated **50% boost in dev
+          efficiency**.`,
+  },
   {
     name: "Good Tech Tom",
     logo: goodTechTomLogo,
