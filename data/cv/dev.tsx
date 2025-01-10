@@ -35,6 +35,34 @@ const DevCV: ICV = {
   ],
   roles: [
     {
+      name: "Brsk",
+      start: "Jul 2024",
+      end: "present",
+      positions: ["Senior Developer"],
+      highlight: true,
+      skills: [
+        "Python",
+        "Django",
+        "Rest Framework",
+        "Mentoring",
+        "Architecture",
+        "Dev Ops",
+      ],
+      points: [
+        <p key={shortid.generate()}>
+          Lead developer on UK&apos;s 3rd largest fibre broadband
+          provider&apos;s Fibre Network and Support systems.
+        </p>,
+        <p key={shortid.generate()}>
+          Designed, architected and lead move of legacy Django codebase to
+          Hexagonal/DDD structure for 30-50% dev efficiency boost.
+        </p>,
+        <p key={shortid.generate()}>
+          Mentored team with 1:1 and group technical training sessions.
+        </p>,
+      ],
+    },
+    {
       name: "Good Tech Tom",
       start: "Sep 2023",
       end: "Jul 2024",
@@ -51,16 +79,8 @@ const DevCV: ICV = {
       ],
       points: [
         <p key={shortid.generate()}>
-          Bringing impactful, ethical and meaningful change for good through a
+          Brought impactful, ethical and meaningful change for good through a
           smart and focussed use of tech.
-        </p>,
-        <p key={shortid.generate()}>
-          Introduced ethical AI to SMEs to boost and optimise their marketing
-          and sales activity.
-        </p>,
-        <p key={shortid.generate()}>
-          Created ethically minded, browser based RPG game &amp; engine in pure
-          Typescript.
         </p>,
       ],
     },
@@ -124,9 +144,6 @@ const DevCV: ICV = {
         <p key={shortid.generate()}>
           Rapid analysis & development cycle for an ambitious cooperative
           whiteboard product to capitalise on sales peak due to Covid lockdown.
-        </p>,
-        <p key={shortid.generate()}>
-          Bespoke online shop and backend workflow using Django and Stripe.
         </p>,
       ],
     },
@@ -215,10 +232,6 @@ const DevCV: ICV = {
         <p key={shortid.generate()}>
           Developed &quot;Act&quot;, Oxfam&apos;s international hub for raising
           awareness and promoting action around the world.
-        </p>,
-        <p key={shortid.generate()}>
-          Senior developer on projects for The Church of England, Civicus and
-          Lumos (JK Rowling&apos;s Childrens Charity).
         </p>,
       ],
     },
