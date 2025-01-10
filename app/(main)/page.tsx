@@ -14,15 +14,12 @@ export default async function Page() {
         <div className={styles.summary}>
           <div>
             <ul className={styles.list}>
-              <li>Python3, Django, Wagtail, DjangoCMS, Flask</li>
-              <li>
-                Modern JavaScript, Next.js, Node.js, React, Vue, HTML5, SCSS
-              </li>
+              <li>Python3, Django REST, Kubernetes, AWS, GCP</li>
+              <li>Typescript, Next.js, Node.js, React, Vue, HTML5, SCSS</li>
               <li>
                 Technical strategy, Leadership, Recruitment, Management,
                 Mentoring
               </li>
-              <li>Scrum, Kanban, Shape Up</li>
             </ul>
           </div>
 
