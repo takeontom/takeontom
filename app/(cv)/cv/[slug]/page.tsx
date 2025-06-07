@@ -2,6 +2,7 @@ import React from "react";
 import CV from "@/components/CV";
 import { ICV } from "@/types";
 import DevCV from "@/data/cv/dev";
+import { Metadata } from "next";
 
 interface PageParams {
   params: { slug: string };
@@ -40,9 +41,10 @@ function getCV(slug: string): ICV {
   return cv;
 }
 
-export async function generateMetadata({ params }: PageParams) {
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
   const cv = getCV(params.slug);
   return {
+    metadataBase: new URL('https://takeontom.com'),
     title: `${cv.name} - ${cv.targetPosition}`,
     description: cv.summary,
     manifest: "/site.webmanifest",

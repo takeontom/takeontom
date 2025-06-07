@@ -9,7 +9,6 @@
   "containerUser": "node",
   "workspaceFolder": "/workspace/",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "onCreateCommand": ["npm", "install"],
   "customizations": {
     "vscode": {
       "extensions": [

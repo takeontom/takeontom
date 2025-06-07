@@ -4,6 +4,7 @@ import styles from "./layout.module.scss";
 import { Open_Sans, Source_Sans_3 } from "next/font/google";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { Metadata } from "next";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -17,8 +18,9 @@ const sourceSansPro = Source_Sans_3({
   weight: ["400", "700"],
 });
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase: new URL('https://takeontom.com'),
     title: {
       default: "Tom Smith - Experienced Developer & Technical Leader",
       template: "%s | Tom Smith - Experienced Developer & Technical Leader",
