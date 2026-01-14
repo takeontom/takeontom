@@ -5,7 +5,7 @@ import DevCV from "@/data/cv/dev";
 import { Metadata } from "next";
 
 interface PageParams {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 function getCV(slug: string): ICV {
@@ -42,7 +42,8 @@ function getCV(slug: string): ICV {
 }
 
 export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
-  const cv = getCV(params.slug);
+  const { slug } = await params;
+  const cv = getCV(slug);
   return {
     metadataBase: new URL('https://takeontom.com'),
     title: `${cv.name} - ${cv.targetPosition}`,
@@ -51,7 +52,8 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
-export default function Page({ params }: PageParams) {
-  const cv = getCV(params.slug);
+export default async function Page({ params }: PageParams) {
+  const { slug } = await params;
+  const cv = getCV(slug);
   return <CV cv={cv} />;
 }
