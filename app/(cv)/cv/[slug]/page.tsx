@@ -45,10 +45,46 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   const { slug } = await params;
   const cv = getCV(slug);
   return {
-    metadataBase: new URL('https://takeontom.com'),
+    metadataBase: new URL("https://takeontom.com"),
     title: `${cv.name} - ${cv.targetPosition}`,
     description: cv.summary,
     manifest: "/site.webmanifest",
+    keywords: [
+      "Technical Leader",
+      "Full Stack Developer",
+      "Python Developer",
+      "Django Developer",
+      "Next.js Developer",
+      "React Developer",
+      "Engineering Manager",
+      "Software Architect",
+      cv.targetPosition,
+    ],
+    alternates: {
+      canonical: `/cv/${slug}`,
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_GB",
+      url: `https://takeontom.com/cv/${slug}`,
+      siteName: "Tom Smith",
+      title: `${cv.name} - ${cv.targetPosition}`,
+      description: cv.summary,
+      images: [
+        {
+          url: "/android-chrome-384x384.png",
+          width: 384,
+          height: 384,
+          alt: "Tom Smith",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: `${cv.name} - ${cv.targetPosition}`,
+      description: cv.summary,
+      images: ["/android-chrome-384x384.png"],
+    },
   };
 }
 
