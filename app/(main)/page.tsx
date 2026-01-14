@@ -6,10 +6,10 @@ export default async function Page() {
   return (
     <main className={styles.main}>
       <section>
-        <h2 className={styles.PageTitle}>
+        <h1 className={styles.PageTitle}>
           <strong>Experienced Technical Leader</strong>, with a strong{" "}
           <strong>Full Stack Development</strong> background.
-        </h2>
+        </h1>
 
         <div className={styles.summary}>
           <div>

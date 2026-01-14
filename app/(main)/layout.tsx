@@ -27,6 +27,41 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: "Experienced developer and leader based in the UK",
     manifest: "/site.webmanifest",
+    keywords: [
+      "Technical Leader",
+      "Full Stack Developer",
+      "Python Developer",
+      "Django Developer",
+      "Next.js Developer",
+      "React Developer",
+      "Engineering Manager",
+      "Software Architect",
+    ],
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_GB",
+      url: "https://takeontom.com",
+      siteName: "Tom Smith",
+      title: "Tom Smith - Experienced Developer & Technical Leader",
+      description: "Experienced developer and leader based in the UK",
+      images: [
+        {
+          url: "/android-chrome-384x384.png",
+          width: 384,
+          height: 384,
+          alt: "Tom Smith",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: "Tom Smith - Experienced Developer & Technical Leader",
+      description: "Experienced developer and leader based in the UK",
+      images: ["/android-chrome-384x384.png"],
+    },
   };
 }
 
@@ -35,12 +70,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Tom Smith",
+    url: "https://takeontom.com",
+    jobTitle: "Technical Leader & Full Stack Developer",
+    image: "https://takeontom.com/android-chrome-384x384.png",
+    sameAs: [
+      "https://uk.linkedin.com/in/takeontom",
+      "https://github.com/takeontom/",
+    ],
+    description: "Experienced developer and leader based in the UK.",
+  };
+
   return (
     <html
       lang="en"
       className={[openSans.variable, sourceSansPro.variable].join(" ")}
     >
-      <head></head>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <div className={styles.bg}></div>
         <div className={styles.pageContainer}>
